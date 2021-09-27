@@ -7881,5 +7881,6 @@ EMOJI_BIGANGER = F9 FE
 '～' = 1E6A
 '鼾' = 1E6B
 '齄' = 1E6C
+'~' = 1E6A
 
 

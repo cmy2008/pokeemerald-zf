@@ -1,5 +1,5 @@
 gText_ApprenticeChallenge0::
-	.string "Um, I'm {STR_VAR_1}'s no. {STR_VAR_2} apprentice.\n"
+	.string "我是{STR_VAR_1}，编号{STR_VAR_2}的学生。\n"
 	.string "Snivel… This tension is getting to me…$"
 
 gText_ApprenticeChallenge1::
