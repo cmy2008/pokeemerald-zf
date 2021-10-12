@@ -1108,7 +1108,7 @@ RustboroCity_Text_MayHiLetsRegister:
     .string "小遥：啊，你好，{PLAYER}{KUN}！\p你的口袋领航员\n有对战寻呼功能！\p我们登记一下各自的信息吧，\n这样就能随时联络了！\p… … … … … …$"
 
 RustboroCity_Text_RegisteredMay:
-    .string "Registered MAY\nin the POKeNAV.$"
+    .string "小瑶已被登记在\n口袋领航员。$"
 
 RustboroCity_Text_MayPassedBrineyWantToBattle:
     .string "小遥：顺便说一句，我\n在橙华森林碰上哈奇了，\p他大概正要回\n他的海边小屋去。\p对了，你的宝可梦图鉴怎么样了，\n{PLAYER}{KUN}？我这里进展不错！\p好了…\n来跟我战斗怎么样？$"
