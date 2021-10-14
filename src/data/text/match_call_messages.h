@@ -186,7 +186,7 @@ const u8 gText_MatchCallTriathlete_Isaiah_Intro2[] = _("游泳者打败的！ ")
 const u8 gText_MatchCallTriathlete_Maria_Strategy[] = _("速度高于一切！ ");
 const u8 gText_MatchCallTriathlete_Maria_Pokemon[] = _("我使用敏捷的宝可梦。 ");
 const u8 gText_MatchCallTriathlete_Maria_Intro1[] = _("马拉松是对你自己 ");
-const u8 gText_MatchCallTriathlete_Maria_Intro2[] = _("的。 ");
+const u8 gText_MatchCallTriathlete_Maria_Intro2[] = _("的挑战。 ");
 
 const u8 gText_MatchCallTriathlete_Abigail_Strategy[] = _("防守是关键。 ");
 const u8 gText_MatchCallTriathlete_Abigail_Pokemon[] = _("我的宝可梦很结实。 ");
