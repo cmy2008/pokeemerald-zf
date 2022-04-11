@@ -18,7 +18,7 @@ const u8 gRibbonDescriptionPart2_Artist[] = _("华丽肖像模特");
 const u8 gRibbonDescriptionPart1_Effort[] = _("该奖章赠予");
 const u8 gRibbonDescriptionPart2_Effort[] = _("努力的宝可梦");
 
-const u8 *const gRibbonDescriptionPointers[][2] = 
+const u8 *const gRibbonDescriptionPointers[][2] =
 {
     [CHAMPION_RIBBON]      = {gRibbonDescriptionPart1_Champion,      gRibbonDescriptionPart2_Champion},
     [COOL_RIBBON_NORMAL]   = {gRibbonDescriptionPart1_CoolContest,   gRibbonDescriptionPart2_NormalRank},

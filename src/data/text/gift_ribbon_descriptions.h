@@ -46,7 +46,7 @@ const u8 gGiftRibbonDescriptionPart2_LovedPokemon[] = _("珍爱的宝可梦");
 const u8 gGiftRibbonDescriptionPart1_LoveForPokemon[] = _("该缎带展示了");
 const u8 gGiftRibbonDescriptionPart2_LoveForPokemon[] = _("对宝可梦的爱。");
 
-const u8 *const gGiftRibbonDescriptionPointers[MAX_GIFT_RIBBON][2] = 
+const u8 *const gGiftRibbonDescriptionPointers[MAX_GIFT_RIBBON][2] =
 {
     {gGiftRibbonDescriptionPart1_2003RegionalTourney,   gGiftRibbonDescriptionPart2_Champion},
     {gGiftRibbonDescriptionPart1_2003NationalTourney,   gGiftRibbonDescriptionPart2_Champion},

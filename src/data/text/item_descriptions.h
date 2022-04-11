@@ -1199,11 +1199,18 @@ static const u8 sSootheBellDesc[] = _(
 "受到安抚，变得容\n"
 "易和训练家亲密。");
 
+#if defined(BATTLE_ENGINE) && B_MENTAL_HERB >= GEN_5
 static const u8 sMentalHerbDesc[] = _(
-"当携带它的宝可梦\n"
-"无法自由使出招式\n"
-"时，仅会回复1次\n"
+    "当携带它的宝可梦\n"
+    "陷入着迷状态时\n"
+    "仅会回复1次。");
+#else
+static const u8 sMentalHerbDesc[] = _(
+    "当携带它的宝可梦\n"
+    "无法自由使出招式\n"
+    "时，仅会回复1次\n"
 "。");
+#endif
 
 static const u8 sChoiceBandDesc[] = _(
 "有点讲究的头带。\n"

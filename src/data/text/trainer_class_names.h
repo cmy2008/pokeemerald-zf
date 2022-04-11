@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: sueRimn
+ * @Date: 2022-03-20 14:29:32
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2022-04-11 23:49:04
+ */
 const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_PKMN_TRAINER_1] = _("宝可梦训练家"),
     [TRAINER_CLASS_PKMN_TRAINER_2] = _("宝可梦训练家"),

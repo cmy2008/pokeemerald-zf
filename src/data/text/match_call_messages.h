@@ -388,7 +388,7 @@ const u8 gText_MatchCallChampion_Wallace_Pokemon[] = _("我更喜欢优雅的宝
 const u8 gText_MatchCallChampion_Wallace_Intro1[] = _("我觉得美丽 ");
 const u8 gText_MatchCallChampion_Wallace_Intro2[] = _("象征着智力。");
 
-const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] = 
+const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_COUNT] =
 {
     [REMATCH_ROSE] = MCFLAVOR(AromaLady_Rose),
     [REMATCH_ANDRES] = MCFLAVOR(RuinManiac_Andres),
@@ -454,7 +454,7 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
     [REMATCH_TRENT] = MCFLAVOR(Hiker_Trent),
     [REMATCH_SAWYER] = MCFLAVOR(Hiker_Sawyer),
     [REMATCH_KIRA_AND_DAN] = MCFLAVOR(YoungCouple_LoisAndHal),
-    [REMATCH_WALLY_3] = MCFLAVOR(PkmnTrainer_Wally),
+    [REMATCH_WALLY_VR] = MCFLAVOR(PkmnTrainer_Wally),
     [REMATCH_ROXANNE] = MCFLAVOR(RockinWhiz_Roxanne),
     [REMATCH_BRAWLY] = MCFLAVOR(TheBigHit_Brawly),
     [REMATCH_WATTSON] = MCFLAVOR(SwellShock_Wattson),

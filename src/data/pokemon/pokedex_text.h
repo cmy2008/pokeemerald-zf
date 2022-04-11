@@ -1,4 +1,4 @@
-const u8 gNonePokedexText[]=_("这是一只新型精灵，\n目前它仍然被调查中.\n暂时还无法提供详细的资料.");
+const u8 gDummyPokedexText[]=_("这是一只新型精灵，\n目前它仍然被调查中.\n暂时还无法提供详细的资料.");
 const u8 gBulbasaurPokedexText[]=_("在出生后的一段时间内，\n它会吸收背上种子里\n储存着的营养成长.");
 const u8 gIvysaurPokedexText[]=_("当背上的花苞长大之后，\n它似乎就无法再用\n两只脚站立起来了.");
 const u8 gVenusaurPokedexText[]=_("花朵散发出的迷人香味能\n安抚激动的心情，\n甚至消弭斗争.");
@@ -888,3 +888,54 @@ const u8 gDrakloakPokedexText[]=_("飞行速度为每小时200公里.\n与多龙
 const u8 gDragapultPokedexText[]=_("它角里的多龙梅西亚似乎\n满心期待着能被以\n音速发射出去.");
 const u8 gZacianPokedexText[]=_("被称为妖精王之剑，让敌友\n都对其敬畏不已.能以一剑\n将之拿下超极巨化宝可梦.");
 const u8 gZamazentaPokedexText[]=_("被称为格斗王之盾，受到人\n们的畏惧与尊崇.能轻易抵\n消超极巨化宝可梦的攻击.");
+const u8 gEternatusPokedexText[] = _(
+    "The core on its chest absorbs energy\n"
+    "emanating from the lands of the Galar\n"
+    "region. This energy is what allows\n"
+    "Eternatus to stay active.");
+
+const u8 gKubfuPokedexText[] = _(
+    "Kubfu trains hard to perfect its moves.\n"
+    "The moves it masters will determine which\n"
+    "form it takes when it evolves.");
+
+const u8 gUrshifuPokedexText[] = _(
+    "This form of Urshifu is a strong believer\n"
+    "in the one-hit KO. Its strategy is to leap\n"
+    "in close to foes and land a devastating\n"
+    "blow with a hardened fist.");
+
+const u8 gZarudePokedexText[] = _(
+    "Within dense forests, this Pokémon lives\n"
+    "in a pack with others of its kind. It's\n"
+    "incredibly aggressive, and the other\n"
+    "Pokémon of the forest fear it.");
+
+const u8 gRegielekiPokedexText[] = _(
+    "This Pokémon is a cluster of electrical\n"
+    "energy. It's said that removing the rings\n"
+    "on Regieleki's body will unleash the\n"
+    "Pokémon's latent power.");
+
+const u8 gRegidragoPokedexText[] = _(
+    "An academic theory proposes that\n"
+    "Regidrago's arms were once the head of an\n"
+    "ancient dragon Pokémon. The theory\n"
+    "remains unproven.");
+
+const u8 gGlastrierPokedexText[] = _(
+    "Glastrier emits intense cold from its\n"
+    "hooves. It's also a belligerent Pokémon--\n"
+    "anything it wants, it takes by force.");
+
+const u8 gSpectrierPokedexText[] = _(
+    "It probes its surroundings with all its\n"
+    "senses save one--it doesn't use its sense\n"
+    "of sight. Spectrier's kicks are said to\n"
+    "separate soul from body.");
+
+const u8 gCalyrexPokedexText[] = _(
+    "Calyrex is a merciful Pokémon, capable of\n"
+    "providing healing and blessings. It\n"
+    "reigned over the Galar region in times\n"
+    "of yore.");
