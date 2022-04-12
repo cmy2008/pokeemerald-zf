@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2022-03-20 14:29:32
  * @LastEditors: sueRimn
- * @LastEditTime: 2022-04-11 23:49:04
+ * @LastEditTime: 2022-04-12 00:30:58
  */
 const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_PKMN_TRAINER_1] = _("宝可梦训练家"),
@@ -57,7 +57,7 @@ const u8 gTrainerClassNames[][13] = {
     [TRAINER_CLASS_SAILOR] = _("水手"),
     [TRAINER_CLASS_COOLTRAINER_2] = _("精英训练家"),
     [TRAINER_CLASS_MAGMA_ADMIN] = _("熔岩队干部"),
-    [TRAINER_CLASS_PKMN_TRAINER_3] = _("宝可梦训练家"),
+    [TRAINER_CLASS_RIVAL] = _("宝可梦训练家"),
     [TRAINER_CLASS_BUG_CATCHER] = _("捕虫少年"),
     [TRAINER_CLASS_PKMN_RANGER] = _("宝可梦巡护员"),
     [TRAINER_CLASS_MAGMA_LEADER] = _("赤焰松"),
