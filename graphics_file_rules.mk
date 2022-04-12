@@ -25,8 +25,6 @@ STARTERGFXDIR := graphics/starter_choose
 types := normal fight flying poison ground rock bug ghost steel mystery fire water grass electric psychic ice dragon dark fairy
 contest_types := cool beauty cute smart tough
 
-
-
 ### Tilesets ###
 
 $(TILESETGFXDIR)/secondary/petalburg/tiles.4bpp: %.4bpp: %.png
@@ -295,10 +293,31 @@ $(FONTGFXDIR)/frlg_male.fwjpnfont: $(FONTGFXDIR)/japanese_frlg_male_font.png
 $(FONTGFXDIR)/frlg_female.fwjpnfont: $(FONTGFXDIR)/japanese_frlg_female_font.png
 	$(GFX) $< $@
 
+$(FONTGFXDIR)/down_arrow.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(FONTGFXDIR)/down_arrow_rs.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(FONTGFXDIR)/unused_frlg_blanked_down_arrow.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(FONTGFXDIR)/unused_frlg_down_arrow.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(FONTGFXDIR)/keypad_icons.4bpp: %.4bpp: %.png
+	$(GFX) $< $@
+
+$(FONTGFXDIR)/font0_chinese.latfont: $(FONTGFXDIR)/font0_chinese.png
+	$(GFX) $< $@
+
+$(FONTGFXDIR)/font1_chinese.latfont: $(FONTGFXDIR)/font1_chinese.png
+	$(GFX) $< $@
 
 ### Miscellaneous ###
 graphics/title_screen/pokemon_logo.gbapal: %.gbapal: %.pal
 	$(GFX) $< $@ -num_colors 224
+
 
 graphics/pokemon_jump/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 63
