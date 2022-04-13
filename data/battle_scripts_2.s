@@ -88,7 +88,7 @@ BattleScript_SuccessBallThrowEnd::
 	finishturn
     
 BattleScript_BallThrowSteal::
-	printstring STRINGID_GOTCHAPKMNCAUGHT
+	printstring STRINGID_GOTCHAPKMNCAUGHTNOBGM
     givecaughtmon
     cleareffectsonfaint BS_TARGET
 	goto BattleScript_HandleFaintedMon
