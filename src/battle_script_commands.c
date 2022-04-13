@@ -9949,7 +9949,14 @@ static void Cmd_givecaughtmon(void)
     gBattleResults.caughtMonSpecies = GetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker ^ BIT_SIDE]], MON_DATA_SPECIES, NULL);
     GetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker ^ BIT_SIDE]], MON_DATA_NICKNAME, gBattleResults.caughtMonNick);
     gBattleResults.caughtMonBall = GetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker ^ BIT_SIDE]], MON_DATA_POKEBALL, NULL);
-
+    
+    // Treat opponent's copy of stolen mon as fainted
+    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+    {
+        //SetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker ^ BIT_SIDE]], MON_DATA_HP, 0);
+        //gHitMarker |= HITMARKER_FAINTED(gBattlerTarget);
+    }
+    
     gBattlescriptCurrInstr++;
 }
 
