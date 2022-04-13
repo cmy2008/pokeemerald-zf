@@ -9953,8 +9953,8 @@ static void Cmd_givecaughtmon(void)
     // Treat opponent's copy of stolen mon as fainted
     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
     {
-        //SetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker ^ BIT_SIDE]], MON_DATA_HP, 0);
-        //gHitMarker |= HITMARKER_FAINTED(gBattlerTarget);
+        gBattleMons[gBattlerTarget].hp = 0;
+        SetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker ^ BIT_SIDE]], MON_DATA_HP, &gBattleMons[gBattlerTarget].hp);
     }
     
     gBattlescriptCurrInstr++;

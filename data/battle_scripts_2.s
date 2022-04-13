@@ -91,7 +91,7 @@ BattleScript_BallThrowSteal::
 	printstring STRINGID_GOTCHAPKMNCAUGHT
     givecaughtmon
     cleareffectsonfaint BS_TARGET
-	jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_FaintedMonTryChoose
+	goto BattleScript_FaintedMonTryChoose
 
 BattleScript_WallyBallThrow::
 	printstring STRINGID_GOTCHAPKMNCAUGHT2
