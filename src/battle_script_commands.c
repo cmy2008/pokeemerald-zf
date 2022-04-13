@@ -9955,6 +9955,8 @@ static void Cmd_givecaughtmon(void)
     {
         gBattleMons[gBattlerTarget].hp = 0;
         SetMonData(&gEnemyParty[gBattlerPartyIndexes[gBattlerAttacker ^ BIT_SIDE]], MON_DATA_HP, &gBattleMons[gBattlerTarget].hp);
+        
+        SetHealthboxSpriteInvisible(gHealthboxSpriteIds[gBattlerTarget]);
     }
     
     gBattlescriptCurrInstr++;
