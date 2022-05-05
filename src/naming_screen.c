@@ -328,10 +328,10 @@ static const struct WindowTemplate sWindowTemplates[WIN_COUNT + 1] =
 };
 
 static const u8 gText_NamingScreenKeyboard_Upper0[] = _("QWERTYUIOP");
-static const u8 gText_NamingScreenKeyboard_Upper1[] = _("ASFGHJKL");
+static const u8 gText_NamingScreenKeyboard_Upper1[] = _("ASDFGHJKL");
 static const u8 gText_NamingScreenKeyboard_Upper2[] = _("ZXCVBNM");
 static const u8 gText_NamingScreenKeyboard_Lower0[] = _("qwertyuiop");
-static const u8 gText_NamingScreenKeyboard_Lower1[] = _("asfghjkl");
+static const u8 gText_NamingScreenKeyboard_Lower1[] = _("asdfghjkl");
 static const u8 gText_NamingScreenKeyboard_Lower2[] = _("zxcvbnm");
 static const u8 gText_NamingScreenKeyboard_Symbol0[] = _("0123456789");
 static const u8 gText_NamingScreenKeyboard_Symbol1[] = _("!?♂♀/-{PKMN}");
