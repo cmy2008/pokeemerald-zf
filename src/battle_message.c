@@ -734,6 +734,8 @@ static const u8 sText_PkmnAboutToBeAttackedByItsItem[] = _("{B_DEF_NAME_WITH_PRE
 static const u8 sText_CantEscapeBecauseOfCurrentMove[] = _("{B_DEF_NAME_WITH_PREFIX}不能逃跑e\n因为{B_CURRENT_MOVE}!");
 static const u8 sText_NeutralizingGasEnters[] = _("化学变化气体填满了场地!");
 static const u8 sText_NeutralizingGasOver[] = _("化学变化气体\n逐渐消失了!");
+static const u8 sText_SafetyGogglesProtected[] = _("{B_DEF_NAME_WITH_PREFIX}因为{B_LAST_ITEM}\n的效果不受影响!");
+static const u8 sText_TargetChangedType[] =_("{B_DEF_NAME_WITH_PREFIX}转变为\n{B_BUFF1}形态!");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
