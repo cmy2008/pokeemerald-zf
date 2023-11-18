@@ -3,6 +3,7 @@
 LittlerootTown_BrendansHouse_2F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_BrendansHouse_2F_OnTransition
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LittlerootTown_BrendansHouse_2F_OnWarp
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_BrendansHouse_2F_OnFrame
 	.byte 0
 
 LittlerootTown_BrendansHouse_2F_OnTransition:
@@ -42,6 +43,10 @@ LittlerootTown_BrendansHouse_2F_EventScript_SetReadyToMeetBrendan::
 LittlerootTown_BrendansHouse_2F_OnWarp:
 	map_script_2 VAR_SECRET_BASE_INITIALIZED, 0, LittlerootTown_BrendansHouse_2F_EventScript_CheckInitDecor
 	.2byte 0
+
+LittlerootTown_BrendansHouse_2F_OnFrame:
+		map_script_2 VAR_BACK_ROOM, 1, BACK_ROOM_1
+		.2byte 0
 
 LittlerootTown_BrendansHouse_2F_EventScript_CheckInitDecor::
 	checkplayergender
@@ -272,6 +277,12 @@ PlayersHouse_2F_EventScript_GameCube::
 	msgbox PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
 	end
 
+BACK_ROOM_1::
+	msgbox BACK_ROOM_TEXT_1, MSGBOX_DEFAULT
+	setvar VAR_BACK_ROOM, 2
+	releaseall
+	end
+
 PlayersHouse_2F_Text_ClockIsStopped:
     .string "钟停了…\p把它调好吧！$"
 
@@ -286,3 +297,6 @@ Common_Text_LookCloserAtMap:
 
 PlayersHouse_2F_Text_ItsAGameCube:
     .string "这是NGC，\p上面连着个GBA\n当做手柄。$"
+
+BACK_ROOM_TEXT_1:
+	.string "这是后屎x1。\p确信$"
