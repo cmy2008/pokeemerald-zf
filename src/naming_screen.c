@@ -157,7 +157,7 @@ struct NamingScreenData
     u8 tilemapBuffer2[0x800];
     u8 tilemapBuffer3[0x800];
     u8 textBuffer[16];
-    u8 tileBuffer[0x600];
+        u8 tileBuffer[0x600];
     u8 state;
     u8 windows[WIN_COUNT];
     u16 inputCharBaseXPos;
@@ -279,18 +279,25 @@ static const struct WindowTemplate sWindowTemplates[WIN_COUNT + 1] =
 // The keys shown on the keyboard are handled separately by sNamingScreenKeyboardText
 static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
     [KEYBOARD_LETTERS_LOWER] = {
-        __("abcdef ."),
-        __("ghijkl ,"),
-        __("mnopqrs "),
-        __("tuvwxyz "),
+        { 0x03,0x04,0x05,0x06,0x03,0x04,0x05,0x06 },
+        { 0x03,0x04,0x05,0x06,0x03,0x04,0x05,0x06 },
+        { 0x03,0x04,0x05,0x06,0x03,0x04,0x05,0x06 },
+        { 0x03,0x04,0x05,0x06,0x03,0x04,0x05,0x06 },
     },
     [KEYBOARD_LETTERS_UPPER] = {
-        __("ABCDEF ."),
-        __("GHIJKL ,"),
-        __("MNOPQRS "),
-        __("TUVWXYZ "),
+        { 0x01, 0x02, 0x01, 0x02, 0x00, 0x00, 0x01, 0x02, },
+        { 0x01, 0x02, 0x01, 0x02, 0x00, 0x00, 0x01, 0x02, },
+        { 0x01, 0x02, 0x01, 0x02, 0x00, 0x00, 0x01, 0x02, },
+        { 0x01, 0x02, 0x01, 0x02, 0x00, 0x00, 0x01, 0x02, },
     },
-    [KEYBOARD_SYMBOLS] = {
+    //               x     2x-2 2x-1
+    //'张' = 0x1038 0x01 > 0x00 0x01
+    //'帆' = 0x03AE 0x02 > 0x02 0x03
+    //'弓' = 0x0475 0x03 > 0x04 0x05
+    //'长' = 0x0226 0x04 > 0x06 0x07
+    //'巾' = 0x073F 0x05 > 0x08 0x09
+    //'凡' = 0x03B5 0x06 > 0x10 0x11
+        [KEYBOARD_SYMBOLS] = {
         __("01234   "),
         __("56789   "),
         __("!?♂♀/-  "),
@@ -299,8 +306,8 @@ static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
 };
 
 static const u8 sPageColumnCounts[KBPAGE_COUNT] = {
-    [KEYBOARD_LETTERS_LOWER] = KBCOL_COUNT,
-    [KEYBOARD_LETTERS_UPPER] = KBCOL_COUNT,
+    [KEYBOARD_LETTERS_LOWER] = 6,
+    [KEYBOARD_LETTERS_UPPER] = 6,
     [KEYBOARD_SYMBOLS]       = 6
 };
 static const u8 sPageColumnXPos[KBPAGE_COUNT][KBCOL_COUNT] = {
@@ -1848,6 +1855,10 @@ static void BufferCharacter(u8 ch)
     sNamingScreen->textBuffer[index] = ch;
 }
 
+
+static const u8 zfChars[] = _("张帆弓长巾凡");
+//                 0x0 0x1 0x2 0x3 0x12
+
 static void SaveInputText(void)
 {
     u8 i;
@@ -1898,7 +1909,7 @@ static void NamingScreen_Dummy(u8 bg, u8 page)
 static void DrawTextEntry(void)
 {
     u8 i;
-    u8 temp[2];
+    u8 temp[3];
     u16 extraWidth;
     u8 maxChars = sNamingScreen->template->maxChars;
     u16 x = sNamingScreen->inputCharBaseXPos - 0x40;
@@ -1907,8 +1918,10 @@ static void DrawTextEntry(void)
 
     for (i = 0; i < maxChars; i++)
     {
-        temp[0] = sNamingScreen->textBuffer[i];
-        temp[1] = gText_ExpandedPlaceholder_Empty[0];
+        
+        temp[0] = zfChars[sNamingScreen->textBuffer[i]*2-2];
+        temp[1] = zfChars[sNamingScreen->textBuffer[i]*2-1];
+        temp[2] = gText_ExpandedPlaceholder_Empty[0];
         extraWidth = (IsWideLetter(temp[0]) == TRUE) ? 2 : 0;
 
         AddTextPrinterParameterized(sNamingScreen->windows[WIN_TEXT_ENTRY], FONT_NORMAL, temp, i * 8 + x + extraWidth, 1, TEXT_SKIP_DRAW, NULL);
@@ -1936,14 +1949,14 @@ static const struct TextColor sTextColorStruct =
 static const u8 sFillValues[KBPAGE_COUNT] =
 {
     [KEYBOARD_LETTERS_LOWER] = PIXEL_FILL(14),
-    [KEYBOARD_LETTERS_UPPER] = PIXEL_FILL(13),
+    [KEYBOARD_LETTERS_UPPER] = PIXEL_FILL(14),
     [KEYBOARD_SYMBOLS]       = PIXEL_FILL(15)
 };
 
 static const u8 *const sKeyboardTextColors[KBPAGE_COUNT] =
 {
-    [KEYBOARD_LETTERS_LOWER] = sTextColorStruct.colors[1],
-    [KEYBOARD_LETTERS_UPPER] = sTextColorStruct.colors[0],
+    [KEYBOARD_LETTERS_LOWER] = sTextColorStruct.colors[2],
+    [KEYBOARD_LETTERS_UPPER] = sTextColorStruct.colors[2],
     [KEYBOARD_SYMBOLS]       = sTextColorStruct.colors[2]
 };
 

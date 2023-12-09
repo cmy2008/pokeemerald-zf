@@ -273,6 +273,44 @@
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var
+#define VAR_REGISTER_BIRCH_STATE             0x40DA
+#define VAR_UNUSED_0x40DB                    0x40DB // Unused Var
+#define VAR_UNUSED_0x40DC                    0x40DC // Unused Var
+#define VAR_GIFT_PICHU_SLOT                  0x40DD
+#define VAR_GIFT_UNUSED_1                    0x40DE // Var is written to, but never read
+#define VAR_GIFT_UNUSED_2                    0x40DF // Var is written to, but never read
+#define VAR_GIFT_UNUSED_3                    0x40E0 // Var is written to, but never read
+#define VAR_GIFT_UNUSED_4                    0x40E1 // Var is written to, but never read
+#define VAR_GIFT_UNUSED_5                    0x40E2 // Var is written to, but never read
+#define VAR_GIFT_UNUSED_6                    0x40E3 // Var is written to, but never read
+#define VAR_GIFT_UNUSED_7                    0x40E4 // var is written to, but never read
+#define VAR_UNUSED_0x40E5                    0x40E5 // Unused Var
+#define VAR_DAILY_SLOTS                      0x40E6
+#define VAR_DAILY_WILDS                      0x40E7
+#define VAR_DAILY_BLENDER                    0x40E8
+#define VAR_DAILY_PLANTED_BERRIES            0x40E9
+#define VAR_DAILY_PICKED_BERRIES             0x40EA
+#define VAR_DAILY_ROULETTE                   0x40EB
+#define VAR_SECRET_BASE_STEP_COUNTER         0x40EC // Used by Secret Base TV programs
+#define VAR_SECRET_BASE_LAST_ITEM_USED       0x40ED // Used by Secret Base TV programs
+#define VAR_SECRET_BASE_LOW_TV_FLAGS         0x40EE // Used by Secret Base TV programs
+#define VAR_SECRET_BASE_HIGH_TV_FLAGS        0x40EF // Used by Secret Base TV programs
+#define VAR_SECRET_BASE_IS_NOT_LOCAL         0x40F0 // Set to TRUE while in another player's secret base.
+#define VAR_DAILY_BP                         0x40F1
+#define VAR_WALLY_CALL_STEP_COUNTER          0x40F2
+#define VAR_SCOTT_FORTREE_CALL_STEP_COUNTER  0x40F3
+#define VAR_ROXANNE_CALL_STEP_COUNTER        0x40F4
+#define VAR_SCOTT_BF_CALL_STEP_COUNTER       0x40F5
+#define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER 0x40F6
+#define VAR_BACK_ROOM                        0x40F7 // Unused Var
+#define VAR_UNUSED_0x40F8                    0x40F8 // Unused Var
+#define VAR_UNUSED_0x40F9                    0x40F9 // Unused Var
+#define VAR_UNUSED_0x40FA                    0x40FA // Unused Var
+#define VAR_UNUSED_0x40FB                    0x40FB // Unused Var
+#define VAR_UNUSED_0x40FC                    0x40FC // Unused Var
+#define VAR_UNUSED_0x40FD                    0x40FD // Unused Var
+#define VAR_UNUSED_0x40FE                    0x40FE // Unused Var
+#define VAR_UNUSED_0x40FF                    0x40FF // Unused Var
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)
