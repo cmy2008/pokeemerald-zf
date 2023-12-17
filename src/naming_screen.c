@@ -279,24 +279,24 @@ static const struct WindowTemplate sWindowTemplates[WIN_COUNT + 1] =
 // The keys shown on the keyboard are handled separately by sNamingScreenKeyboardText
 static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
     [KEYBOARD_LETTERS_LOWER] = {
-        { 0x03,0x04,0x05,0x06,0x03,0x04,0x05,0x06 },
-        { 0x03,0x04,0x05,0x06,0x03,0x04,0x05,0x06 },
-        { 0x03,0x04,0x05,0x06,0x03,0x04,0x05,0x06 },
-        { 0x03,0x04,0x05,0x06,0x03,0x04,0x05,0x06 },
+        { 0x03,0x04,0x05,0x06 },
+        { 0x03,0x04,0x05,0x06 },
+        { 0x03,0x04,0x05,0x06 },
+        { 0x03,0x04,0x05,0x06 },
     },
     [KEYBOARD_LETTERS_UPPER] = {
-        { 0x01, 0x02, 0x01, 0x02, 0x00, 0x00, 0x01, 0x02, },
-        { 0x01, 0x02, 0x01, 0x02, 0x00, 0x00, 0x01, 0x02, },
-        { 0x01, 0x02, 0x01, 0x02, 0x00, 0x00, 0x01, 0x02, },
-        { 0x01, 0x02, 0x01, 0x02, 0x00, 0x00, 0x01, 0x02, },
+        { 0x01, 0x02, 0x01, 0x02 },
+        { 0x01, 0x02, 0x01, 0x02 },
+        { 0x01, 0x02, 0x01, 0x02 },
+        { 0x01, 0x02, 0x01, 0x02 },
     },
-    //               x     2x-2 2x-1
-    //'张' = 0x1038 0x01 > 0x00 0x01
-    //'帆' = 0x03AE 0x02 > 0x02 0x03
+    //               x     2x 2x+1
+    //'张' = 0x1038 0x01 > 0x02 0x03
+    //'帆' = 0x03AE 0x02 > 0x06 0x07
     //'弓' = 0x0475 0x03 > 0x04 0x05
     //'长' = 0x0226 0x04 > 0x06 0x07
     //'巾' = 0x073F 0x05 > 0x08 0x09
-    //'凡' = 0x03B5 0x06 > 0x10 0x11
+    //'凡' = 0x03B5 0x06 > 0x13 0x14
         [KEYBOARD_SYMBOLS] = {
         __("01234   "),
         __("56789   "),
@@ -305,9 +305,12 @@ static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
     }
 };
 
+static const u8 zfChars[] = _("  张帆弓长巾凡");
+//                              0x2 0x4 0x4 0x3 0x12
+
 static const u8 sPageColumnCounts[KBPAGE_COUNT] = {
-    [KEYBOARD_LETTERS_LOWER] = 6,
-    [KEYBOARD_LETTERS_UPPER] = 6,
+    [KEYBOARD_LETTERS_LOWER] = 4,
+    [KEYBOARD_LETTERS_UPPER] = 4,
     [KEYBOARD_SYMBOLS]       = 6
 };
 static const u8 sPageColumnXPos[KBPAGE_COUNT][KBCOL_COUNT] = {
@@ -1141,7 +1144,7 @@ static void SetCursorPos(s16 x, s16 y)
     if (x < sPageColumnCounts[CurrentPageToKeyboardId()])
         cursorSprite->x = sPageColumnXPos[CurrentPageToKeyboardId()][x] + 38;
     else
-        cursorSprite->x = 0;
+    cursorSprite->x = 0;
 
     cursorSprite->y = y * 16 + 88;
     cursorSprite->sPrevX = cursorSprite->sX;
@@ -1856,23 +1859,33 @@ static void BufferCharacter(u8 ch)
 }
 
 
-static const u8 zfChars[] = _("张帆弓长巾凡");
-//                 0x0 0x1 0x2 0x3 0x12
-
+//由GPT-4生成
 static void SaveInputText(void)
 {
     u8 i;
+    u8 maxChars = sNamingScreen->template->maxChars;
+    
+    // temp2数组的大小是基于maxChars的最大可能值声明的
+    u8 temp2[2 * maxChars + 1]; // 加1为了EOS
 
-    for (i = 0; i < sNamingScreen->template->maxChars; i++)
+    for (i = 0; i < maxChars; i++)
     {
-        if (sNamingScreen->textBuffer[i] != CHAR_SPACE && sNamingScreen->textBuffer[i] != EOS)
-        {
-            StringCopyN(sNamingScreen->destBuffer, sNamingScreen->textBuffer, sNamingScreen->template->maxChars + 1);
-            break;
+        // 检查是否zfChars中有指向0的字符，如果有就停止
+        if (zfChars[sNamingScreen->textBuffer[i] * 2] == 0) {
+            break; // 遇到0，终止循环
         }
+        
+        // 通过textBuffer中的字符索引来获取zfChars数组中对应的双字节字符
+        temp2[i * 2] = zfChars[sNamingScreen->textBuffer[i] * 2]; // 字符的高位字节
+        temp2[i * 2 + 1] = zfChars[sNamingScreen->textBuffer[i] * 2 + 1]; // 字符的低位字节
     }
-}
 
+    // 添加EOS，并且确保没有额外的0或空格
+    temp2[i * 2] = EOS;
+
+    // 复制temp2到目标缓冲区，只复制到EOS字符，因为我们已知字符串的实际长度
+    StringCopyN(sNamingScreen->destBuffer, temp2, i * 2 + 1);
+}
 static void LoadGfx(void)
 {
     LZ77UnCompWram(gNamingScreenMenu_Gfx, sNamingScreen->tileBuffer);
@@ -1909,7 +1922,7 @@ static void NamingScreen_Dummy(u8 bg, u8 page)
 static void DrawTextEntry(void)
 {
     u8 i;
-    u8 temp[3];
+    u8 temp[4];
     u16 extraWidth;
     u8 maxChars = sNamingScreen->template->maxChars;
     u16 x = sNamingScreen->inputCharBaseXPos - 0x40;
@@ -1919,12 +1932,13 @@ static void DrawTextEntry(void)
     for (i = 0; i < maxChars; i++)
     {
         
-        temp[0] = zfChars[sNamingScreen->textBuffer[i]*2-2];
-        temp[1] = zfChars[sNamingScreen->textBuffer[i]*2-1];
+        temp[0] = zfChars[sNamingScreen->textBuffer[i]*2];
+        temp[1] = zfChars[sNamingScreen->textBuffer[i]*2+1];
         temp[2] = gText_ExpandedPlaceholder_Empty[0];
+        temp[3] = gText_ExpandedPlaceholder_Empty[0];
         extraWidth = (IsWideLetter(temp[0]) == TRUE) ? 2 : 0;
 
-        AddTextPrinterParameterized(sNamingScreen->windows[WIN_TEXT_ENTRY], FONT_NORMAL, temp, i * 8 + x + extraWidth, 1, TEXT_SKIP_DRAW, NULL);
+        AddTextPrinterParameterized(sNamingScreen->windows[WIN_TEXT_ENTRY], FONT_NORMAL, temp, i * 12 + x + extraWidth, 1, TEXT_SKIP_DRAW, NULL);
     }
 
     TryDrawGenderIcon();
@@ -2068,7 +2082,7 @@ static bool8 IsWideLetter(u8 character)
         if (character == sText_AlphabetUpperLower[i])
             return FALSE;
     }
-    return FALSE;
+    return TRUE;
 }
 
 // Debug? Arguments aren't sensible for non-player screens.
