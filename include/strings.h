@@ -3,7 +3,6 @@
 
 // Placeholders
 extern const u8 gText_ExpandedPlaceholder_Empty[];
-extern const u8 gText_EmptyPokedexInfo2[];
 extern const u8 gText_ExpandedPlaceholder_Kun[];
 extern const u8 gText_ExpandedPlaceholder_Chan[];
 extern const u8 gText_ExpandedPlaceholder_Sapphire[];
