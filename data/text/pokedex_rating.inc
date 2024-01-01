@@ -1,7 +1,7 @@
 gBirchDexRatingText_AreYouCurious::
     .string "小田卷博士：啊，{PLAYER}{KUN}！\p你想知道你的宝可梦图鉴\n是什么水平吗？$"
 
-gBirchDexRatingText_Cancel:::
+gBirchDexRatingText_Cancel::
     .string "嗯，你收集的宝可梦还不够多，\n没什么太大的价值啊。$"
 
 gBirchDexRatingText_SoYouveSeenAndCaught::

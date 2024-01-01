@@ -70,49 +70,49 @@ BattleFrontier_BattleTowerLobby_Text_SilentType::
 BattleFrontier_BattleTowerLobby_Text_LookingForwardToNextBattle::
     .string "我很期待你的下一次\n战斗！$"
 
-gTVBravoTrainerBattleTowerText00::
+BravoTrainerBattleTower_Text_Intro::
     .string "太棒了！\n这里是加油训练师时间！\p今天我们将给大家介绍{STR_VAR_1}，\n一位对战塔的挑战者！\p{STR_VAR_1}将要挑战\n实力强劲的{STR_VAR_2}。$"
 
-gTVBravoTrainerBattleTowerText01::
+BravoTrainerBattleTower_Text_NewRecord::
     .string "在{STR_VAR_1}的比赛中，这对组合\n创造了连胜{STR_VAR_2}的新记录！\l做得真好啊！$"
 
-gTVBravoTrainerBattleTowerText02::
+BravoTrainerBattleTower_Text_Lost::
     .string "这对组合最终还是屈服在\n{STR_VAR_1}是手上了。\l好样的！\p不过，在挑战赛中这么早\n遇上{STR_VAR_1}还真是倒霉啊。\p我们询问了下关于他们\n和{STR_VAR_1}之间的比赛的感受。$"
 
-gTVBravoTrainerBattleTowerText03::
+BravoTrainerBattleTower_Text_Won::
     .string "这对组合彻底地击败了{STR_VAR_1}\n{STR_VAR_2}，获得了完胜。\l厉害啊！\p连{STR_VAR_1}都被击败了…\n这是对信心的挑战！完全的震惊！\p我们询问了下关于他们\n获胜那一瞬间的感受。$"
 
-gTVBravoTrainerBattleTowerText04::
+BravoTrainerBattleTower_Text_LostFinal::
     .string "比赛结束后，这对组合终于\n向{STR_VAR_1}的{STR_VAR_2}屈服了，\l这就是他们最终的决定。\p好样的！\p你们的发挥非常好。\n我们从来就没有见到过像\l{STR_VAR_1}和{STR_VAR_2}一样出色的搭档。\p我们询问了关于打败那对组合\n后他们的感想。$"
 
-gTVBravoTrainerBattleTowerText05::
+BravoTrainerBattleTower_Text_Satisfied::
     .string "他们的回答是：\n“我很满足！”\p这是不是个很爽快的回答呢？\n不愧是训练师！\p能战斗到完全满足\n不是非常厉害吗？\p训练师的这些话让我\n完全明白了这种满足感：$"
 
-gTVBravoTrainerBattleTowerText06::
+BravoTrainerBattleTower_Text_Unsatisfied::
     .string "训练师应该是这么说的：\n“我还没满足…”\p我们的训练师在那发表后\n明显心情有些低落。\p不过，想要在完全满意的\n状态下战斗也没那么容易吧？\p不管怎么说，我们的训练师\n总是会以这样一句话来表达懊恼：$"
 
-gTVBravoTrainerBattleTowerText07::
-    .string "无$"
+BravoTrainerBattleTower_Text_None1::
+	.string "None$"
 
-gTVBravoTrainerBattleTowerText08::
-    .string "无$"
+BravoTrainerBattleTower_Text_None2::
+	.string "None$"
 
-gTVBravoTrainerBattleTowerText09::
-    .string "无$"
+BravoTrainerBattleTower_Text_None3::
+	.string "None$"
 
-gTVBravoTrainerBattleTowerText10::
-    .string "无$"
+BravoTrainerBattleTower_Text_None4::
+	.string "None$"
 
-gTVBravoTrainerBattleTowerText11::
+BravoTrainerBattleTower_Text_Response::
     .string "“{STR_VAR_1}。”$"
 
-gTVBravoTrainerBattleTowerText12::
+BravoTrainerBattleTower_Text_ResponseSatisfied::
     .string "“{STR_VAR_1}。”\n这不是很棒吗？\p这就是{STR_VAR_2}的那些心得。\n我这样认为。\p和{STR_VAR_3}的那场战斗\n…你把他称作\l“{STR_VAR_1}”！$"
 
-gTVBravoTrainerBattleTowerText13::
+BravoTrainerBattleTower_Text_ResponseUnsatisfied::
     .string "“{STR_VAR_1}。”\n现在合适了吗？\p和{STR_VAR_3}的那场战斗\n…你只能够使用{STR_VAR_1}”\l来描述他吗！\p{STR_VAR_2}看起来越来越失望了\n我想是这样的！$"
 
-gTVBravoTrainerBattleTowerText14::
+BravoTrainerBattleTower_Text_Outro::
     .string "厉害啊，{STR_VAR_1}！\n厉害啊，{STR_VAR_2}！\p希望下次我们能见识到\n达到更高水平的{STR_VAR_1}！\p这就是我们今天的全部内容！\n下次再见！$"
 
 SlateportCity_PokemonFanClub_Text_InterviewRequestHasName::

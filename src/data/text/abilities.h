@@ -113,12 +113,12 @@ static const u8 sFilterDescription[] = _("受效果绝佳的攻击时\n可以减
 static const u8 sSlowStartDescription[] = _("在5回合内，\n攻击和速度减半。");
 static const u8 sScrappyDescription[] = _("可以击中鬼属性\n宝可梦。");
 static const u8 sStormDrainDescription[] = _("吸收水属性招式，\n并恢复HP。");
-#if B_SNOW_WARNING < GEN_9
 static const u8 sIceBodyDescription[] = _("冰雹天气时，\n会缓缓回复HP。");
+#if B_SNOW_WARNING < GEN_9
+static const u8 sSnowWarningDescription[] = _("出场时，\n会将天气变为暴雪。");
 #elif B_SNOW_WARNING >= GEN_9
-static const u8 sSnowWarningDescription[] = _("Summons a Snowstorm.");
-#endif
 static const u8 sSnowWarningDescription[] = _("出场时，\n会将天气变为冰雹。");
+#endif
 static const u8 sHoneyGatherDescription[] = _("战斗结束时，\n有时会捡来甜甜蜜。");
 static const u8 sFriskDescription[] = _("出场时，\n察觉对手的持有物。");
 static const u8 sRecklessDescription[] = _("反作用力受伤的招式，\n其威力会提高。");
