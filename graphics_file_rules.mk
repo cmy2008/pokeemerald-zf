@@ -22,8 +22,44 @@ STARTERGFXDIR := graphics/starter_choose
 NAMINGGFXDIR := graphics/naming_screen
 SPINDAGFXDIR := graphics/pokemon/spinda/spots
 
-types := normal fight flying poison ground rock bug ghost steel mystery fire water grass electric psychic ice dragon dark fairy
+types := normal fight flying poison ground rock bug ghost steel mystery fire water grass electric psychic ice dragon dark
 contest_types := cool beauty cute smart tough
+
+
+
+### Castform ###
+
+$(CASTFORMGFXDIR)/front.4bpp: $(CASTFORMGFXDIR)/normal/front.4bpp \
+                              $(CASTFORMGFXDIR)/sunny/front.4bpp \
+                              $(CASTFORMGFXDIR)/rainy/front.4bpp \
+                              $(CASTFORMGFXDIR)/snowy/front.4bpp
+	@cat $^ >$@
+
+$(CASTFORMGFXDIR)/back.4bpp: $(CASTFORMGFXDIR)/normal/back.4bpp \
+                             $(CASTFORMGFXDIR)/sunny/back.4bpp \
+                             $(CASTFORMGFXDIR)/rainy/back.4bpp \
+                             $(CASTFORMGFXDIR)/snowy/back.4bpp
+	@cat $^ >$@
+
+$(CASTFORMGFXDIR)/anim_front.4bpp: $(CASTFORMGFXDIR)/normal/anim_front.4bpp \
+                                   $(CASTFORMGFXDIR)/sunny/anim_front.4bpp \
+                                   $(CASTFORMGFXDIR)/rainy/anim_front.4bpp \
+                                   $(CASTFORMGFXDIR)/snowy/anim_front.4bpp
+	@cat $^ >$@
+
+$(CASTFORMGFXDIR)/normal.gbapal: $(CASTFORMGFXDIR)/normal/normal.gbapal \
+                                 $(CASTFORMGFXDIR)/sunny/normal.gbapal \
+                                 $(CASTFORMGFXDIR)/rainy/normal.gbapal \
+                                 $(CASTFORMGFXDIR)/snowy/normal.gbapal
+	@cat $^ >$@
+
+$(CASTFORMGFXDIR)/shiny.gbapal: $(CASTFORMGFXDIR)/normal/shiny.gbapal \
+                                $(CASTFORMGFXDIR)/sunny/shiny.gbapal \
+                                $(CASTFORMGFXDIR)/rainy/shiny.gbapal \
+                                $(CASTFORMGFXDIR)/snowy/shiny.gbapal
+	@cat $^ >$@
+
+
 
 ### Tilesets ###
 
@@ -268,7 +304,6 @@ $(FONTGFXDIR)/font1_chinese.latfont: $(FONTGFXDIR)/font1_chinese.png
 ### Miscellaneous ###
 graphics/title_screen/pokemon_logo.gbapal: %.gbapal: %.pal
 	$(GFX) $< $@ -num_colors 224
-
 
 graphics/pokemon_jump/bg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 63 -Wnum_tiles

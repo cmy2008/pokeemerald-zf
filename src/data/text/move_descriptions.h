@@ -2625,140 +2625,141 @@ static const u8 sDoubleIronBashDescription[] = _(
 "有时会使对手畏缩。");
 
 // GEN 8
-static const u8 sDYNAMAX_CANNONDescription[] = _(
+static const u8 sDynamaxCannonDescription[] = _(
 "从核心放出光束进行攻击。");
     
-static const u8 sSNIPE_SHOTDescription[] = _(
+static const u8 sSnipeShotDescription[] = _(
 "无视对手招式或特性的吸引\n"
 "效果。可向选定的对手攻击。");
     
-static const u8 sJAW_LOCKDescription[] = _(
+static const u8 sJawLockDescription[] = _(
 "使双方无法替换宝可梦。\n"
 "其中一方退场才解除效果。");
     
-static const u8 sSTUFF_CHEEKSDescription[] = _(
+static const u8 sStuffCheeksDescription[] = _(
 "吃掉携带的树果，\n"
 "大幅提高防御。");
     
-static const u8 sNO_RETREATDescription[] = _(
+static const u8 sNoRetreatDescription[] = _(
 "提高自己的所有能力，\n"
 "但无法替换或逃走。");
     
-static const u8 sTAR_SHOTDescription[] = _(
+static const u8 sTarShotDescription[] = _(
 "降低对手的速度，\n"
 "并且使对手的弱点变为火。");
     
-static const u8 sMAGIC_POWDERDescription[] = _(
+static const u8 sMagicPowderDescription[] = _(
 "向对手喷洒魔法粉，\n"
 "使对手变为超能力属性。");
     
-static const u8 sDRAGON_DARTSDescription[] = _(
+static const u8 sDragonDartsDescription[] = _(
 "进行2次攻击。如2只宝可梦，\n"
 "则对它们各进行1次攻击。");
     
-static const u8 sTEATIMEDescription[] = _(
+static const u8 sTeatimeDescription[] = _(
 "场上的所有宝可梦都会\n"
 "吃掉自己携带的树果。");
     
-static const u8 sOCTOLOCKDescription[] = _(
+static const u8 sOctolockDescription[] = _(
 "让对手无法逃走。被固定后，\n"
 "每回合都会降低防御和特防。");
     
-static const u8 sBOLT_BEAKDescription[] = _(
+static const u8 sBoltBeakDescription[] = _(
 "用带电的喙啄刺对手。\n"
 "如先出手，招式威力变2倍。");
     
-static const u8 sFISHIOUS_RENDDescription[] = _(
+static const u8 sFishiousRendDescription[] = _(
 "用坚硬的腮咬住对手。\n"
 "如先出手，招式威力变2倍。");
     
-static const u8 sCOURT_CHANGEDescription[] = _(
+static const u8 sCourtChangeDescription[] = _(
 "用神奇的力量交换双方的\n"
 "场地效果。");
     
-static const u8 sCLANGOROUS_SOULDescription[] = _(
+static const u8 sClangorousSoulDescription[] = _(
 "削减少许自己的HP，\n"
 "使所有能力都提高。");
     
-static const u8 sBODY_PRESSDescription[] = _(
+static const u8 sBodyPressDescription[] = _(
 "用身体撞向对手进行攻击。\n"
 "防御越高，伤害就越高。");
     
-static const u8 sDECORATEDescription[] = _(
+static const u8 sDecorateDescription[] = _(
 "通过装饰，\n"
 "大幅提高对方的攻击和特攻。");
     
-static const u8 sDRUM_BEATINGDescription[] = _(
+static const u8 sDrumBeatingDescription[] = _(
 "用鼓点来控制鼓的根部攻击，\n"
 "从而降低对手的速度。");
     
-static const u8 sSNAP_TRAPDescription[] = _(
+static const u8 sSnapTrapDescription[] = _(
 "使用捕兽夹，在4~5回合内，\n"
 "夹住对手进行攻击。");
     
-static const u8 sPYRO_BALLDescription[] = _(
+static const u8 sPyroBallDescription[] = _(
 "形成火球攻击对手。\n"
 "有时会使对手陷入灼伤状态。");
     
-static const u8 sBEHEMOTH_BLADEDescription[] = _(
+static const u8 sBehemothBladeDescription[] = _(
 "变身为巨大的剑，挥斩对手。");
     
-static const u8 sBEHEMOTH_BASHDescription[] = _(
+static const u8 sBehemothBashDescription[] = _(
 "变身为巨大的盾，撞击对手。");
     
-static const u8 sAURA_WHEELDescription[] = _(
+    
+static const u8 sAuraWheelDescription[] = _(
 "用颊囊里的能量攻击，自身\n"
 "速度提高，属性随样子改变。");
     
-static const u8 sBREAKING_SWIPEDescription[] = _(
+static const u8 sBreakingSwipeDescription[] = _(
 "用坚韧的尾巴猛扫对手攻击，\n"
 "从而降低对手的攻击。");
     
-static const u8 sBRANCH_POKEDescription[] = _(
+static const u8 sBranchPokeDescription[] = _(
 "使用尖锐的树枝刺向对手\n"
 "进行攻击。");
     
-static const u8 sOVERDRIVEDescription[] = _(
+static const u8 sOverdriveDescription[] = _(
 "奏响吉他和贝斯，\n"
 "释放出剧烈震动攻击对手。");
     
-static const u8 sAPPLE_ACIDDescription[] = _(
+static const u8 sAppleAcidDescription[] = _(
 "使用酸性液体进行攻击。\n"
 "降低对手的特防。");
     
-static const u8 sGRAV_APPLEDescription[] = _(
+static const u8 sGravAppleDescription[] = _(
 "从高处落下苹果造成伤害。\n"
 "可降低对手的防御。");
     
-static const u8 sSPIRIT_BREAKDescription[] = _(
+static const u8 sSpiritBreakDescription[] = _(
 "让对手一蹶不振的气势攻击。\n"
 "会降低对手的特攻。");
     
-static const u8 sSTRANGE_STEAMDescription[] = _(
+static const u8 sStrangeSteamDescription[] = _(
 "喷出烟雾攻击对手。\n"
 "有时会使对手混乱。");
     
-static const u8 sLIFE_DEWDescription[] = _(
+static const u8 sLifeDewDescription[] = _(
 "喷洒出神奇的水，\n"
 "回复自己和场上同伴的HP。");
     
-static const u8 sOBSTRUCTDescription[] = _(
+static const u8 sObstructDescription[] = _(
 "完全抵挡攻击。连续使用易\n"
 "失败。触碰后防御大幅降低。");
     
-static const u8 sFALSE_SURRENDERDescription[] = _(
+static const u8 sFalseSurrenderDescription[] = _(
 "用凌乱的头发进行突刺。\n"
 "攻击必定会命中。");
     
-static const u8 sMETEOR_ASSAULTDescription[] = _(
+static const u8 sMeteorAssaultDescription[] = _(
 "大力挥舞粗壮的茎进行攻击。\n"
 "下一回合自己将无法动弹。");
     
-static const u8 sETERNABEAMDescription[] = _(
+static const u8 sEternabeamDescription[] = _(
 "发动的最强攻击。\n"
 "下一回合自己将无法动弹。");
     
-static const u8 sSTEEL_BEAMDescription[] = _(
+static const u8 sSteelBeamDescription[] = _(
 "钢铁化为光束激烈地发射。\n"
 "自己也会受到伤害。");
 
