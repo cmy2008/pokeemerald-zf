@@ -1,3 +1,8 @@
+VSSeeker_Text_TrainersNotReady::
+	.string "The other TRAINERS don't appear\n"
+	.string "to be ready for battle.\p"
+	.string "Let's wait till later.{PAUSE_UNTIL_PRESS}$"
+
 Route102_Text_CalvinIntro::
     .string "如果你随身带着宝可梦，那么\n你就是个正式的宝可梦训练师！\l你不能拒绝我的挑战！$"
 

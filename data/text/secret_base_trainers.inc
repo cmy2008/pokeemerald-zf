@@ -1,24 +1,24 @@
 SecretBase_Text_Trainer0Intro::
-    .string "Have you made a SECRET BASE already?\p"
-    .string "I went here, there, everywhere before\n"
-    .string "choosing this place.\p"
-    .string "Since you're already here, how would\n"
-    .string "you like to battle?$"
+	.string "Have you made a SECRET BASE already?\p"
+	.string "I went here, there, everywhere before\n"
+	.string "choosing this place.\p"
+	.string "Since you're already here, how would\n"
+	.string "you like to battle?$"
 
 SecretBase_Text_Trainer0AcceptBattle::
-    .string "Okay!\n"
-    .string "Here we come!$"
+	.string "Okay!\n"
+	.string "Here we come!$"
 
 SecretBase_Text_Trainer0DeclineBattle::
-    .string "Hunh?\n"
-    .string "Oh, you can't now…$"
+	.string "Hunh?\n"
+	.string "Oh, you can't now…$"
 
 SecretBase_Text_Trainer0Defeated::
     .string "哇啊啊！你真强！\n我输掉的事…请帮我保密！$"
 
 SecretBase_Text_Trainer0PostBattle::
-    .string "What do you think of my SECRET BASE?\n"
-    .string "Come visit me again tomorrow.$"
+	.string "What do you think of my SECRET BASE?\n"
+	.string "Come visit me again tomorrow.$"
 
 SecretBase_Text_Trainer0PreChampion::
     .string "Have you made a SECRET BASE already?\p"

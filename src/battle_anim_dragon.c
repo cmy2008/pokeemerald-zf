@@ -5,7 +5,6 @@
 #include "trig.h"
 #include "constants/rgb.h"
 
-static void AnimOutrageFlame(struct Sprite *);
 static void AnimDragonDanceOrb_Step(struct Sprite *);
 static void AnimOverheatFlame_Step(struct Sprite *);
 static void AnimTask_DragonDanceWaver_Step(u8);
@@ -14,7 +13,7 @@ static void AnimDragonRushStep(struct Sprite *sprite);
 static void AnimSpinningDracoMeteor(struct Sprite *sprite);
 static void AnimSpinningDracoMeteorFinish(struct Sprite *sprite);
 
-EWRAM_DATA static u16 gUnusedOverheatData[7] = {0};
+EWRAM_DATA static u16 sUnusedOverheatData[7] = {0};
 
 static const union AnimCmd sAnim_OutrageOverheatFire_0[] =
 {
@@ -316,7 +315,7 @@ static void AnimSpinningDracoMeteor(struct Sprite *sprite)
     StoreSpriteCallbackInData6(sprite, AnimSpinningDracoMeteorFinish);
 }
 
-static void AnimOutrageFlame(struct Sprite *sprite)
+void AnimOutrageFlame(struct Sprite *sprite)
 {
     sprite->x = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_X_2);
     sprite->y = GetBattlerSpriteCoord(gBattleAnimAttacker, BATTLER_COORD_Y_PIC_OFFSET);
@@ -555,7 +554,7 @@ void AnimOverheatFlame(struct Sprite *sprite)
     sprite->data[3] = gBattleAnimArgs[3];
     sprite->callback = AnimOverheatFlame_Step;
     for (i = 0; i < 7; i++)
-        gUnusedOverheatData[i] = sprite->data[i];
+        sUnusedOverheatData[i] = sprite->data[i];
 }
 
 static void AnimOverheatFlame_Step(struct Sprite *sprite)

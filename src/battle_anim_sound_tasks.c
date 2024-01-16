@@ -104,7 +104,7 @@ void SoundTask_LoopSEAdjustPanning(u8 taskId)
     gTasks[taskId].data[12] = r9;
 
     gTasks[taskId].func = SoundTask_LoopSEAdjustPanning_Step;
-    SoundTask_LoopSEAdjustPanning_Step(taskId);
+    gTasks[taskId].func(taskId);
 }
 
 static void SoundTask_LoopSEAdjustPanning_Step(u8 taskId)
@@ -139,10 +139,12 @@ void SoundTask_PlayCryHighPitch(u8 taskId)
     {
         if (gBattleAnimArgs[0] == ANIM_ATTACKER)
             species = gContestResources->moveAnim->species;
-        #ifndef UBFIX
+    // Destroying the task twice (here and at end of function)
+    // results in an incorrect value for gAnimVisualTaskCount
+    #ifndef BUGFIX
         else
-            DestroyAnimVisualTask(taskId); // UB: task gets destroyed twice.
-        #endif
+            DestroyAnimVisualTask(taskId);
+    #endif
     }
     else
     {
@@ -185,10 +187,12 @@ void SoundTask_PlayDoubleCry(u8 taskId)
     {
         if (gBattleAnimArgs[0] == ANIM_ATTACKER)
             species = gContestResources->moveAnim->species;
-        #ifndef UBFIX
+    // Destroying the task twice (here and at end of function)
+    // results in an incorrect value for gAnimVisualTaskCount
+    #ifndef BUGFIX
         else
-            DestroyAnimVisualTask(taskId); // UB: task gets destroyed twice.
-        #endif
+            DestroyAnimVisualTask(taskId);
+    #endif
     }
     else
     {
@@ -279,6 +283,11 @@ void SoundTask_WaitForCry(u8 taskId)
     }
 }
 
+void SoundTask_PlayNormalCry(u8 taskId)
+{
+    PlayCry_ByMode(gBattleMons[gBattleAnimAttacker].species, BattleAnimAdjustPanning(SOUND_PAN_ATTACKER), CRY_MODE_NORMAL);
+    gTasks[taskId].func = SoundTask_WaitForCry;
+}
 
 #define tSpecies data[1]
 #define tPan     data[2]
@@ -385,7 +394,7 @@ void SoundTask_AdjustPanningVar(u8 taskId)
     gTasks[taskId].data[11] = sourcePan;
 
     gTasks[taskId].func = SoundTask_AdjustPanningVar_Step;
-    SoundTask_AdjustPanningVar_Step(taskId);
+    gTasks[taskId].func(taskId);
 }
 
 static void SoundTask_AdjustPanningVar_Step(u8 taskId)

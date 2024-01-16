@@ -29,8 +29,8 @@ OldaleTown_EventScript_MoveMartEmployee::
 	setobjectmovementtype LOCALID_MART_EMPLOYEE, MOVEMENT_TYPE_FACE_DOWN
 	return
 
-OldaleTown_EventScript_CitySign::
-	msgbox OldaleTown_Text_CitySign, MSGBOX_SIGN
+OldaleTown_EventScript_TownSign::
+	msgbox OldaleTown_Text_TownSign, MSGBOX_SIGN
 	end
 
 OldaleTown_EventScript_Girl::
@@ -370,6 +370,6 @@ OldaleTown_Text_MayLetsGoBack:
 OldaleTown_Text_BrendanLetsGoBack:
     .string "佑树：我要回老爸的\n研究所去。\l{PLAYER}，你也该快点回去。$"
 
-OldaleTown_Text_CitySign:
+OldaleTown_Text_TownSign:
     .string "古辰镇\n“简单而朴实的小镇。”$"
 

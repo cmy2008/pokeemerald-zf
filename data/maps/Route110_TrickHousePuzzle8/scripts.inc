@@ -27,7 +27,7 @@ Route110_TrickHousePuzzle8_EventScript_Leroy::
 	msgbox Route110_TrickHousePuzzle8_Text_LeroyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route110_TrickHousePuzzle8_EventScript_WroteSecretCodeLockOpened:
+Route110_TrickHousePuzzle8_Text_WroteSecretCodeLockOpened:
     .string "{PLAYER}在门上写下\n密码。\p“我爱戏法大师”\n… … … … … … … …\p锁“咔嗒”一声开了！$"
 
 Route110_TrickHousePuzzle8_Text_VincentIntro:

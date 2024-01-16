@@ -314,7 +314,7 @@ Route110_TrickHousePuzzle7_EventScript_Everett::
 	msgbox Route110_TrickHousePuzzle7_Text_EverettPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route110_TrickHousePuzzle7_EventScript_WroteSecretCodeLockOpened:
+Route110_TrickHousePuzzle7_Text_WroteSecretCodeLockOpened:
     .string "{PLAYER}在门上写下\n密码。\p“我想拥抱戏法大师”\n… … … … … … … …\p锁“咔嗒”一声开了！$"
 
 Route110_TrickHousePuzzle7_Text_JoshuaIntro:

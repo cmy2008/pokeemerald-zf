@@ -21,7 +21,6 @@ sound/**/*.bin
 sound/songs/midi/*.s
 tools/agbcc
 *.map
-*.ld
 *.bat
 *.dump
 *.sa*
@@ -30,7 +29,8 @@ build/
 .DS_Store
 *.ddump
 .idea/
-porymap.project.cfg
+porymap.*.cfg
+prefabs.json
 .vscode/
 *.a
 .fuse_hidden*
@@ -38,3 +38,4 @@ porymap.project.cfg
 *.diff
 *.sym
 *.js
+src/data/map_group_count.h
