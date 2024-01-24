@@ -1,6 +1,9 @@
 gText_Birch_Welcome::
     .string "你好！让你久等了！\p欢迎来到精灵宝可梦的世界！\p我是小田卷。\p人们都称我为\n宝可梦博士。\p$"
 
+gText_Birch_Birthday::
+    .string "今天是张帆的生日，\n也许就是你的生日\p先祝你15岁生日快乐！\n这是我为你特别准备的礼物，\p也许它很粗糙，\n甚至还有许多BUG。\l但是，我并没有多少新东西带给你，\p接下来就是宝可梦的正常流程了，\p祝你游戏愉快！\p$"
+
 gText_Birch_Pokemon::
     .string "这就是叫做宝可梦的生物。$"
 

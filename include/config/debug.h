@@ -1,3 +1,4 @@
+#define ZF_BIRTHDAY                     FALSE
 #ifndef GUARD_CONFIG_DEBUG_H
 #define GUARD_CONFIG_DEBUG_H
 

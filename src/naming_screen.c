@@ -314,8 +314,8 @@ static const u8 sPageColumnCounts[KBPAGE_COUNT] = {
     [KEYBOARD_SYMBOLS]       = 6
 };
 static const u8 sPageColumnXPos[KBPAGE_COUNT][KBCOL_COUNT] = {
-    [KEYBOARD_LETTERS_LOWER] = {0, 12, 24, 56, 68, 80, 92, 123},
-    [KEYBOARD_LETTERS_UPPER] = {0, 12, 24, 56, 68, 80, 92, 123},
+    [KEYBOARD_LETTERS_LOWER] = {14, 48, 82, 116, 150},
+    [KEYBOARD_LETTERS_UPPER] = {14, 48, 82, 116, 150},
     [KEYBOARD_SYMBOLS]       = {0, 22, 44, 66, 88, 110}
 };
 

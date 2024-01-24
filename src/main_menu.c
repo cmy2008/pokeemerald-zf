@@ -198,6 +198,7 @@ static void NewGameBirchSpeech_StartFadePlatformOut(u8, u8);
 static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8);
 static void NewGameBirchSpeech_ShowDialogueWindow(u8, u8);
 static void NewGameBirchSpeech_ClearWindow(u8);
+static void Task_NewGameBirchSpeech_BirthDay(u8);
 static void Task_NewGameBirchSpeech_ThisIsAPokemon(u8);
 static void Task_NewGameBirchSpeech_MainSpeech(u8);
 static void NewGameBirchSpeech_WaitForThisIsPokemonText(struct TextPrinterTemplate *, u16);
@@ -1337,8 +1338,21 @@ static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8 taskId)
             NewGameBirchSpeech_ClearWindow(0);
             StringExpandPlaceholders(gStringVar4, gText_Birch_Welcome);
             AddTextPrinterForMessage(TRUE);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_ThisIsAPokemon;
+            gTasks[taskId].func = Task_NewGameBirchSpeech_BrithDay;
         }
+    }
+}
+
+static void Task_NewGameBirchSpeech_BrithDay(u8 taskId)
+{
+    if (!gPaletteFade.active && !RunTextPrintersAndIsPrinter0Active())
+    {
+        #if ZF_BIRTHDAY
+        gTasks[taskId].func = Task_NewGameBirchSpeech_ThisIsAPokemon;
+        StringExpandPlaceholders(gStringVar4, gText_Birch_Brithday);
+        AddTextPrinterForMessage(TRUE);
+        #endif
+        sBirchSpeechMainTaskId = taskId;
     }
 }
 
