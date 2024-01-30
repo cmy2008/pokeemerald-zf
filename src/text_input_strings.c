@@ -7,6 +7,20 @@ const u8 gText_EasyChatKeyboard_MNOPQRS[] = _("{CLEAR 11}M{CLEAR 6}N{CLEAR 6}O{C
 const u8 gText_EasyChatKeyboard_TUVWXYZ[] = _("{CLEAR 11}T{CLEAR 6}U{CLEAR 6}V{CLEAR 26}W{CLEAR 6}X{CLEAR 6}Y{CLEAR 6}Z{CLEAR 26} ");
 
 // Naming Screen keyboard
+#if PVPDALAO
+const u8 gText_NamingScreenKeyboard_abcdef[] = _("还{CLEAR 14}是{CLEAR 14}P{CLEAR 14}V{CLEAR 14}P{CLEAR 14}大{CLEAR 14}佬");
+const u8 gText_NamingScreenKeyboard_ghijkl[] = _("还{CLEAR 14}是{CLEAR 14}P{CLEAR 14}V{CLEAR 14}P{CLEAR 14}大{CLEAR 14}佬");
+const u8 gText_NamingScreenKeyboard_mnopqrs[] = _("还{CLEAR 14}是{CLEAR 14}P{CLEAR 14}V{CLEAR 14}P{CLEAR 14}大{CLEAR 14}佬");
+const u8 gText_NamingScreenKeyboard_tuvwxyz[] = _("还{CLEAR 14}是{CLEAR 14}P{CLEAR 14}V{CLEAR 14}P{CLEAR 14}大{CLEAR 14}佬");
+const u8 gText_NamingScreenKeyboard_ABCDEF[] = _("还{CLEAR 14}是{CLEAR 14}P{CLEAR 14}V{CLEAR 14}P{CLEAR 14}大{CLEAR 14}佬");
+const u8 gText_NamingScreenKeyboard_GHIJKL[] = _("还{CLEAR 14}是{CLEAR 14}P{CLEAR 14}V{CLEAR 14}P{CLEAR 14}大{CLEAR 14}佬");
+const u8 gText_NamingScreenKeyboard_MNOPQRS[] = _("还{CLEAR 14}是{CLEAR 14}P{CLEAR 14}V{CLEAR 14}P{CLEAR 14}大{CLEAR 14}佬");
+const u8 gText_NamingScreenKeyboard_TUVWXYZ[] = _("还{CLEAR 14}是{CLEAR 14}P{CLEAR 14}V{CLEAR 14}P{CLEAR 14}大{CLEAR 14}佬");
+const u8 gText_NamingScreenKeyboard_01234[] = _("{CLEAR 11}0{CLEAR 16}1{CLEAR 16}2{CLEAR 16}3{CLEAR 16}4{CLEAR 16} ");
+const u8 gText_NamingScreenKeyboard_56789[] = _("{CLEAR 11}5{CLEAR 16}6{CLEAR 16}7{CLEAR 16}8{CLEAR 16}9{CLEAR 16} ");
+const u8 gText_NamingScreenKeyboard_Symbols1[] = _("{CLEAR 12}!{CLEAR 17}?{CLEAR 16}大{CLEAR 16}佬{CLEAR 16}/{CLEAR 17}-");
+const u8 gText_NamingScreenKeyboard_Symbols2[] = _("{CLEAR 11}…{CLEAR 16}“{CLEAR 16}”{CLEAR 18}‘{CLEAR 19}'{CLEAR 18} ");
+#else
 const u8 gText_NamingScreenKeyboard_abcdef[] = _("{CLEAR 22}弓{CLEAR 22}长{CLEAR 22}巾{CLEAR 22}凡{CLEAR 22} {CLEAR 22} ");
 const u8 gText_NamingScreenKeyboard_ghijkl[] = _("{CLEAR 22}弓{CLEAR 22}长{CLEAR 22}巾{CLEAR 22}凡{CLEAR 22} {CLEAR 22} ");
 const u8 gText_NamingScreenKeyboard_mnopqrs[] = _("{CLEAR 22}弓{CLEAR 22}长{CLEAR 22}巾{CLEAR 22}凡{CLEAR 22} {CLEAR 22} ");
@@ -19,6 +33,8 @@ const u8 gText_NamingScreenKeyboard_01234[] = _("{CLEAR 11}0{CLEAR 16}1{CLEAR 16
 const u8 gText_NamingScreenKeyboard_56789[] = _("{CLEAR 11}5{CLEAR 16}6{CLEAR 16}7{CLEAR 16}8{CLEAR 16}9{CLEAR 16} ");
 const u8 gText_NamingScreenKeyboard_Symbols1[] = _("{CLEAR 12}!{CLEAR 17}?{CLEAR 16}张{CLEAR 16}帆{CLEAR 16}/{CLEAR 17}-");
 const u8 gText_NamingScreenKeyboard_Symbols2[] = _("{CLEAR 11}…{CLEAR 16}“{CLEAR 16}”{CLEAR 18}‘{CLEAR 19}'{CLEAR 18} ");
+#endif
+
 
 // Union Room Chat keyboard
 const u8 gText_UnionRoomChatKeyboard_ABCDE[] = _("ABCDE");

@@ -157,7 +157,7 @@ struct NamingScreenData
     u8 tilemapBuffer2[0x800];
     u8 tilemapBuffer3[0x800];
     u8 textBuffer[16];
-        u8 tileBuffer[0x600];
+    u8 tileBuffer[0x600];
     u8 state;
     u8 windows[WIN_COUNT];
     u16 inputCharBaseXPos;
@@ -278,7 +278,21 @@ static const struct WindowTemplate sWindowTemplates[WIN_COUNT + 1] =
 // This handles what characters get inserted when a key is pressed
 // The keys shown on the keyboard are handled separately by sNamingScreenKeyboardText
 static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
+    #if PVPDALAO
     [KEYBOARD_LETTERS_LOWER] = {
+        { 0x01, 0x02},
+        { 0x01, 0x02},
+        { 0x01, 0x02},
+        { 0x01, 0x02},
+    },
+    [KEYBOARD_LETTERS_UPPER] = {
+        { 0x01, 0x02},
+        { 0x01, 0x02},
+        { 0x01, 0x02},
+        { 0x01, 0x02},
+    },
+    #else
+        [KEYBOARD_LETTERS_LOWER] = {
         { 0x03,0x04,0x05,0x06 },
         { 0x03,0x04,0x05,0x06 },
         { 0x03,0x04,0x05,0x06 },
@@ -290,6 +304,7 @@ static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
         { 0x01, 0x02, 0x01, 0x02 },
         { 0x01, 0x02, 0x01, 0x02 },
     },
+    #endif
     //               x     2x 2x+1
     //'张' = 0x1038 0x01 > 0x02 0x03
     //'帆' = 0x03AE 0x02 > 0x06 0x07
@@ -304,19 +319,35 @@ static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
         __("…“”‘'   "),
     }
 };
-
+#if PVPDALAO
+static const u8 PVPChars[] = _("PVP大佬");
+static const u8 zfChars[] = _("  大佬");
+#else
 static const u8 zfChars[] = _("  张帆弓长巾凡");
+#endif
 //                              0x2 0x4 0x4 0x3 0x12
 
 static const u8 sPageColumnCounts[KBPAGE_COUNT] = {
+    #if PVPDALAO
+    [KEYBOARD_LETTERS_LOWER] = 2,
+    [KEYBOARD_LETTERS_UPPER] = 2,
+    [KEYBOARD_SYMBOLS]       = 6
+    #else
     [KEYBOARD_LETTERS_LOWER] = 4,
     [KEYBOARD_LETTERS_UPPER] = 4,
     [KEYBOARD_SYMBOLS]       = 6
+    #endif
 };
 static const u8 sPageColumnXPos[KBPAGE_COUNT][KBCOL_COUNT] = {
+    #if PVPDALAO
+    [KEYBOARD_LETTERS_LOWER] = {105, 130},
+    [KEYBOARD_LETTERS_UPPER] = {105, 130},
+    [KEYBOARD_SYMBOLS]       = {0, 22, 44, 66, 88, 110}
+    #else
     [KEYBOARD_LETTERS_LOWER] = {14, 48, 82, 116, 150},
     [KEYBOARD_LETTERS_UPPER] = {14, 48, 82, 116, 150},
     [KEYBOARD_SYMBOLS]       = {0, 22, 44, 66, 88, 110}
+    #endif
 };
 
 static const struct NamingScreenTemplate *const sNamingScreenTemplates[];
@@ -1144,7 +1175,7 @@ static void SetCursorPos(s16 x, s16 y)
     if (x < sPageColumnCounts[CurrentPageToKeyboardId()])
         cursorSprite->x = sPageColumnXPos[CurrentPageToKeyboardId()][x] + 38;
     else
-    cursorSprite->x = 0;
+        cursorSprite->x = 0;
 
     cursorSprite->y = y * 16 + 88;
     cursorSprite->sPrevX = cursorSprite->sX;
@@ -1864,6 +1895,12 @@ static void SaveInputText(void)
 {
     u8 i;
     u8 maxChars = sNamingScreen->template->maxChars;
+    #if PVPDALAO
+    for (i = 0; i < maxChars; i++)
+        sNamingScreen->textBuffer[i] = PVPChars[i];
+    sNamingScreen->textBuffer[maxChars] = EOS;
+    StringCopyN(sNamingScreen->destBuffer, sNamingScreen->textBuffer, sNamingScreen->template->maxChars + 1);
+    #else
     
     // temp2数组的大小是基于maxChars的最大可能值声明的
     u8 temp2[2 * maxChars + 1]; // 加1为了EOS
@@ -1885,6 +1922,7 @@ static void SaveInputText(void)
 
     // 复制temp2到目标缓冲区，只复制到EOS字符，因为我们已知字符串的实际长度
     StringCopyN(sNamingScreen->destBuffer, temp2, i * 2 + 1);
+    #endif
 }
 static void LoadGfx(void)
 {
@@ -1931,9 +1969,15 @@ static void DrawTextEntry(void)
 
     for (i = 0; i < maxChars; i++)
     {
-        
         temp[0] = zfChars[sNamingScreen->textBuffer[i]*2];
+        if (IsWideLetter(temp[0]) == FALSE)
+        {
+        temp[1] = gText_ExpandedPlaceholder_Empty[0];
+        }
+        else
+        {
         temp[1] = zfChars[sNamingScreen->textBuffer[i]*2+1];
+        }
         temp[2] = gText_ExpandedPlaceholder_Empty[0];
         temp[3] = gText_ExpandedPlaceholder_Empty[0];
         extraWidth = (IsWideLetter(temp[0]) == TRUE) ? 2 : 0;

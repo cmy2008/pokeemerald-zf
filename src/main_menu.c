@@ -1338,18 +1338,18 @@ static void Task_NewGameBirchSpeech_WaitForSpriteFadeInWelcome(u8 taskId)
             NewGameBirchSpeech_ClearWindow(0);
             StringExpandPlaceholders(gStringVar4, gText_Birch_Welcome);
             AddTextPrinterForMessage(TRUE);
-            gTasks[taskId].func = Task_NewGameBirchSpeech_BrithDay;
+            gTasks[taskId].func = Task_NewGameBirchSpeech_BirthDay;
         }
     }
 }
 
-static void Task_NewGameBirchSpeech_BrithDay(u8 taskId)
+static void Task_NewGameBirchSpeech_BirthDay(u8 taskId)
 {
     if (!gPaletteFade.active && !RunTextPrintersAndIsPrinter0Active())
     {
-        #if ZF_BIRTHDAY
         gTasks[taskId].func = Task_NewGameBirchSpeech_ThisIsAPokemon;
-        StringExpandPlaceholders(gStringVar4, gText_Birch_Brithday);
+        #if ZF_BIRTHDAY
+        StringExpandPlaceholders(gStringVar4, gText_Birch_BirthDay);
         AddTextPrinterForMessage(TRUE);
         #endif
         sBirchSpeechMainTaskId = taskId;

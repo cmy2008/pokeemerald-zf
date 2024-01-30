@@ -20,7 +20,7 @@ gText_Birch_WhatsYourName::
     .string "那么。\n告诉我你的名字吧！$"
 
 gText_Birch_SoItsPlayer::
-    .string "是{PLAYER}{KUN}吗？$"
+    .string "还是{PLAYER}{KUN}吗？$"
 
 gText_Birch_YourePlayer::
     .string "啊，没错！\p你就是刚搬到\n未白镇来的{PLAYER}{KUN}啊。\l我知道了！\p$"

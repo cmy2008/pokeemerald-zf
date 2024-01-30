@@ -1,4 +1,5 @@
 #define ZF_BIRTHDAY                     FALSE
+#define PVPDALAO                        TRUE
 #ifndef GUARD_CONFIG_DEBUG_H
 #define GUARD_CONFIG_DEBUG_H
 
