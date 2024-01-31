@@ -214,7 +214,6 @@ static const u8 sMapName_MAPSEC_DESERT_UNDERPASS[] = _("沙漠地下通道");
 static const u8 sMapName_MAPSEC_ALTERING_CAVE[] = _("变化洞窟");
 static const u8 sMapName_MAPSEC_NAVEL_ROCK[] = _("肚脐岩");
 static const u8 sMapName_MAPSEC_TRAINER_HILL[] = _("训练师之丘");
-static const u8 sMapName_MAPSEC_PVPDALAO[] = _("PVP大佬");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_LITTLEROOT_TOWN] = { 4, 11, 1, 1, sMapName_MAPSEC_LITTLEROOT_TOWN },
@@ -430,7 +429,6 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_ALTERING_CAVE] = { 6, 8, 1, 1, sMapName_MAPSEC_ALTERING_CAVE },
     [MAPSEC_NAVEL_ROCK] = { 0, 0, 1, 1, sMapName_MAPSEC_NAVEL_ROCK },
     [MAPSEC_TRAINER_HILL] = { 8, 4, 1, 1, sMapName_MAPSEC_TRAINER_HILL },
-    [MAPSEC_PVPDALAO] = { 0, 19, 1, 1, sMapName_MAPSEC_PVPDALAO },
 };
 
 #endif // GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H

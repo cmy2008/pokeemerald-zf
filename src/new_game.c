@@ -127,9 +127,9 @@ static void ClearFrontierRecord(void)
 static void WarpToTruck(void)
 {
     #if PVPDALAO
-    SetVar(VAR_PVPDALAO, 10)
+    VarSet(VAR_PVPDALAO, 0);
     #else
-    SetVar(VAR_PVPDALAO, 0)
+    VarSet(VAR_PVPDALAO, 10);
     #endif
     SetWarpDestination(MAP_GROUP(INSIDE_OF_TRUCK), MAP_NUM(INSIDE_OF_TRUCK), WARP_ID_NONE, -1, -1);
     WarpIntoMap();
