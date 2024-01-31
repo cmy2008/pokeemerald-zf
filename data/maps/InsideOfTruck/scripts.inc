@@ -17,8 +17,25 @@ InsideOfTruck_EventScript_SetIntroFlags::
 	lockall
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	checkplayergender
+	goto_if_eq VAR_PVPDALAO, 10, InsideOfTruck_EventScript_MaleTrigger
+	goto_if_eq VAR_PVPDALAO, 0, InsideOfTruck_EventScript_WrapToDalao
+	end
+
+InsideOfTruck_EventScript_MaleTrigger::
 	goto_if_eq VAR_RESULT, MALE, InsideOfTruck_EventScript_SetIntroFlagsMale
 	goto_if_eq VAR_RESULT, FEMALE, InsideOfTruck_EventScript_SetIntroFlagsFemale
+
+InsideOfTruck_EventScript_WrapToDalao::
+	setrespawn HEAL_LOCATION_PVPDALAO
+	setvar VAR_LITTLEROOT_INTRO_STATE, 1
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_MOM
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_MOM
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F_POKE_BALL
+	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 1
+	setdynamicwarp MAP_PVPDALAO, 0, 19
+	releaseall
 	end
 
 InsideOfTruck_EventScript_SetIntroFlagsMale::

@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PVPdalao/border.bin",
       "blockdata_filepath": "data/layouts/PVPdalao/map.bin"
+    },
+    {
+      "id": "LAYOUT_PVPDALAO2",
+      "name": "PVPdalao2_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/PVPdalao2/border.bin",
+      "blockdata_filepath": "data/layouts/PVPdalao2/map.bin"
     }
   ]
 }

@@ -124,6 +124,11 @@
 #define BERRY_TREE_ROUTE_123_PECHA    87
 #define BERRY_TREE_ROUTE_123_SITRUS   88
 #define BERRY_TREE_ROUTE_123_RAWST    89
+#define BERRY_TREE_PVPDALAO_1         90
+#define BERRY_TREE_PVPDALAO_2         91
+#define BERRY_TREE_PVPDALAO_3         92
+#define BERRY_TREE_PVPDALAO_4         93
+#define BERRY_TREE_PVPDALAO_5         94
 
 // Remainder are unused
 

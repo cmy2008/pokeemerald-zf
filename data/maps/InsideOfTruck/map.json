@@ -57,7 +57,7 @@
   "warp_events": [
     {
       "x": 4,
-      "y": 1,
+      "y": 3,
       "elevation": 0,
       "dest_map": "MAP_DYNAMIC",
       "dest_warp_id": "WARP_ID_DYNAMIC"
@@ -71,7 +71,7 @@
     },
     {
       "x": 4,
-      "y": 3,
+      "y": 1,
       "elevation": 0,
       "dest_map": "MAP_DYNAMIC",
       "dest_warp_id": "WARP_ID_DYNAMIC"

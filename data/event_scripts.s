@@ -1030,3 +1030,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/PVPdalao/scripts.inc"
+
+	.include "data/maps/PVPdalao2/scripts.inc"
