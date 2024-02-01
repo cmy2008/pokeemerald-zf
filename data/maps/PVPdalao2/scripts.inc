@@ -1,7 +1,6 @@
 PVPdalao2_MapScripts::
 # 2 ".\\PVPdalao2.pory"
-	setvar VAR_PVPDALAO, 3
-	return
+	.byte 0
 
 
 PVPdalao_Trainer::

@@ -1,8 +1,6 @@
 PVPdalao_MapScripts::
 # 3 ".\\PVPdalao.pory"
-	setvar VAR_PVPDALAO, 0
-	return
-
+	.byte 0
 
 PVPdalao_Main::
 # 8 ".\\PVPdalao.pory"
@@ -60,8 +58,7 @@ PVPdalao_Main_7:
 # 25 ".\\PVPdalao.pory"
 	msgbox PVPdalao_String
 # 26 ".\\PVPdalao.pory"
-	setvar VAR_PVPDALAO, 6
-	return
+	.byte 0
 
 
 PVPdalao_Main_Text_0:
