@@ -1,6 +1,7 @@
 PVPdalao_MapScripts::
 # 3 ".\\PVPdalao.pory"
-	.byte 0
+	setvar VAR_PVPDALAO, 0
+	return
 
 
 PVPdalao_Main::
@@ -16,6 +17,8 @@ PVPdalao_Main::
 	case 3, PVPdalao_Main_5
 # 21 ".\\PVPdalao.pory"
 	case 4, PVPdalao_Main_6
+# 24 ".\\PVPdalao.pory"
+	case 5, PVPdalao_Main_7
 	return
 
 PVPdalao_Main_2:
@@ -43,7 +46,7 @@ PVPdalao_Main_5:
 # 19 ".\\PVPdalao.pory"
 	msgbox PVPdalao_Main_Text_3, MSGBOX_AUTOCLOSE
 # 20 ".\\PVPdalao.pory"
-	setvar VAR_PVPDALAO, 1
+	setvar VAR_PVPDALAO, 4
 	return
 
 PVPdalao_Main_6:
@@ -51,6 +54,13 @@ PVPdalao_Main_6:
 	msgbox PVPdalao_String, MSGBOX_AUTOCLOSE
 # 23 ".\\PVPdalao.pory"
 	setvar VAR_PVPDALAO, 5
+	return
+
+PVPdalao_Main_7:
+# 25 ".\\PVPdalao.pory"
+	msgbox PVPdalao_String
+# 26 ".\\PVPdalao.pory"
+	setvar VAR_PVPDALAO, 6
 	return
 
 
@@ -71,5 +81,5 @@ PVPdalao_Main_Text_3:
 	.string "生存大师$"
 
 PVPdalao_String::
-# 28 ".\\PVPdalao.pory"
+# 31 ".\\PVPdalao.pory"
 	.string "还是PVP大佬$"
