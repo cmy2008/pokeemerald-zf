@@ -12,7 +12,13 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_PVPDALAO",
+      "offset": 0,
+      "direction": "down"
+    }
+  ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
@@ -24,7 +30,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_PVPDALAO_1",
-      "script": "NULL",
+      "script": "BerryTreeScript",
       "flag": "0"
     },
     {
@@ -37,7 +43,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_PVPDALAO_2",
-      "script": "NULL",
+      "script": "BerryTreeScript",
       "flag": "0"
     },
     {
@@ -50,7 +56,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_PVPDALAO_3",
-      "script": "NULL",
+      "script": "BerryTreeScript",
       "flag": "0"
     },
     {
@@ -63,7 +69,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_PVPDALAO_4",
-      "script": "NULL",
+      "script": "BerryTreeScript",
       "flag": "0"
     },
     {
@@ -76,7 +82,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "BERRY_TREE_PVPDALAO_5",
-      "script": "NULL",
+      "script": "BerryTreeScript",
       "flag": "0"
     },
     {

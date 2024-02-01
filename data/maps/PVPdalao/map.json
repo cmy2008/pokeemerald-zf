@@ -12,7 +12,13 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": 0,
+  "connections": [
+    {
+      "map": "MAP_PVPDALAO2",
+      "offset": 0,
+      "direction": "up"
+    }
+  ],
   "object_events": [
 
   ],
@@ -78,6 +84,87 @@
       "elevation": 0,
       "var": "VAR_PVPDALAO",
       "var_value": "4",
+      "script": "PVPdalao_Main"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_PVPDALAO",
+      "var_value": "3",
+      "script": "PVPdalao_Main"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_PVPDALAO",
+      "var_value": "3",
+      "script": "PVPdalao_Main"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_PVPDALAO",
+      "var_value": "3",
+      "script": "PVPdalao_Main"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_PVPDALAO",
+      "var_value": "2",
+      "script": "PVPdalao_Main"
+    },
+    {
+      "type": "trigger",
+      "x": 1,
+      "y": 9,
+      "elevation": 0,
+      "var": "VAR_PVPDALAO",
+      "var_value": "2",
+      "script": "PVPdalao_Main"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_PVPDALAO",
+      "var_value": "2",
+      "script": "PVPdalao_Main"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_PVPDALAO",
+      "var_value": "1",
+      "script": "PVPdalao_Main"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_PVPDALAO",
+      "var_value": "1",
+      "script": "PVPdalao_Main"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 10,
+      "elevation": 0,
+      "var": "VAR_PVPDALAO",
+      "var_value": "1",
       "script": "PVPdalao_Main"
     }
   ],
