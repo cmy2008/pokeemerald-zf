@@ -41,12 +41,6 @@ jobs:
           ./install.sh ../
         working-directory: agbcc
 
-      - name: Agbcc
-        env:
-          MODERN: 0
-          COMPARE: 0
-        run: make -j${nproc} -O all
-
       - name: Modern
         env:
           MODERN: 1
@@ -57,6 +51,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Pokeemerald
-          path: |
-              pokeemerald.gba
-              pokeemerald_modern.gba
+          path: pokeemerald.gba
