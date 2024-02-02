@@ -70,51 +70,6 @@
     },
     {
       "type": "trigger",
-      "x": 5,
-      "y": 5,
-      "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "3",
-      "script": "PVPdalao_Main"
-    },
-    {
-      "type": "trigger",
-      "x": 2,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "4",
-      "script": "PVPdalao_Main"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "3",
-      "script": "PVPdalao_Main"
-    },
-    {
-      "type": "trigger",
-      "x": 5,
-      "y": 6,
-      "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "3",
-      "script": "PVPdalao_Main"
-    },
-    {
-      "type": "trigger",
-      "x": 6,
-      "y": 5,
-      "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "3",
-      "script": "PVPdalao_Main"
-    },
-    {
-      "type": "trigger",
       "x": 2,
       "y": 9,
       "elevation": 0,
