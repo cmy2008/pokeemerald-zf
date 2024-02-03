@@ -1,0 +1,8 @@
+raw`PVPdalao2_MapScripts::
+    .byte 0
+`
+
+script PVPdalao_Trainer {
+    trainerbattle_single(TRAINER_MAY_PLACEHOLDER, PVPdalao_String, PVPdalao_String)
+    msgbox(PVPdalao_String)
+}
