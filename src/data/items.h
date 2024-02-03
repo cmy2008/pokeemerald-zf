@@ -69,7 +69,11 @@ const struct Item gItems[] =
 
     [ITEM_MASTER_BALL] =
     {
+        #if PVPDALAO
+        .name = _("下界合金剑")
+        #else
         .name = _("大师球"),
+        #endif
         .price = 0,
         .description = sMasterBallDesc,
         .pocket = POCKET_POKE_BALLS,

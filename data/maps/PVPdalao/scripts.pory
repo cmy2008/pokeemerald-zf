@@ -1,4 +1,5 @@
 raw`PVPdalao_MapScripts::
+    map_script MAP_SCRIPT_ON_FRAME_TABLE, PVPdalo_Onfarme
     .byte 0
 `
 
@@ -22,15 +23,23 @@ script PVPdalao_Main {
         setvar(VAR_PVPDALAO, 5)
         case 5:
         msgbox("又或是起床大佬", MSGBOX_AUTOCLOSE)
-        setvar(VAR_PVPDALAO, 6)
+        setvar(VAR_PVPDALAO, 9)
         case 6:
         msgbox("又或是建筑大佬", MSGBOX_AUTOCLOSE)
-        setvar(VAR_PVPDALAO, 7)
+        clearflag(FLAG_HIDE_BED)
+        setvar(VAR_PVPDALAO, 10)
         case 7:
         msgbox("又或是红石大佬", MSGBOX_AUTOCLOSE)
-        setvar(VAR_PVPDALAO, 8)
+        setvar(VAR_PVPDALAO, 11)
         case 8:
         msgbox("还是什么都不知道的小白")
+        case 9:
+        msgbox("假装这是床")
+        setflag(FLAG_HIDE_BED)
+        case 10:
+        msgbox("唐氏绝门     {UP_ARROW}")
+        case 11:
+        msgbox("错误：在宝可梦中未找到对象\n“红石”，请联系开发者寻求帮助")
     }
     // releaseall
 }
@@ -38,6 +47,10 @@ script PVPdalao_Main {
 script Msgbox_PVPdalao {
     msgbox(PVPdalao_String, MSGBOX_AUTOCLOSE)
     delay(2)
+}
+
+script PVPdalo_Onfarme {
+    setflag(FLAG_HIDE_BED)
 }
 
 text PVPdalao_String {
