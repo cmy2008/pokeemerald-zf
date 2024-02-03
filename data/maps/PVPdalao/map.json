@@ -185,15 +185,6 @@
     },
     {
       "type": "trigger",
-      "x": 33,
-      "y": -8,
-      "elevation": 0,
-      "var": "",
-      "var_value": "",
-      "script": "Msgbox_PVPdalao"
-    },
-    {
-      "type": "trigger",
       "x": 10,
       "y": 6,
       "elevation": 0,
@@ -204,7 +195,7 @@
     {
       "type": "trigger",
       "x": 10,
-      "y": 14,
+      "y": 15,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
@@ -222,7 +213,7 @@
     {
       "type": "trigger",
       "x": 10,
-      "y": 3,
+      "y": 2,
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
