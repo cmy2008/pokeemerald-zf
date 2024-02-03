@@ -24,12 +24,6 @@ PVPdalao_Main::
 	case 7, PVPdalao_Main_9
 # 33 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	case 8, PVPdalao_Main_10
-# 35 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	case 9, PVPdalao_Main_11
-# 38 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	case 10, PVPdalao_Main_12
-# 40 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	case 11, PVPdalao_Main_13
 	return
 
 PVPdalao_Main_2:
@@ -71,7 +65,7 @@ PVPdalao_Main_7:
 # 24 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	msgbox PVPdalao_Main_Text_4, MSGBOX_AUTOCLOSE
 # 25 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	setvar VAR_PVPDALAO, 9
+	setvar VAR_PVPDALAO, 6
 	return
 
 PVPdalao_Main_8:
@@ -80,14 +74,14 @@ PVPdalao_Main_8:
 # 28 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	clearflag FLAG_HIDE_BED
 # 29 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	setvar VAR_PVPDALAO, 10
+	setvar VAR_PVPDALAO, 7
 	return
 
 PVPdalao_Main_9:
 # 31 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	msgbox PVPdalao_Main_Text_6, MSGBOX_AUTOCLOSE
 # 32 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	setvar VAR_PVPDALAO, 11
+	setvar VAR_PVPDALAO, 8
 	return
 
 PVPdalao_Main_10:
@@ -95,29 +89,32 @@ PVPdalao_Main_10:
 	msgbox PVPdalao_Main_Text_7
 	return
 
-PVPdalao_Main_11:
-# 36 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	msgbox PVPdalao_Main_Text_8
-# 37 ".\\data\\maps\\PVPdalao\\scripts.pory"
+
+Msgbox_PVPdalao::
+# 40 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	msgbox PVPdalao_String, MSGBOX_AUTOCLOSE
+# 41 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	delay 2
+	return
+
+
+PVPdalao_Bed::
+# 45 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	msgbox PVPdalao_Bed_Text_0
+# 46 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	setflag FLAG_HIDE_BED
 	return
 
-PVPdalao_Main_12:
-# 39 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	msgbox PVPdalao_Main_Text_9
-	return
 
-PVPdalao_Main_13:
-# 41 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	msgbox PVPdalao_Main_Text_10
+Msgbox_Men::
+# 50 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	msgbox Msgbox_Men_Text_0
 	return
 
 
-Msgbox_PVPdalao::
-# 47 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	msgbox PVPdalao_String, MSGBOX_AUTOCLOSE
-# 48 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	delay 2
+Msgbox_Redstone::
+# 54 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	msgbox Msgbox_Redstone_Text_0
 	return
 
 
@@ -153,18 +150,18 @@ PVPdalao_Main_Text_7:
 # 34 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "还是什么都不知道的小白$"
 
-PVPdalao_Main_Text_8:
-# 36 ".\\data\\maps\\PVPdalao\\scripts.pory"
+PVPdalao_Bed_Text_0:
+# 45 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "假装这是床$"
 
-PVPdalao_Main_Text_9:
-# 39 ".\\data\\maps\\PVPdalao\\scripts.pory"
+Msgbox_Men_Text_0:
+# 50 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "唐氏绝门     {UP_ARROW}$"
 
-PVPdalao_Main_Text_10:
-# 41 ".\\data\\maps\\PVPdalao\\scripts.pory"
+Msgbox_Redstone_Text_0:
+# 54 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "错误：在宝可梦中未找到对象\n“红石”，请联系开发者寻求帮助$"
 
 PVPdalao_String::
-# 51 ".\\data\\maps\\PVPdalao\\scripts.pory"
+# 56 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "还是PVP大佬$"

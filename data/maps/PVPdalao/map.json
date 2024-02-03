@@ -35,7 +35,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PVPdalao_Main",
+      "script": "Msgbox_Men",
       "flag": "FLAG_HIDE_MEN"
     },
     {
@@ -185,21 +185,12 @@
     },
     {
       "type": "trigger",
-      "x": 10,
-      "y": 8,
+      "x": 33,
+      "y": -8,
       "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "4",
-      "script": "PVPdalao_Main"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 15,
-      "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "4",
-      "script": "PVPdalao_Main"
+      "var": "",
+      "var_value": "",
+      "script": "Msgbox_PVPdalao"
     },
     {
       "type": "trigger",
@@ -213,11 +204,29 @@
     {
       "type": "trigger",
       "x": 10,
+      "y": 14,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Msgbox_PVPdalao"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Msgbox_PVPdalao"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
       "y": 3,
       "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "4",
-      "script": "PVPdalao_Main"
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Msgbox_PVPdalao"
     }
   ],
   "bg_events": [

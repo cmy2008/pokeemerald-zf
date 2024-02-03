@@ -22,23 +22,16 @@ script PVPdalao_Main {
         setvar(VAR_PVPDALAO, 5)
         case 5:
         msgbox("又或是起床大佬", MSGBOX_AUTOCLOSE)
-        setvar(VAR_PVPDALAO, 9)
+        setvar(VAR_PVPDALAO, 6)
         case 6:
         msgbox("又或是建筑大佬", MSGBOX_AUTOCLOSE)
         clearflag(FLAG_HIDE_BED)
-        setvar(VAR_PVPDALAO, 10)
+        setvar(VAR_PVPDALAO, 7)
         case 7:
         msgbox("又或是红石大佬", MSGBOX_AUTOCLOSE)
-        setvar(VAR_PVPDALAO, 11)
+        setvar(VAR_PVPDALAO, 8)
         case 8:
         msgbox("还是什么都不知道的小白")
-        case 9:
-        msgbox("假装这是床")
-        setflag(FLAG_HIDE_BED)
-        case 10:
-        msgbox("唐氏绝门     {UP_ARROW}")
-        case 11:
-        msgbox("错误：在宝可梦中未找到对象\n“红石”，请联系开发者寻求帮助")
     }
     // releaseall
 }
@@ -48,6 +41,18 @@ script Msgbox_PVPdalao {
     delay(2)
 }
 
+script PVPdalao_Bed {
+    msgbox("假装这是床")
+    setflag(FLAG_HIDE_BED)
+}
+
+script Msgbox_Men {
+    msgbox("唐氏绝门     {UP_ARROW}")
+}
+
+script Msgbox_Redstone {
+    msgbox("错误：在宝可梦中未找到对象\n“红石”，请联系开发者寻求帮助")
+}
 text PVPdalao_String {
     "还是PVP大佬"
 }
