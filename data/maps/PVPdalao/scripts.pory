@@ -1,5 +1,4 @@
 raw`PVPdalao_MapScripts::
-    map_script MAP_SCRIPT_ON_FRAME_TABLE, PVPdalo_Onfarme
     .byte 0
 `
 
@@ -47,10 +46,6 @@ script PVPdalao_Main {
 script Msgbox_PVPdalao {
     msgbox(PVPdalao_String, MSGBOX_AUTOCLOSE)
     delay(2)
-}
-
-script PVPdalo_Onfarme {
-    setflag(FLAG_HIDE_BED)
 }
 
 text PVPdalao_String {
