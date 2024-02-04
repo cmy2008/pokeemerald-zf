@@ -183,29 +183,29 @@
     {
       "type": "trigger",
       "x": 2,
-      "y": 4,
+      "y": 1,
       "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "4",
-      "script": "PVPdalao_Main"
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Msgbox_PVPdalao"
+    },
+    {
+      "type": "trigger",
+      "x": 2,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Msgbox_PVPdalao"
     },
     {
       "type": "trigger",
       "x": 2,
       "y": 5,
       "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "4",
-      "script": "PVPdalao_Main"
-    },
-    {
-      "type": "trigger",
-      "x": 2,
-      "y": 0,
-      "elevation": 0,
-      "var": "VAR_PVPDALAO",
-      "var_value": "4",
-      "script": "PVPdalao_Main"
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Msgbox_PVPdalao"
     }
   ],
   "bg_events": [

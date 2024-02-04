@@ -7,6 +7,7 @@ script PVPdalao_Main {
     switch (var(VAR_PVPDALAO)) {
         case 0:
         msgbox("你好，陌生人", MSGBOX_AUTOCLOSE)
+        setvar(VAR_TEMP_0, 0)
         setvar(VAR_PVPDALAO, 1)
         case 1:
         msgbox("GRW团队诞生了", MSGBOX_AUTOCLOSE)
@@ -25,13 +26,15 @@ script PVPdalao_Main {
         setvar(VAR_PVPDALAO, 6)
         case 6:
         msgbox("又或是建筑大佬", MSGBOX_AUTOCLOSE)
-        clearflag(FLAG_HIDE_BED)
+        clearflag(FLAG_HIDE_MEN)
         setvar(VAR_PVPDALAO, 7)
+        warp(MAP_PVPDALAO, 10, 19)
         case 7:
         msgbox("又或是红石大佬", MSGBOX_AUTOCLOSE)
         setvar(VAR_PVPDALAO, 8)
         case 8:
         msgbox("还是什么都不知道的小白")
+        setvar(VAR_PVPDALAO, 9)
     }
     // releaseall
 }
