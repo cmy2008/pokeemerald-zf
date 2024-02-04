@@ -73,5 +73,5 @@ InsideOfTruck_Text_BoxPrintedWithMonLogo:
     .string "盒子上印着宝可梦的商标。\p这是宝可梦牌\n搬家服务。$"
 
 InsideOfTruck_Text_Copyright:
-	.string "作者：可受的猪灵@Bilibili\n开源作品，禁止商业，禁止倒卖，如需转载请注明原作者$"
+	.string "作者：可受的猪灵{EMOJI_AT}Bilibili\n开源作品，禁止商业，禁止倒卖，如需转载请注明原作者$"
 
