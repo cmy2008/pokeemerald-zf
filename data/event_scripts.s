@@ -1027,7 +1027,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/test_signpost.inc"
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
+	#if PVPDALAO
+	.include "data/text/birch_speech2.inc"
+	#else
 	.include "data/text/birch_speech.inc"
+	#endif
 
 	.include "data/maps/PVPdalao/scripts.inc"
 
