@@ -33,7 +33,7 @@ script PVPdalao_Main {
         msgbox("又或是红石大佬", MSGBOX_AUTOCLOSE)
         setvar(VAR_PVPDALAO, 8)
         case 8:
-        msgbox("还是什么都不知道的小白")
+        msgbox("还是什么都不知道的小白", MSGBOX_AUTOCLOSE)
         setvar(VAR_PVPDALAO, 9)
     }
     // releaseall
@@ -51,11 +51,11 @@ script PVPdalao_Bed {
 }
 
 script Msgbox_Men {
-    msgbox("唐氏绝门                    {UP_ARROW}")
+    msgbox("绝世唐门                       {UP_ARROW}", MSGBOX_AUTOCLOSE)
 }
 
 script Msgbox_Redstone {
-    msgbox("错误：在宝可梦中未找到对象\n“红石”，请联系开发者寻求帮助")
+    msgbox("错误：在宝可梦中未找到对象“红石”，\n请联系开发者寻求帮助")
 }
 text PVPdalao_String {
     "还是PVP大佬"

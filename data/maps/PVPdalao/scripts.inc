@@ -90,7 +90,7 @@ PVPdalao_Main_9:
 
 PVPdalao_Main_10:
 # 36 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	msgbox PVPdalao_Main_Text_7
+	msgbox PVPdalao_Main_Text_7, MSGBOX_AUTOCLOSE
 # 37 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	setvar VAR_PVPDALAO, 9
 	return
@@ -116,7 +116,7 @@ PVPdalao_Bed::
 
 Msgbox_Men::
 # 54 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	msgbox Msgbox_Men_Text_0
+	msgbox Msgbox_Men_Text_0, MSGBOX_AUTOCLOSE
 	return
 
 
@@ -164,11 +164,11 @@ PVPdalao_Bed_Text_0:
 
 Msgbox_Men_Text_0:
 # 54 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	.string "唐氏绝门                    {UP_ARROW}$"
+	.string "绝世唐门                       {UP_ARROW}$"
 
 Msgbox_Redstone_Text_0:
 # 58 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	.string "错误：在宝可梦中未找到对象\n“红石”，请联系开发者寻求帮助$"
+	.string "错误：在宝可梦中未找到对象“红石”，\n请联系开发者寻求帮助$"
 
 PVPdalao_String::
 # 60 ".\\data\\maps\\PVPdalao\\scripts.pory"

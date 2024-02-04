@@ -218,6 +218,15 @@
       "var": "VAR_TEMP_0",
       "var_value": "0",
       "script": "Msgbox_PVPdalao"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "Msgbox_PVPdalao"
     }
   ],
   "bg_events": [
