@@ -15,6 +15,7 @@ InsideOfTruck_OnResume:
 
 InsideOfTruck_EventScript_SetIntroFlags::
 	lockall
+	msgbox InsideOfTruck_Text_Copyright, MSGBOX_DEFAULT
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	checkplayergender
 	goto_if_eq VAR_PVPDALAO, 10, InsideOfTruck_EventScript_MaleTrigger
@@ -70,4 +71,7 @@ InsideOfTruck_EventScript_MovingBox::
 
 InsideOfTruck_Text_BoxPrintedWithMonLogo:
     .string "盒子上印着宝可梦的商标。\p这是宝可梦牌\n搬家服务。$"
+
+InsideOfTruck_Text_Copyright:
+	.string "作者：可受的猪灵@Bilibili\n开源作品，禁止商业，禁止倒卖，如需转载请注明原作者$"
 

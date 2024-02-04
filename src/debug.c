@@ -449,7 +449,7 @@ static const u8 sDebugText_Dashes[] =        _("---");
 static const u8 sDebugText_Empty[] =         _("");
 static const u8 sDebugText_Continue[] =      _("继续…{CLEAR_TO 110}{RIGHT_ARROW}");
 // Main Menu
-static const u8 sDebugText_Utilities[] =        _("通用…{CLEAR_TO 110}{RIGHT_ARROW}");
+static const u8 sDebugText_Utilities[] =        _("忘关了就是开了？{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_PartyBoxes[] =       _("队伍/盒子…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_Scripts[] =          _("脚本…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_FlagsVars[] =        _("Flags & Vars…{CLEAR_TO 110}{RIGHT_ARROW}");
@@ -484,8 +484,8 @@ static const u8 sDebugText_Util_WatchCredits[] =             _("查看制作人�
 static const u8 sDebugText_Util_Player_Name[] =              _("玩家名");
 static const u8 sDebugText_Util_Player_Gender[] =            _("切换玩家性别");
 static const u8 sDebugText_Util_Player_Id[] =                _("新建训练家 Id");
-static const u8 sDebugText_Util_CheatStart[] =               _("启动作弊");
-static const u8 sDebugText_Util_ExpansionVersion[] =         _("Expansion 版本号");
+static const u8 sDebugText_Util_CheatStart[] =               _("开了就是开了");
+static const u8 sDebugText_Util_ExpansionVersion[] =         _("原作者：可受的猪灵@bilibili(Expansion 版本号)");
 // Party/Boxes Menu
 static const u8 sDebugText_PartyBoxes_AccessPC[] =           _("访问 PC");
 static const u8 sDebugText_PartyBoxes_MoveReminder[] =       _("招式教学狂");

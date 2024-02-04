@@ -144,13 +144,7 @@
     }
   ],
   "warp_events": [
-    {
-      "x": 4,
-      "y": 2,
-      "elevation": 0,
-      "dest_map": "MAP_PVPDALAO2",
-      "dest_warp_id": "0"
-    }
+
   ],
   "coord_events": [
     {
