@@ -18,8 +18,8 @@ script PVPdalao_Main {
         msgbox("生存大师", MSGBOX_AUTOCLOSE)
         setvar(VAR_PVPDALAO, 4)
         case 4:
-        goto(Msgbox_PVPdalao)
         setvar(VAR_PVPDALAO, 5)
+        goto(Msgbox_PVPdalao)
         case 5:
         msgbox("又或是起床大佬", MSGBOX_AUTOCLOSE)
         setvar(VAR_PVPDALAO, 6)
@@ -42,8 +42,9 @@ script Msgbox_PVPdalao {
 }
 
 script PVPdalao_Bed {
-    msgbox("假装这是床")
+    msgbox("假装这是床", MSGBOX_AUTOCLOSE)
     setflag(FLAG_HIDE_BED)
+    warp(MAP_PVPDALAO2, 4, 2)
 }
 
 script Msgbox_Men {

@@ -56,9 +56,9 @@ PVPdalao_Main_5:
 
 PVPdalao_Main_6:
 # 21 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	goto Msgbox_PVPdalao
-# 22 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	setvar VAR_PVPDALAO, 5
+# 22 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	goto Msgbox_PVPdalao
 	return
 
 PVPdalao_Main_7:
@@ -100,20 +100,22 @@ Msgbox_PVPdalao::
 
 PVPdalao_Bed::
 # 45 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	msgbox PVPdalao_Bed_Text_0
+	msgbox PVPdalao_Bed_Text_0, MSGBOX_AUTOCLOSE
 # 46 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	setflag FLAG_HIDE_BED
+# 47 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	warp MAP_PVPDALAO2, 4, 2
 	return
 
 
 Msgbox_Men::
-# 50 ".\\data\\maps\\PVPdalao\\scripts.pory"
+# 51 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	msgbox Msgbox_Men_Text_0
 	return
 
 
 Msgbox_Redstone::
-# 54 ".\\data\\maps\\PVPdalao\\scripts.pory"
+# 55 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	msgbox Msgbox_Redstone_Text_0
 	return
 
@@ -155,13 +157,13 @@ PVPdalao_Bed_Text_0:
 	.string "假装这是床$"
 
 Msgbox_Men_Text_0:
-# 50 ".\\data\\maps\\PVPdalao\\scripts.pory"
+# 51 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "唐氏绝门     {UP_ARROW}$"
 
 Msgbox_Redstone_Text_0:
-# 54 ".\\data\\maps\\PVPdalao\\scripts.pory"
+# 55 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "错误：在宝可梦中未找到对象\n“红石”，请联系开发者寻求帮助$"
 
 PVPdalao_String::
-# 56 ".\\data\\maps\\PVPdalao\\scripts.pory"
+# 57 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "还是PVP大佬$"
