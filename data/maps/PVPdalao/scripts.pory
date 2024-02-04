@@ -44,6 +44,11 @@ script Msgbox_PVPdalao {
     delay(2)
 }
 
+script Msgbox_PVPdalao2 {
+    msgbox(PVPdalao_String)
+    delay(2)
+}
+
 script PVPdalao_Bed {
     msgbox("假装这是床", MSGBOX_AUTOCLOSE)
     setflag(FLAG_HIDE_BED)
