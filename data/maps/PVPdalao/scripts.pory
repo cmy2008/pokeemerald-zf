@@ -35,17 +35,15 @@ script PVPdalao_Main {
         case 8:
         msgbox("还是什么都不知道的小白", MSGBOX_AUTOCLOSE)
         setvar(VAR_PVPDALAO, 9)
+        case 9:
+        msgbox(PVPdalao_String)
+        setvar(VAR_PVPDALAO, 10)
     }
     // releaseall
 }
 
 script Msgbox_PVPdalao {
     msgbox(PVPdalao_String, MSGBOX_AUTOCLOSE)
-    delay(2)
-}
-
-script Msgbox_PVPdalao2 {
-    msgbox(PVPdalao_String)
     delay(2)
 }
 

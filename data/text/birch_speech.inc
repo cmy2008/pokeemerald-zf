@@ -14,10 +14,10 @@ gText_Birch_AndYouAre::
     .string "问？\p$"
 
 gText_Birch_BoyOrGirl::
-    .string "男女？\p$"
+    .string "男女？$"
 
 gText_Birch_WhatsYourName::
-    .string "吧！\p$"
+    .string "吧！$"
 
 gText_Birch_SoItsPlayer::
     .string "还是{PLAYER}{KUN}吗？$"
@@ -26,4 +26,4 @@ gText_Birch_YourePlayer::
     .string "啊！\p{PLAYER}{KUN}啊。\l知！\p$"
 
 gText_Birch_AreYouReady::
-    .string "好的，准备好了吗？\p振奋人心的冒险\n即将展开。\p鼓起勇气，迈向宝可梦的世界吧！\n那里孕育着梦想，\l充满着刺激，还会遇到新的朋友！\p当然，我对你充满了期待。\n到我的宝可梦研究所来见我吧。\p$"
+    .string "吗？\p吧！\n友！\p吧。\p$"
