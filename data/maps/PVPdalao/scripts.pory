@@ -51,7 +51,7 @@ script PVPdalao_Bed {
 }
 
 script Msgbox_Men {
-    msgbox("唐氏绝门     {UP_ARROW}")
+    msgbox("唐氏绝门                    {UP_ARROW}")
 }
 
 script Msgbox_Redstone {

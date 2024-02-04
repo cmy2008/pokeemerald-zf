@@ -164,7 +164,7 @@ PVPdalao_Bed_Text_0:
 
 Msgbox_Men_Text_0:
 # 54 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	.string "唐氏绝门     {UP_ARROW}$"
+	.string "唐氏绝门                    {UP_ARROW}$"
 
 Msgbox_Redstone_Text_0:
 # 58 ".\\data\\maps\\PVPdalao\\scripts.pory"
