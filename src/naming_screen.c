@@ -44,7 +44,7 @@ enum {
 };
 
 #define KBROW_COUNT 4
-#define KBCOL_COUNT 8
+#define KBCOL_COUNT 14
 
 enum {
     GFXTAG_BACK_BUTTON,
@@ -156,7 +156,7 @@ struct NamingScreenData
     u8 tilemapBuffer1[0x800];
     u8 tilemapBuffer2[0x800];
     u8 tilemapBuffer3[0x800];
-    u8 textBuffer[16];
+    u8 textBuffer[20];
     u8 tileBuffer[0x600];
     u8 state;
     u8 windows[WIN_COUNT];
@@ -280,16 +280,16 @@ static const struct WindowTemplate sWindowTemplates[WIN_COUNT + 1] =
 static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
     #if PVPDALAO
     [KEYBOARD_LETTERS_LOWER] = {
-        { 0x01, 0x02},
-        { 0x01, 0x02},
-        { 0x01, 0x02},
-        { 0x01, 0x02},
+        { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 },
+        { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 },
+        { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 },
+        { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 },
     },
     [KEYBOARD_LETTERS_UPPER] = {
-        { 0x01, 0x02},
-        { 0x01, 0x02},
-        { 0x01, 0x02},
-        { 0x01, 0x02},
+        { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 },
+        { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 },
+        { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 },
+        { 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07 },
     },
     #else
         [KEYBOARD_LETTERS_LOWER] = {
@@ -321,7 +321,7 @@ static const u8 sKeyboardChars[KBPAGE_COUNT][KBROW_COUNT][KBCOL_COUNT] = {
 };
 #if PVPDALAO
 static const u8 PVPChars[] = _("PVP大佬");
-static const u8 zfChars[] = _("  大佬");
+static const u8 zfChars[] = _("  还是P V P 大佬");
 #else
 static const u8 zfChars[] = _("  张帆弓长巾凡");
 #endif
@@ -329,8 +329,8 @@ static const u8 zfChars[] = _("  张帆弓长巾凡");
 
 static const u8 sPageColumnCounts[KBPAGE_COUNT] = {
     #if PVPDALAO
-    [KEYBOARD_LETTERS_LOWER] = 2,
-    [KEYBOARD_LETTERS_UPPER] = 2,
+    [KEYBOARD_LETTERS_LOWER] = 7,
+    [KEYBOARD_LETTERS_UPPER] = 7,
     [KEYBOARD_SYMBOLS]       = 6
     #else
     [KEYBOARD_LETTERS_LOWER] = 4,
@@ -340,8 +340,8 @@ static const u8 sPageColumnCounts[KBPAGE_COUNT] = {
 };
 static const u8 sPageColumnXPos[KBPAGE_COUNT][KBCOL_COUNT] = {
     #if PVPDALAO
-    [KEYBOARD_LETTERS_LOWER] = {105, 130},
-    [KEYBOARD_LETTERS_UPPER] = {105, 130},
+    [KEYBOARD_LETTERS_LOWER] = {0, 20, 40, 60, 80, 100, 120},
+    [KEYBOARD_LETTERS_UPPER] = {0, 20, 40, 60, 80, 100, 120},
     [KEYBOARD_SYMBOLS]       = {0, 22, 44, 66, 88, 110}
     #else
     [KEYBOARD_LETTERS_LOWER] = {14, 48, 82, 116, 150},
