@@ -340,8 +340,8 @@ static const u8 sPageColumnCounts[KBPAGE_COUNT] = {
 };
 static const u8 sPageColumnXPos[KBPAGE_COUNT][KBCOL_COUNT] = {
     #if PVPDALAO
-    [KEYBOARD_LETTERS_LOWER] = {0, 20, 40, 60, 80, 100, 120},
-    [KEYBOARD_LETTERS_UPPER] = {0, 20, 40, 60, 80, 100, 120},
+    [KEYBOARD_LETTERS_LOWER] = {0, 23, 43, 60, 77, 97, 120},
+    [KEYBOARD_LETTERS_UPPER] = {0, 23, 43, 60, 77, 97, 120},
     [KEYBOARD_SYMBOLS]       = {0, 22, 44, 66, 88, 110}
     #else
     [KEYBOARD_LETTERS_LOWER] = {14, 48, 82, 116, 150},

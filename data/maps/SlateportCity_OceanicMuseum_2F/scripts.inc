@@ -330,7 +330,7 @@ SlateportCity_OceanicMuseum_2F_Text_PressureExperiment:
     .string "一个橡皮球不断地\n收缩，扩张。\p“在大海中，水由于\n自身重量形成内部的压力。\p浅水中这一压力\n并不明显，\p但在非常深的水里，\n一小片地方的水压\l甚至可以达到上万吨。”$"
 
 SlateportCity_OceanicMuseum_2F_Text_HoennModel:
-    .string "“丰缘地区模型”\p是丰缘地区的\n微缩景观。\p未白镇在哪儿呢？$"
+    .string "“丰缘地区模型”\p是丰缘地区的\n微缩景观。\p若至镇在哪儿呢？$"
 
 SlateportCity_OceanicMuseum_2F_Text_DeepSeawaterDisplay:
     .string "海水循环的演示。\p“在海地附近，海水由于\n温度和含盐量的不同，\l形成了环流。”$"

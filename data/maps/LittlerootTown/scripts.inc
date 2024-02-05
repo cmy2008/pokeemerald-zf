@@ -910,7 +910,7 @@ LittlerootTown_EventScript_GiveRunningShoes::
 	return
 
 LittlerootTown_Text_OurNewHomeLetsGoInside:
-    .string "妈妈：{PLAYER}，我们到了，宝贝！\p跟我们的行李一起挤在车厢里\n很累吧？\p这儿就是未白镇了，\p喜欢吗？\n这是我们的新家！\p虽然房子看上去有点老旧，\n但你不觉得住起来应该很舒适吗？\p而且这次你也有自己的房间了，{PLAYER}！\n我们先进屋吧。$"
+    .string "妈妈：{PLAYER}，我们到了，宝贝！\p跟我们的行李一起挤在车厢里\n很累吧？\p这儿就是若至镇了，\p喜欢吗？\n这是我们的新家！\p虽然房子看上去有点老旧，\n但你不觉得住起来应该很舒适吗？\p而且这次你也有自己的房间了，{PLAYER}！\n我们先进屋吧。$"
 
 LittlerootTown_Text_WaitPlayer:
     .string "妈妈：等等，{PLAYER}！$"
@@ -949,7 +949,7 @@ LittlerootTown_Text_GoodLuckCatchingPokemon:
     .string "你要去抓宝可梦？\n祝你好运！$"
 
 LittlerootTown_Text_TownSign:
-    .string "未白镇\n“充满缤纷色彩的小镇。”$"
+    .string "若至镇\n“充满缤纷色彩的小镇。”$"
 
 LittlerootTown_Text_ProfBirchsLab:
     .string "小田卷博士的宝可梦研究所$"

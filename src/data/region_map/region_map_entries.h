@@ -1,7 +1,7 @@
 #ifndef GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 #define GUARD_DATA_REGION_MAP_REGION_MAP_ENTRIES_H
 
-static const u8 sMapName_MAPSEC_LITTLEROOT_TOWN[] = _("未白镇");
+static const u8 sMapName_MAPSEC_LITTLEROOT_TOWN[] = _("若至镇");
 static const u8 sMapName_MAPSEC_OLDALE_TOWN[] = _("古辰镇");
 static const u8 sMapName_MAPSEC_DEWFORD_TOWN[] = _("武斗镇");
 static const u8 sMapName_MAPSEC_LAVARIDGE_TOWN[] = _("釜炎镇");

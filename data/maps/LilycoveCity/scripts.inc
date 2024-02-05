@@ -428,7 +428,7 @@ LilycoveCity_Text_MayDefeat:
     .string "… … … … … … … …\p我还记得我们上次\n在103号公路的战斗，{PLAYER}{KUN}。\p是那场战斗让你变得这么强的，是吗，\n{PLAYER}{KUN}？$"
 
 LilycoveCity_Text_MayGoingBackToLittleroot:
-    .string "小遥：我打算\n回未白镇去。\p我已经抓到了很多不错的宝可梦，\n宝可梦图鉴也快完成了，\l我要回家给爸爸看。$"
+    .string "小遥：我打算\n回若至镇去。\p我已经抓到了很多不错的宝可梦，\n宝可梦图鉴也快完成了，\l我要回家给爸爸看。$"
 
 LilycoveCity_Text_MayYouGoingToCollectBadges:
     .string "{PLAYER}{KUN}，你打算做什么？\p收集所有的道馆徽章，\n然后去挑战宝可梦联盟吗？\p好吧，{PLAYER}{KUN}，那你收集徽章的时候，\n我就致力于我的宝可梦图鉴吧。\l我会比你更早完成的！\p再见了！$"
@@ -455,7 +455,7 @@ LilycoveCity_Text_BrendanDefeat:
     .string "唔…\n你的宝可梦训练得不错。\p我开始对你改变看法了——\n你会成为一个出色的训练师的…$"
 
 LilycoveCity_Text_BrendanGoingBackToLittleroot:
-    .string "佑树：我…\n我打算回未白镇去。\p你知道我在帮老爸收集\n宝可梦图鉴，现在进展得不错，\l我要回去给他看看。$"
+    .string "佑树：我…\n我打算回若至镇去。\p你知道我在帮老爸收集\n宝可梦图鉴，现在进展得不错，\l我要回去给他看看。$"
 
 LilycoveCity_Text_BrendanYouGoingToCollectBadges:
     .string "{PLAYER}，你准备怎么办？\p收集所有的道馆徽章，然后\n去挑战宝可梦联盟吗？\p也许我也会去…\p好了，无论如何，加油吧！$"

@@ -500,10 +500,10 @@ TrendWatcher_Text_Intro::
 
 @ Identical to below, may have been different in other languages
 TrendWatcher_Text_MaleTaughtMePhrase::
-    .string "老人：{STR_VAR_1}{STR_VAR_2}\n是一个从未白镇来的{STR_VAR_3}\l告诉我的一件新鲜事物…$"
+    .string "老人：{STR_VAR_1}{STR_VAR_2}\n是一个从若至镇来的{STR_VAR_3}\l告诉我的一件新鲜事物…$"
 
 TrendWatcher_Text_FemaleTaughtMePhrase::
-    .string "老人：{STR_VAR_1}{STR_VAR_2}\n是一个从未白镇来的{STR_VAR_3}\l告诉我的一件新鲜事物…$"
+    .string "老人：{STR_VAR_1}{STR_VAR_2}\n是一个从若至镇来的{STR_VAR_3}\l告诉我的一件新鲜事物…$"
 
 TrendWatcher_Text_PhraseWasHopeless::
     .string "但是我绝望了。\p{STR_VAR_1}{STR_VAR_2}节！\p{STR_VAR_1}{STR_VAR_2}比赛！\p我试着尽全力去把它\n教给每一个人，但是…\p或许{STR_VAR_1}部分\n并不是正确的…\p主持：恩，打扰一下，先生，我需要\n听一些政治性的…$"
