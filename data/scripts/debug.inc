@@ -75,8 +75,8 @@ Debug_FlagsNotSetOverworldConfigMessage::
 	goto Debug_MessageEnd
 
 Debug_FlagsNotSetOverworldConfigMessage_Text:
-	.string "Feature unavailable!\n"
-	.string "Please define a usable flag in:\l"
+	.string "功能不可用!\n"
+	.string "请在这里定义该标记:\l"
 	.string "'include/config/overworld.h'!$"
 
 Debug_FlagsNotSetBattleConfigMessage::
@@ -84,8 +84,8 @@ Debug_FlagsNotSetBattleConfigMessage::
 	goto Debug_MessageEnd
 
 Debug_FlagsNotSetBattleConfigMessage_Text:
-	.string "Feature unavailable!\n"
-	.string "Please define a usable flag in:\l"
+	.string "功能不可用!\n"
+	.string "请在这里定义一个可用标记:\l"
 	.string "'include/config/battle.h'!$"
 
 Debug_BoxFilledMessage::
@@ -130,16 +130,16 @@ Debug_CheckSaveBlock::
 	end
 
 Debug_SaveBlock1Size::
-	.string "SaveBlock1 size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
-	.string "Free space: {STR_VAR_3}b.$"
+	.string "SaveBlock1 大小: {STR_VAR_1}b/{STR_VAR_2}b.\n"
+	.string "剩余空间: {STR_VAR_3}b.$"
 
 Debug_SaveBlock2Size::
-	.string "SaveBlock2 size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
-	.string "Free space: {STR_VAR_3}b.$"
+	.string "SaveBlock2 大小: {STR_VAR_1}b/{STR_VAR_2}b.\n"
+	.string "剩余空间: {STR_VAR_3}b.$"
 
 Debug_PokemonStorageSize::
-	.string "{PKMN}Storage size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
-	.string "Free space: {STR_VAR_3}b.$"
+	.string "{PKMN}Storage 大小: {STR_VAR_1}b/{STR_VAR_2}b.\n"
+	.string "剩余空间: {STR_VAR_3}b.$"
 
 Debug_CheckROMSpace::
 	callnative CheckROMSize
@@ -148,8 +148,8 @@ Debug_CheckROMSpace::
 	end
 
 Debug_ROMSize::
-	.string "ROM size: {STR_VAR_1}MB/32MB.\n"
-	.string "Free space: {STR_VAR_2}MB.$"
+	.string "ROM 大小: {STR_VAR_1}MB/32MB.\n"
+	.string "剩余空间: {STR_VAR_2}MB.$"
 
 Debug_HatchAnEgg::
 	lockall
@@ -177,10 +177,10 @@ DebugScript_HatchAnEgg_CantForceHatch::
 	end
 
 DebugScript_HatchAnEgg_Text_EmptyParty::
-	.string "You have no Pokémon nor Eggs.$"
+	.string "你既没有宝可梦也没有宝可梦的蛋。$"
 
 DebugScript_HatchAnEgg_Text_NotAnEgg::
-	.string "That's not a Pokémon Egg.$"
+	.string "那不是一个宝可梦的蛋。$"
 
 DebugScript_ZeroDaycareMons::
 	msgbox DebugText_DaycareNoPokemon, MSGBOX_DEFAULT
@@ -198,13 +198,13 @@ DebugScript_DaycareMonsNotCompatible::
 	end
 
 DebugText_DaycareNoPokemon:
-	.string "You have no Pokémon at Daycare.$"
+	.string "你没有在培育屋的宝可梦$"
 
 DebugText_DaycareOnePokemon:
-	.string "You have only one Pokémon at Daycare.$"
+	.string "你仅有一个在培育屋的宝可梦$"
 
 DebugText_DaycarePokemonNotCompatible:
-	.string "Your Pokémon at Daycare can't\nhave babies together!$"
+	.string "你在培育屋的宝可梦不能生育幼年宝可梦!$"
 
 Debug_ShowExpansionVersion::
 	callnative BufferExpansionVersion
@@ -226,7 +226,7 @@ Debug_FlagsAndVarNotSetBattleConfigMessage::
 	end
 
 Debug_FlagsAndVarNotSetBattleConfigMessage_Text:
-	.string "Feature unavailable! Please define a\n"
-	.string "usable flag and a usable var in:\l"
-	.string "'include/config/battle.h'!$"
+    .string "功能不可用！请在以下文件中定义\n"
+    .string "一个可用标记和一个可用的变量：\l"
+    .string "'include/config/battle.h'！$"
 
