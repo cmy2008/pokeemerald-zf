@@ -129,8 +129,14 @@ Msgbox_Men::
 	return
 
 
-Msgbox_Redstone::
+Msgbox_ArmorStand::
 # 61 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	msgbox Msgbox_ArmorStand_Text_0, MSGBOX_AUTOCLOSE
+	return
+
+
+Msgbox_Redstone::
+# 65 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	msgbox Msgbox_Redstone_Text_0
 	return
 
@@ -175,10 +181,14 @@ Msgbox_Men_Text_0:
 # 57 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "绝世唐门                       {UP_ARROW}$"
 
-Msgbox_Redstone_Text_0:
+Msgbox_ArmorStand_Text_0:
 # 61 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	.string "我是盔甲架(确信$"
+
+Msgbox_Redstone_Text_0:
+# 65 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "错误：在宝可梦中未找到对象“红石”，\n请联系开发者寻求帮助$"
 
 PVPdalao_String::
-# 63 ".\\data\\maps\\PVPdalao\\scripts.pory"
+# 67 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "还是PVP大佬$"

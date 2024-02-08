@@ -106,11 +106,12 @@ void GetBerryCountString(u8 *dst, const u8 *berryName, u32 quantity)
 {
     const u8 *berryString;
     u8 *txtPtr;
-
+/*中文无需复数
     if (quantity < 2)
         berryString = gText_Berry;
     else
-        berryString = gText_Berries;
+*/
+    berryString = gText_Berries;
 
     txtPtr = StringCopy(dst, berryName);
     *txtPtr = CHAR_SPACE;

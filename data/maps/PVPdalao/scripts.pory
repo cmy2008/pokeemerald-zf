@@ -57,6 +57,10 @@ script Msgbox_Men {
     msgbox("绝世唐门                       {UP_ARROW}", MSGBOX_AUTOCLOSE)
 }
 
+script Msgbox_ArmorStand {
+    msgbox("我是盔甲架(确信", MSGBOX_AUTOCLOSE)
+}
+
 script Msgbox_Redstone {
     msgbox("错误：在宝可梦中未找到对象“红石”，\n请联系开发者寻求帮助")
 }

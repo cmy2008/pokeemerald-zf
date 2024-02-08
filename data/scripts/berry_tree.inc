@@ -190,7 +190,7 @@ BerryTree_Text_WantToPlant:
     .string "想要种植一个浆果吗？$"
 
 BerryTree_Text_PlantedOneBerry:
-    .string "{PLAYER}在柔软的壤土里种下了一个{STR_VAR_1}。$"
+    .string "{PLAYER}在柔软的壤土里种下了\n一个{STR_VAR_1}。$"
 
 BerryTree_Text_BerryGrowthStage1:
     .string "这里种植了一个{STR_VAR_1}。$"
