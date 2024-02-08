@@ -1845,5 +1845,5 @@ const u8 gText_Quiz[] = _("测验");
 const u8 gText_Answer[] = _("回答");
 const u8 gText_PokeBalls[] = _("精灵球");
 const u8 gText_Berry[] = _("树果"); // Unused
-const u8 gText_Berries[] = _("树果~");
+const u8 gText_Berries[] = _("~树果");
 const u8 gText_BasePointsResetToZero[] = _("{STR_VAR_1}'s base points\nwere all reset to zero!{PAUSE_UNTIL_PRESS}");
