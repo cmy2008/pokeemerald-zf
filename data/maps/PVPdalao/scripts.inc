@@ -147,7 +147,7 @@ PVPdalao_Main_Text_0:
 
 PVPdalao_Main_Text_1:
 # 13 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	.string "GRW团队诞生了$"
+	.string "GRW团队招生了$"
 
 PVPdalao_Main_Text_2:
 # 16 ".\\data\\maps\\PVPdalao\\scripts.pory"

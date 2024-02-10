@@ -10,7 +10,7 @@ script PVPdalao_Main {
         setvar(VAR_TEMP_0, 0)
         setvar(VAR_PVPDALAO, 1)
         case 1:
-        msgbox("GRW团队诞生了", MSGBOX_AUTOCLOSE)
+        msgbox("GRW团队招生了", MSGBOX_AUTOCLOSE)
         setvar(VAR_PVPDALAO, 2)
         case 2:
         msgbox("无论你是跑酷大神", MSGBOX_AUTOCLOSE)
