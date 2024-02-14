@@ -1992,7 +1992,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             }
             CreateMon(&party[i], partyData[i].species, partyData[i].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
             SetMonData(&party[i], MON_DATA_OT_GENDER, &otGender);
-            SetMonData(&party[i], MON_DATA_OT_NAME, gTrainers[trainer].trainerName);
+            SetMonData(&party[i], MON_DATA_OT_NAME, trainer.trainerName);
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
             CustomTrainerPartyAssignMoves(&party[i], &partyData[i]);
