@@ -1953,7 +1953,6 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             monsCount = trainer->partySize;
         }
 
-        fixedOTID = Random32();
 
         for (i = 0; i < monsCount; i++)
         {
