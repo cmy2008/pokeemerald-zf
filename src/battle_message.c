@@ -1080,6 +1080,7 @@ const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
     [STRINGID_SHOOTSOCLOSE - 12] = sText_ShootSoClose,
     [STRINGID_GOTCHAPKMNCAUGHTPLAYER - 12] = sText_GotchaPkmnCaughtPlayer,
     [STRINGID_GOTCHAPKMNCAUGHTWALLY - 12] = sText_GotchaPkmnCaughtWally,
+    [STRINGID_GOTCHAPKMNCAUGHTNOBGM - 12] = sText_GotchaPkmnCaughtNoBgm,
     [STRINGID_GIVENICKNAMECAPTURED - 12] = sText_GiveNicknameCaptured,
     [STRINGID_PKMNSENTTOPC - 12] = sText_PkmnSentToPC,
     [STRINGID_PKMNDATAADDEDTODEX - 12] = sText_PkmnDataAddedToDex,
@@ -1969,7 +1970,7 @@ static const u8 sText_GlintAppearsInEye[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}�
 static const u8 sText_PkmnGettingIntoPosition[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}准备\n就位！");
 static const u8 sText_PkmnBeganGrowlingDeeply[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}发出了咆哮！");
 static const u8 sText_PkmnEagerForMore[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}想要更多！");
-
+static const u8 sText_GotchaPkmnCaughtNoBgm[] = _("{B_OPPONENT_MON1_NAME} 被击败了！\n还是PVP大佬{WAIT_SE}{RESUME_MUSIC}\p");
 const u16 gBattlePalaceFlavorTextTable[] =
 {
     [B_MSG_GLINT_IN_EYE]   = STRINGID_GLINTAPPEARSINEYE,

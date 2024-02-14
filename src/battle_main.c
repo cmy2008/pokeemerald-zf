@@ -1933,8 +1933,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     u32 fixedOTID;
     u8 otGender;
 
-    if (trainerNum == TRAINER_SECRET_BASE)
-        return 0;
+
 
     if (battleTypeFlags & BATTLE_TYPE_TRAINER && !(battleTypeFlags & (BATTLE_TYPE_FRONTIER
                                                                         | BATTLE_TYPE_EREADER_TRAINER
