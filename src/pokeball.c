@@ -1508,7 +1508,7 @@ void LoadBallGfx(u8 ballId)
 
     switch (ballId)
     {
-    case BALL_POKE ... BALL_MASTER:
+    case BALL_POKE ... BALL_ULTRA:
     case BALL_NET ... BALL_NEST:
     case BALL_REPEAT:
     case BALL_SAFARI:
