@@ -2718,9 +2718,9 @@ u8 GiveMonToPlayer(struct Pokemon *mon)
 {
     s32 i;
 
-    SetMonData(mon, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
-    SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
-    SetMonData(mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
+    //SetMonData(mon, MON_DATA_OT_NAME, gSaveBlock2Ptr->playerName);
+    //SetMonData(mon, MON_DATA_OT_GENDER, &gSaveBlock2Ptr->playerGender);
+    //SetMonData(mon, MON_DATA_OT_ID, gSaveBlock2Ptr->playerTrainerId);
 
     for (i = 0; i < PARTY_SIZE; i++)
     {

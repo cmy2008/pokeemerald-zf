@@ -146,6 +146,7 @@ BattleScript_SafariBallThrow::
 BattleScript_SuccessBallThrow::
     setbyte sMON_CAUGHT, TRUE
     incrementgamestat GAME_STAT_POKEMON_CAPTURES
+    jumpifword CMP_COMMON_BITS, gBattleTypeFlags, BATTLE_TYPE_TRAINER, BattleScript_BallThrowSteal
 BattleScript_PrintCaughtMonInfo::
     printstring STRINGID_GOTCHAPKMNCAUGHTPLAYER
     jumpifbyte CMP_NOT_EQUAL, sEXP_CATCH, TRUE, BattleScript_TryPrintCaughtMonInfo
@@ -173,6 +174,12 @@ BattleScript_GiveCaughtMonEnd::
 BattleScript_SuccessBallThrowEnd::
     setbyte gBattleOutcome, B_OUTCOME_CAUGHT
     finishturn
+
+BattleScript_BallThrowSteal::
+	printstring STRINGID_GOTCHAPKMNCAUGHTNOBGM
+    givecaughtmon
+    cleareffectsonfaint BS_TARGET
+	goto BattleScript_HandleFaintedMon
 
 BattleScript_WallyBallThrow::
     printstring STRINGID_GOTCHAPKMNCAUGHTWALLY

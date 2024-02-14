@@ -1928,6 +1928,14 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     u32 personalityValue;
     s32 i, j;
     u8 monsCount;
+    
+    // Stolen mon OT info
+    u32 fixedOTID;
+    u8 otGender;
+
+    if (trainerNum == TRAINER_SECRET_BASE)
+        return 0;
+
     if (battleTypeFlags & BATTLE_TYPE_TRAINER && !(battleTypeFlags & (BATTLE_TYPE_FRONTIER
                                                                         | BATTLE_TYPE_EREADER_TRAINER
                                                                         | BATTLE_TYPE_TRAINER_HILL)))
@@ -1947,6 +1955,8 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             monsCount = trainer->partySize;
         }
 
+        fixedOTID = Random32();
+
         for (i = 0; i < monsCount; i++)
         {
             s32 ball = -1;
@@ -1956,11 +1966,20 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             u32 fixedOtId = 0;
 
             if (trainer->doubleBattle == TRUE)
+            {
                 personalityValue = 0x80;
+                otGender = gSaveBlock2Ptr->playerGender;
+            }
             else if (trainer->encounterMusic_gender & F_TRAINER_FEMALE)
+            {
                 personalityValue = 0x78; // Use personality more likely to result in a female Pokémon
+                otGender = FEMALE;
+            }
             else
+            {
                 personalityValue = 0x88; // Use personality more likely to result in a male Pokémon
+                otGender = MALE;
+            }
 
             personalityValue += personalityHash << 8;
             if (partyData[i].gender == TRAINER_MON_MALE)
@@ -1971,10 +1990,12 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 ModifyPersonalityForNature(&personalityValue, partyData[i].nature - 1);
             if (partyData[i].isShiny)
             {
-                otIdType = OT_ID_PRESET;
+            otIdType = OT_ID_PRESET;
                 fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
             }
             CreateMon(&party[i], partyData[i].species, partyData[i].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+            SetMonData(&party[i], MON_DATA_OT_GENDER, &otGender);
+            SetMonData(&party[i], MON_DATA_OT_NAME, gTrainers[trainerNum].trainerName);[/COLOR]
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
             CustomTrainerPartyAssignMoves(&party[i], &partyData[i]);
