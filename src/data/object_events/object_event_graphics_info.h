@@ -1634,12 +1634,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Teala = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BreakableRock = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_5,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
     .height = 16,
-    .paletteSlot = PALSLOT_NPC_1,
+    .paletteSlot = PALSLOT_NPC_5,
     .shadowSize = SHADOW_SIZE_S,
     .inanimate = TRUE,
     .disableReflectionPaletteLoad = FALSE,
