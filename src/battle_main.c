@@ -1930,7 +1930,6 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     u8 monsCount;
     
     // Stolen mon OT info
-    u32 fixedOTID;
     u8 otGender;
 
 
@@ -1994,7 +1993,7 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
             }
             CreateMon(&party[i], partyData[i].species, partyData[i].lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
             SetMonData(&party[i], MON_DATA_OT_GENDER, &otGender);
-            SetMonData(&party[i], MON_DATA_OT_NAME, gTrainers[trainerNum].trainerName);[/COLOR]
+            SetMonData(&party[i], MON_DATA_OT_NAME, gTrainers[trainer].trainerName);
             SetMonData(&party[i], MON_DATA_HELD_ITEM, &partyData[i].heldItem);
 
             CustomTrainerPartyAssignMoves(&party[i], &partyData[i]);

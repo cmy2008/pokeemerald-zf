@@ -746,6 +746,7 @@ static const u8 sText_PkmnTookTargetHigh[] = _("{B_ATK_NAME_WITH_PREFIX} took {B
 static const u8 sText_TargetTooHeavy[] = _("But the target\nwas too heavy!");
 static const u8 sText_SafetyGogglesProtected[] = _("{B_DEF_NAME_WITH_PREFIX}因为{B_LAST_ITEM}\n的效果不受影响!");
 static const u8 sText_TargetChangedType[] =_("{B_DEF_NAME_WITH_PREFIX}转变为\n{B_BUFF1}形态!");
+static const u8 sText_GotchaPkmnCaughtNoBgm[] = _("{B_OPPONENT_MON1_NAME} 被击败了！\n还是PVP大佬{WAIT_SE}{RESUME_MUSIC}\p");
 
 const u8 *const gBattleStringsTable[BATTLESTRINGS_COUNT] =
 {
@@ -1970,7 +1971,6 @@ static const u8 sText_GlintAppearsInEye[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}�
 static const u8 sText_PkmnGettingIntoPosition[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}准备\n就位！");
 static const u8 sText_PkmnBeganGrowlingDeeply[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}发出了咆哮！");
 static const u8 sText_PkmnEagerForMore[] = _("{B_SCR_ACTIVE_NAME_WITH_PREFIX}想要更多！");
-static const u8 sText_GotchaPkmnCaughtNoBgm[] = _("{B_OPPONENT_MON1_NAME} 被击败了！\n还是PVP大佬{WAIT_SE}{RESUME_MUSIC}\p");
 const u16 gBattlePalaceFlavorTextTable[] =
 {
     [B_MSG_GLINT_IN_EYE]   = STRINGID_GLINTAPPEARSINEYE,
