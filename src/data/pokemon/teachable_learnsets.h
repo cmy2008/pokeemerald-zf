@@ -39114,3 +39114,10 @@ static const u16 sOgerponTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_OGERPON
+
+static const u16 sDiamondPickaxeTeachableLearnset[] = {
+    MOVE_CUT,
+    MOVE_DIG,
+    MOVE_ROCK_BLAST,
+    MOVE_ROCK_SMASH,
+};

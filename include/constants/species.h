@@ -1658,7 +1658,7 @@
 #define SPECIES_OGERPON_CORNERSTONE_MASK_TERA           GEN9_START + 135
 #define SPECIES_URSALUNA_BLOODMOON                      GEN9_START + 136
 // Indigo Disk
-#define SPECIES_1018                                    GEN9_START + 137
+#define SPECIES_DIAMOND_PICKAXE                         GEN9_START + 137 // 1018
 #define SPECIES_1019                                    GEN9_START + 138
 #define SPECIES_1020                                    GEN9_START + 139
 #define SPECIES_1021                                    GEN9_START + 140

@@ -6173,5 +6173,12 @@ const struct FacilityMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .itemTableId = BATTLE_FRONTIER_ITEM_CHESTO_BERRY,
         .evSpread = F_EV_SPREAD_SP_DEFENSE | F_EV_SPREAD_DEFENSE | F_EV_SPREAD_HP,
         .nature = NATURE_MODEST
+    },
+    [FRONTIER_MON_DIAMOND] = {
+        .species = SPECIES_DIAMOND_PICKAXE,
+        .moves = {MOVE_ROCK_BLAST, MOVE_ROCK_BLAST, MOVE_ROCK_BLAST, MOVE_ROCK_BLAST},
+        .itemTableId = BATTLE_FRONTIER_ITEM_FOCUS_BAND,
+        .evSpread = F_EV_SPREAD_ATTACK | F_EV_SPREAD_HP,
+        .nature = NATURE_BRAVE
     }
 };

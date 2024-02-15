@@ -23147,3 +23147,8 @@ static const struct LevelUpMove sOgerponLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 #endif
+
+static const struct LevelUpMove sDiamondPickaxeLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_ROCK_SMASH),
+    LEVEL_UP_END
+};
