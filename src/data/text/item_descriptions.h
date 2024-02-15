@@ -14,13 +14,14 @@ static const u8 sGreatBallDesc[] = _(
 
 static const u8 sUltraBallDesc[] = _(
     "比起超级球来更容\n"
-"易捉到宝可梦的，\n"
-"性能非常不错的球。");
+    "易捉到宝可梦的，\n"
+    "性能非常不错的球。");
 
 static const u8 sMasterBallDesc[] = _(
-    "必定能捉到野生宝\n"
-"可梦的，性能最好\n"
-"的球。");
+    "来自异世界的物品，\n"
+    "可对宝可梦造成伤\n"
+    "害，但没人知道它\n"
+    "应该如何使用。");
 
 static const u8 sPremierBallDesc[] = _(
     "住着十分惬意的球\n"
@@ -4439,3 +4440,7 @@ static const u8 sGlimmeringCharmDesc[] = _(
     "A charm that will\n"
     "raise the shards\n"
     "from Tera Raids.");
+
+static const u8 sDiamondPickaxe[] = _(
+    "来自异世界的物品，\n"
+    "可作为宝可梦使用。");

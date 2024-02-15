@@ -988,8 +988,9 @@
 #define ITEM_GLIMMERING_CHARM 813
 #define ITEM_814 814 // TWV0YWwgQWxsb3k=
 #define ITEM_815 815 // U3RlbGxhciBUZXJhIFNoYXJk
+#define ITEM_DIAMOND_PICKAXE 816
 
-#define ITEMS_COUNT 816
+#define ITEMS_COUNT 817
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

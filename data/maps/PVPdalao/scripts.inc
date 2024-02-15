@@ -143,11 +143,9 @@ Msgbox_Redstone::
 
 PVPdalao_EventScript_Pokemon::
 # 72 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	givemon SPECIES_DIAMOND_PICKAXE, 1, ITEM_NONE
+	finditem ITEM_DIAMOND_PICKAXE
 # 73 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	msgbox PVPdalao_EventScript_Pokemon_Text_0, MSGBOX_AUTOCLOSE
-# 74 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	setflag FLAG_ITEM_PVPDALAO_POTION2
+	givemon SPECIES_DIAMOND_PICKAXE, 1, ITEM_NONE
 	end
 
 
@@ -198,10 +196,6 @@ Msgbox_ArmorStand_Text_0:
 Msgbox_Redstone_Text_0:
 # 65 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	.string "错误：在宝可梦中未找到对象“红石”，\n请联系开发者寻求帮助$"
-
-PVPdalao_EventScript_Pokemon_Text_0:
-# 73 ".\\data\\maps\\PVPdalao\\scripts.pory"
-	.string "{PLAYER}获得了钻石镐！$"
 
 PVPdalao_String::
 # 67 ".\\data\\maps\\PVPdalao\\scripts.pory"

@@ -9818,4 +9818,15 @@ const struct Item gItems[] =
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
     },
+
+    [ITEM_DIAMOND_PICKAXE] =
+    {
+        .name = _("Diamond Pickaxe]"),
+        .price = 0,
+        .importance = 1,
+        .description = sDiamondPickaxe,
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
+    },
 };

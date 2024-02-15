@@ -69,8 +69,7 @@ text PVPdalao_String {
 }
 
 script PVPdalao_EventScript_Pokemon {
+    finditem(ITEM_DIAMOND_PICKAXE)
     givemon(SPECIES_DIAMOND_PICKAXE, 1, ITEM_NONE)
-    msgbox("{PLAYER}获得了钻石镐！", MSGBOX_AUTOCLOSE)
-    setflag(FLAG_ITEM_PVPDALAO_POTION2)
 	end
 }
