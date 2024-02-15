@@ -9821,7 +9821,7 @@ const struct Item gItems[] =
 
     [ITEM_DIAMOND_PICKAXE] =
     {
-        .name = _("Diamond Pickaxe]"),
+        .name = _("钻石镐"),
         .price = 0,
         .importance = 1,
         .description = sDiamondPickaxe,
