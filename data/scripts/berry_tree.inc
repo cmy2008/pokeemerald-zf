@@ -223,21 +223,21 @@ BerryTree_Text_PickedTheBerry:
 
 BerryTree_Text_PutAwayBerry:
     .string "{PLAYER}将{STR_VAR_1}\n"
-    .string "放入背包的浆果口袋中。\p"
+    .string "放入背包的树果口袋中。\p"
     .string "土壤恢复到了柔软和\n"
     .string "壤土的状态。$"
 
 BerryTree_Text_BerryPocketFull:
-    .string "背包的浆果口袋已满。\p"
+    .string "背包的树果口袋已满。\p"
     .string "{STR_VAR_1}无法被摘取。$"
 
 BerryTree_Text_BerryLeftUnpicked:
-    .string "{PLAYER}没有摘取{STR_VAR_1}\n"
-    .string "。$"
+    .string "{PLAYER}没有摘取\n"
+    .string "{STR_VAR_1}。$"
 
 BerryTree_Text_WantToWater:
-    .string "想要用喷壶给{STR_VAR_1}浇水吗\n"
-    .string "？$"
+    .string "想要用喷壶给{STR_VAR_1}\n"
+    .string "浇水吗？$"
 
 BerryTree_Text_WateredTheBerry:
     .string "{PLAYER}给{STR_VAR_1}浇了水。$"
