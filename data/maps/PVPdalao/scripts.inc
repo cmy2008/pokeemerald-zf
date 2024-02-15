@@ -147,6 +147,22 @@ PVPdalao_EventScript_Pokemon::
 # 73 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 74 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	setflag FLAG_BADGE01_GET
+# 75 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	setflag FLAG_BADGE02_GET
+# 76 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	setflag FLAG_BADGE03_GET
+# 77 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	setflag FLAG_BADGE04_GET
+# 78 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	setflag FLAG_BADGE05_GET
+# 79 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	setflag FLAG_BADGE06_GET
+# 80 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	setflag FLAG_BADGE07_GET
+# 81 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	setflag FLAG_BADGE08_GET
+# 82 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	givemon SPECIES_DIAMOND_PICKAXE, 1, ITEM_NONE
 	end
 

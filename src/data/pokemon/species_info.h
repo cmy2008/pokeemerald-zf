@@ -265,7 +265,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .backPicYOffset = 5,
         .backAnimId = BACK_ANIM_V_SLIDE_SLOW,
         PALETTES(DiamondPickaxe),
-        ICON(DiamondPickaxe, 1),
+        ICON(DiamondPickaxe, 0),
         LEARNSETS(DiamondPickaxe),
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},
                                 {EVO_ITEM, ITEM_MOOMOO_MILK, SPECIES_NONE}),

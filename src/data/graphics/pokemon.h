@@ -6,7 +6,7 @@ const u32 gMonFrontPic_DiamondPickaxe[] = INCBIN_U32("graphics/pokemon/diamond_p
 const u32 gMonBackPic_DiamondPickaxe[] = INCBIN_U32("graphics/pokemon/diamond_pickaxe/back.4bpp.lz");
 const u32 gMonPalette_DiamondPickaxe[] = INCBIN_U32("graphics/pokemon/diamond_pickaxe/normal.gbapal.lz");
 const u32 gMonShinyPalette_DiamondPickaxe[] = INCBIN_U32("graphics/pokemon/diamond_pickaxe/shiny.gbapal.lz");
-const u8 gMonIcon_DiamondPickaxe[] = INCBIN_U8("graphics/pokemon/diamond_pickaxe/icon.4bpp.lz");
+const u8 gMonIcon_DiamondPickaxe[] = INCBIN_U8("graphics/pokemon/diamond_pickaxe/icon.4bpp");
 const u8 gMonIcon_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mark/icon.4bpp");
 const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mark/footprint.1bpp");
 
