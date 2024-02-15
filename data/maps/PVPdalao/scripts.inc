@@ -145,6 +145,8 @@ PVPdalao_EventScript_Pokemon::
 # 72 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	finditem ITEM_DIAMOND_PICKAXE
 # 73 ".\\data\\maps\\PVPdalao\\scripts.pory"
+	setflag FLAG_SYS_POKEMON_GET
+# 74 ".\\data\\maps\\PVPdalao\\scripts.pory"
 	givemon SPECIES_DIAMOND_PICKAXE, 1, ITEM_NONE
 	end
 

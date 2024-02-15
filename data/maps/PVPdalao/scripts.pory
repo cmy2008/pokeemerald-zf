@@ -70,6 +70,7 @@ text PVPdalao_String {
 
 script PVPdalao_EventScript_Pokemon {
     finditem(ITEM_DIAMOND_PICKAXE)
+	setflag(FLAG_SYS_POKEMON_GET)
     givemon(SPECIES_DIAMOND_PICKAXE, 1, ITEM_NONE)
 	end
 }
