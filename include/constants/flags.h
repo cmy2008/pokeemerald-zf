@@ -1504,7 +1504,7 @@
 
 #define FLAG_HIDE_MEN                               (SYSTEM_FLAGS + 0x85) // Used Flag
 #define FLAG_ITEM_PVPDALAO_POTION                   (SYSTEM_FLAGS + 0x86) // Used Flag
-#define FLAG_UNUSED_0x8E7                           (SYSTEM_FLAGS + 0x87) // Unused Flag
+#define FLAG_ITEM_PVPDALAO_POTION2                  (SYSTEM_FLAGS + 0x87) // Used Flag
 #define FLAG_UNUSED_0x8E8                           (SYSTEM_FLAGS + 0x88) // Unused Flag
 #define FLAG_UNUSED_0x8E9                           (SYSTEM_FLAGS + 0x89) // Unused Flag
 #define FLAG_UNUSED_0x8EA                           (SYSTEM_FLAGS + 0x8A) // Unused Flag
