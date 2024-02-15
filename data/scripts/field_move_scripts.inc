@@ -114,8 +114,8 @@ EventScript_CancelSmash::
 	end
 
 Text_WantToSmash:
-	.string "这块石头看起来不是很结实。\n"
-	.string "想使用碎岩吗？$"
+	.string "这是砖石矿！\n"
+	.string "想使用砖石镐吗？$"
 
 Text_CantSmash:
 	.string "这是一块奇形怪状的石头，\n"
