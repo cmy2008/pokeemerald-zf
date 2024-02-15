@@ -186,11 +186,11 @@ BerryTree_Text_ItsSoftLoamySoil:
     .string "错误：未找到种植物“钻石矿”$"
 
 BerryTree_Text_WantToPlant:
-    .string "这是柔软的壤土。\n"
+    .string "这是柔软的土壤。\n"
     .string "想要种植一个浆果吗？$"
 
 BerryTree_Text_PlantedOneBerry:
-    .string "{PLAYER}在柔软的壤土里种下了\n一个{STR_VAR_1}。$"
+    .string "{PLAYER}在柔软的土壤里种下了\n一个{STR_VAR_1}。$"
 
 BerryTree_Text_BerryGrowthStage1:
     .string "这里种植了一个{STR_VAR_1}。$"
@@ -199,10 +199,10 @@ BerryTree_Text_BerryGrowthStage2:
     .string "{STR_VAR_1}已经发芽了。$"
 
 BerryTree_Text_BerryGrowthStage3:
-    .string "这个{STR_VAR_1}植物正在变得更高。$"
+    .string "{STR_VAR_1}正在变得更高。$"
 
 BerryTree_Text_BerryGrowthStage4:
-    .string "这些{STR_VAR_1}花正在{STR_VAR_2}地盛开\n。$"
+    .string "{STR_VAR_1}的花正在{STR_VAR_2}盛开\n。$"
 
 BerryTree_Text_CareAdverbGreat:
     .string "非常美丽地$"
@@ -223,21 +223,21 @@ BerryTree_Text_PickedTheBerry:
 
 BerryTree_Text_PutAwayBerry:
     .string "{PLAYER}将{STR_VAR_1}\n"
-    .string "放入背包的浆果口袋中。\p"
-    .string "土壤恢复到了柔软和\n"
-    .string "壤土的状态。$"
+    .string "放入背包的树果口袋中。\p"
+    .string "土壤恢复到了柔软\n"
+    .string "的状态。$"
 
 BerryTree_Text_BerryPocketFull:
-    .string "背包的浆果口袋已满。\p"
+    .string "背包的树果口袋已满。\p"
     .string "{STR_VAR_1}无法被摘取。$"
 
 BerryTree_Text_BerryLeftUnpicked:
-    .string "{PLAYER}没有摘取{STR_VAR_1}\n"
-    .string "。$"
+    .string "{PLAYER}没有摘取\n"
+    .string "{STR_VAR_1}。$"
 
 BerryTree_Text_WantToWater:
-    .string "想要用喷壶给{STR_VAR_1}浇水吗\n"
-    .string "？$"
+    .string "想要用吼吼鲸喷壶给{STR_VAR_1}\n"
+    .string "浇水吗？$"
 
 BerryTree_Text_WateredTheBerry:
     .string "{PLAYER}给{STR_VAR_1}浇了水。$"
