@@ -501,10 +501,10 @@ static const u8 sDebugText_FlagsVars_Vars[] =                   _("设置 Var XY
 static const u8 sDebugText_FlagsVars_VariableHex[] =            _("{STR_VAR_1}{CLEAR_TO 90}\n0x{STR_VAR_2}{CLEAR_TO 90}");
 static const u8 sDebugText_FlagsVars_Variable[] =               _("Var: {STR_VAR_1}{CLEAR_TO 90}\nVal: {STR_VAR_3}{CLEAR_TO 90}\n{STR_VAR_2}");
 static const u8 sDebugText_FlagsVars_VariableValueSet[] =       _("Var: {STR_VAR_1}{CLEAR_TO 90}\nVal: {STR_VAR_3}{CLEAR_TO 90}\n{STR_VAR_2}");
-static const u8 sDebugText_FlagsVars_PokedexFlags_All[] =       _("标记所有宝可梦");
-static const u8 sDebugText_FlagsVars_PokedexFlags_Reset[] =     _("重置宝可梦标记");
-static const u8 sDebugText_FlagsVars_SwitchDex[] =              _("切换 {STR_VAR_1}宝可梦开关");
-static const u8 sDebugText_FlagsVars_SwitchNationalDex[] =      _("切换 {STR_VAR_1}宝可梦图鉴开关");
+static const u8 sDebugText_FlagsVars_PokedexFlags_All[] =       _("记录所有宝可梦图鉴");
+static const u8 sDebugText_FlagsVars_PokedexFlags_Reset[] =     _("重置宝可梦图鉴记录");
+static const u8 sDebugText_FlagsVars_SwitchDex[] =              _("切换 {STR_VAR_1}宝可梦图鉴开关");
+static const u8 sDebugText_FlagsVars_SwitchNationalDex[] =      _("切换 {STR_VAR_1}全国图鉴开关");
 static const u8 sDebugText_FlagsVars_SwitchPokeNav[] =          _("切换 {STR_VAR_1}领航员开关");
 static const u8 sDebugText_FlagsVars_SwitchMatchCall[] =        _("切换 {STR_VAR_1}对战寻呼开关");
 static const u8 sDebugText_FlagsVars_RunningShoes[] =           _("切换 {STR_VAR_1}跑步鞋开关");
@@ -512,7 +512,7 @@ static const u8 sDebugText_FlagsVars_ToggleFlyFlags[] =         _("切换 {STR_V
 static const u8 sDebugText_FlagsVars_ToggleAllBadges[] =        _("切换 {STR_VAR_1}所有徽章开关");
 static const u8 sDebugText_FlagsVars_ToggleFrontierPass[] =     _("切换 {STR_VAR_1}开拓区进入开关");
 static const u8 sDebugText_FlagsVars_SwitchCollision[] =        _("切换 {STR_VAR_1}关闭碰撞开关");
-static const u8 sDebugText_FlagsVars_SwitchEncounter[] =        _("切换 {STR_VAR_1}关闭遭遇开关");
+static const u8 sDebugText_FlagsVars_SwitchEncounter[] =        _("切换 {STR_VAR_1}关闭遇敌开关");
 static const u8 sDebugText_FlagsVars_SwitchTrainerSee[] =       _("切换 {STR_VAR_1}关闭训练家可视开关");
 static const u8 sDebugText_FlagsVars_SwitchBagUse[] =           _("切换 {STR_VAR_1}关闭背包使用开关");
 static const u8 sDebugText_FlagsVars_SwitchCatching[] =         _("切换 {STR_VAR_1}关闭捕获开关");
@@ -1436,12 +1436,12 @@ static void DebugTask_HandleMenuInput_FlagsVars(u8 taskId)
     {
         PlaySE(SE_SELECT);
         if ((func = sDebugMenu_Actions_Flags[input]) != NULL)
-        {
+{
             if (input == DEBUG_FLAGVAR_MENU_ITEM_FLAGS || input == DEBUG_FLAGVAR_MENU_ITEM_VARS)
-            {
-                Debug_RedrawListMenu(taskId);
-                func(taskId);
-            }
+        {
+            Debug_RedrawListMenu(taskId);
+            func(taskId);
+}
             else
             {
                 func(taskId);
