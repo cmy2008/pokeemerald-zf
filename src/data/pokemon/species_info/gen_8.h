@@ -1882,8 +1882,11 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         SANDACONDA_MISC_INFO,
         .height = 220,
         .weight = 0,
-        .description = COMPOUND_STRING("")
-,
+        .description = COMPOUND_STRING(
+            "Its sand pouch has grown to tremendous\n"
+            "proportions. More than 1,000,000 tons of\n"
+            "sand now swirl around its body with enough\n"
+            "speed and power to pulverize a skyscraper."),
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 610,
@@ -3063,7 +3066,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
 #if P_GIGANTAMAX_FORMS
     [SPECIES_ALCREMIE_GIGANTAMAX] =
     {
-        ALCREMIE_MISC_INFO(BODY_COLOR_PINK),
+        ALCREMIE_MISC_INFO(BODY_COLOR_YELLOW),
         .isGigantamax = TRUE,
         .speciesName = _("Alcremie"),
         .cryId = CRY_ALCREMIE,
@@ -3876,7 +3879,7 @@ const struct SpeciesInfo gSpeciesInfoGen8[] =
         .frontAnimFrames = sAnims_Duraludon,
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
         BACK_PIC(Duraludon, 64, 64),
-        .backPicYOffset = 1,
+        .backPicYOffset = 0,
         //.backAnimId = BACK_ANIM_NONE,
         PALETTES(Duraludon),
         ICON(Duraludon, 0),

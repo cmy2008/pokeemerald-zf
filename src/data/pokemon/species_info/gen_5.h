@@ -2780,7 +2780,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .frontAnimFrames = sAnims_Basculegion,                                              \
         .frontPicYOffset = 0,                                                               \
         .enemyMonElevation = 5,                                                             \
-        .backPicYOffset = 0,                                                                \
+        .backPicYOffset = 8,                                                                \
         LEARNSETS(Basculegion),                                                             \
         .formSpeciesIdTable = sBasculegionFormSpeciesIdTable
         //.frontAnimId = ANIM_V_SQUISH_AND_BOUNCE,
@@ -7992,7 +7992,10 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
         .types = { TYPE_NORMAL, TYPE_FIGHTING },
         .evYield_Attack = 1,
         .evYield_Defense = 1,
-        .description = COMPOUND_STRING(""),
+        .description = COMPOUND_STRING(
+            "Meloetta's melodies are sung with\n"
+            "a special vocalization method that can\n"
+            "control the feelings of those who hear it."),
         FRONT_PIC(MeloettaPirouette, 40, 64),
         .frontPicYOffset = 2,
         .frontAnimFrames = sAnims_MeloettaPirouette,
