@@ -113,8 +113,9 @@ void GetBerryCountString(u8 *dst, const u8 *berryName, u32 quantity)
         berryString = gText_Berries;
 
     txtPtr = StringCopy(dst, berryName);
-    *txtPtr = CHAR_SPACE;
-    StringCopy(txtPtr + 1, berryString);
+    // *txtPtr = CHAR_SPACE;
+    // StringCopy(txtPtr + 1, berryString);
+    StringCopy(txtPtr, berryString);
 }
 
 bool8 IsBagPocketNonEmpty(u8 pocket)
@@ -974,11 +975,11 @@ u32 GetItemStatus1Mask(u16 itemId)
         case ITEM3_BURN:
             return STATUS1_BURN;
         case ITEM3_POISON:
-            return STATUS1_POISON | STATUS1_TOXIC_POISON;
+            return STATUS1_PSN_ANY | STATUS1_TOXIC_COUNTER;
         case ITEM3_SLEEP:
             return STATUS1_SLEEP;
         case ITEM3_STATUS_ALL:
-            return STATUS1_ANY;
+            return STATUS1_ANY | STATUS1_TOXIC_COUNTER;
     }
     return 0;
 }

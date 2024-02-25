@@ -46,16 +46,16 @@ EventScript_CancelCut::
 	end
 
 Text_WantToCut:
-	.string "This tree looks like it can be\n"
-	.string "CUT down!\p"
-	.string "Would you like to CUT it?$"
+	.string "这棵树看起来\n"
+	.string "能被砍倒！\p"
+	.string "想把它砍了吗？$"
 
 Text_MonUsedFieldMove:
-	.string "{STR_VAR_1} used {STR_VAR_2}!$"
+	.string "{STR_VAR_1}使用了{STR_VAR_2}!$"
 
 Text_CantCut:
-	.string "This tree looks like it can be\n"
-	.string "CUT down!$"
+	.string "这棵树看起来\n"
+	.string "能被砍倒！$"
 
 @ Interact with smashable rock
 EventScript_RockSmash::
@@ -114,12 +114,12 @@ EventScript_CancelSmash::
 	end
 
 Text_WantToSmash:
-	.string "This rock appears to be breakable.\n"
-	.string "Would you like to use ROCK SMASH?$"
+	.string "这块石头看起来不是很结实。\n"
+	.string "想使用碎岩吗？$"
 
 Text_CantSmash:
-	.string "It's a rugged rock, but a POKéMON\n"
-	.string "may be able to smash it.$"
+	.string "这是一块奇形怪状的石头，\n"
+	.string "但是看起来宝可梦可以破坏掉它。$"
 
 EventScript_StrengthBoulder::
 	lockall
@@ -165,22 +165,22 @@ EventScript_CancelStrength::
 	end
 
 Text_WantToStrength:
-	.string "It's a big boulder, but a POKéMON\n"
-	.string "may be able to push it aside.\p"
-	.string "Would you like to use STRENGTH?$"
+	.string "这是一块大石头，但是宝可梦\n"
+	.string "应该还是能把它推到一边的。\p"
+	.string "想使用怪力吗？$"
 
 Text_MonUsedStrength:
-	.string "{STR_VAR_1} used STRENGTH!\p"
-	.string "{STR_VAR_1}'s STRENGTH made it\n"
-	.string "possible to move boulders around!$"
+	.string "{STR_VAR_1}使用了怪力！\p"
+	.string "{STR_VAR_1}的怪力让他\n"
+	.string "有力量把大石头推开了！$"
 
 Text_CantStrength:
-	.string "It's a big boulder, but a POKéMON\n"
-	.string "may be able to push it aside.$"
+	.string "这是一块大石头，但是宝可梦\n"
+	.string "应该还是能把它推到一边的。$"
 
 Text_StrengthActivated:
-	.string "STRENGTH made it possible to move\n"
-	.string "boulders around.$"
+	.string "怪力让它有力量\n"
+	.string "推开大石头了。$"
 
 EventScript_UseWaterfall::
 	lockall
@@ -205,15 +205,15 @@ EventScript_EndWaterfall::
 	end
 
 Text_CantWaterfall:
-	.string "A wall of water is crashing down with\n"
-	.string "a mighty roar.$"
+	.string "随着震耳欲聋的巨响，\n"
+	.string "一道水墙气势非凡的横在眼前。$"
 
 Text_WantToWaterfall:
-	.string "It's a large waterfall.\n"
-	.string "Would you like to use WATERFALL?$"
+	.string "很大的一面水墙。\n"
+	.string "想使用攀瀑吗？$"
 
 Text_MonUsedWaterfall:
-	.string "{STR_VAR_1} used WATERFALL.$"
+	.string "{STR_VAR_1}使用了攀瀑。$"
 
 EventScript_UseDive::
 	lockall
@@ -263,27 +263,27 @@ EventScript_EndSurface::
 	end
 
 Text_CantDive:
-	.string "The sea is deep here. A POKéMON\n"
-	.string "may be able to go underwater.$"
+	.string "这里的水很深。宝可梦\n"
+	.string "可以潜下去。$"
 
 Text_WantToDive:
-	.string "The sea is deep here.\n"
-	.string "Would you like to use DIVE?$"
+	.string "这里的水很深。\n"
+	.string "想使用潜水吗？$"
 
 Text_MonUsedDive:
-	.string "{STR_VAR_1} used DIVE.$"
+	.string "{STR_VAR_1}使用了潜水。$"
 
 Text_CantSurface:
-	.string "Light is filtering down from above.\n"
-	.string "A POKéMON may be able to surface.$"
+	.string "上方有明亮的光芒。\n"
+	.string "宝可梦应该可以从这里浮出水面。$"
 
 Text_WantToSurface:
-	.string "Light is filtering down from above.\n"
-	.string "Would you like to use DIVE?$"
+	.string "上方有明亮的光芒。\n"
+	.string "要使用潜水吗？$"
 
 EventScript_FailSweetScent::
 	msgbox Text_FailSweetScent, MSGBOX_SIGN
 	end
 
 Text_FailSweetScent:
-	.string "Looks like there's nothing here…$"
+	.string "看起来这里什么也没有…$"
