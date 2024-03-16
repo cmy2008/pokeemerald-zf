@@ -989,8 +989,19 @@
 #define ITEM_814 814 // TWV0YWwgQWxsb3k=
 #define ITEM_815 815 // U3RlbGxhciBUZXJhIFNoYXJk
 #define ITEM_DIAMOND_PICKAXE 816
-
-#define ITEMS_COUNT 817
+//Start qol_field_moves
+#define ITEM_CUT_TOOL 817
+#define ITEM_FLY_TOOL 818
+#define ITEM_SURF_TOOL 819
+#define ITEM_STRENGTH_TOOL 820
+#define ITEM_FLASH_TOOL 821
+#define ITEM_ROCKSMASH_TOOL 822
+#define ITEM_WATERFALL_TOOL 823
+#define ITEM_DIVE_TOOL 824
+#define ITEM_TELEPORT_TOOL 825
+#define ITEM_SWEETSCENT_TOOL 826
+//End qol_field_moves
+#define ITEMS_COUNT 827
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

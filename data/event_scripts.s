@@ -1036,3 +1036,4 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PVPdalao/scripts.inc"
 
 	.include "data/maps/PVPdalao2/scripts.inc"
+	.include "data/scripts/qol_field_move_scripts.inc" @ qol_field_moves
