@@ -1493,12 +1493,12 @@ void ItemUseOutOfBattle_FlyTool(u8 taskId)
         gTasks[taskId].func = Task_OpenRegisteredFlyTool;
     }
 }
-static void CB2_OpenFlyToolFromBag(void)
+void CB2_OpenFlyToolFromBag(void)
 {
     VarSet(VAR_FLY_TOOL_SOURCE,FLY_SOURCE_BAG);
     CB2_OpenFlyMap();
 }
-static void Task_OpenRegisteredFlyTool(u8 taskId)
+void Task_OpenRegisteredFlyTool(u8 taskId)
 {
     VarSet(VAR_FLY_TOOL_SOURCE,FLY_SOURCE_FIELD);
     if (!gPaletteFade.active)
@@ -1560,7 +1560,7 @@ void ItemUseOutOfBattle_RockSmashTool(u8 taskId)
     else
         DisplayDadsAdviceCannotUseItemMessage(taskId, gTasks[taskId].tUsingRegisteredKeyItem);
 }
-static void ItemUseOnFieldCB_RockSmashTool(u8 taskId)
+void ItemUseOnFieldCB_RockSmashTool(u8 taskId)
 {
     LockPlayerFieldControls();
     ScriptContext_SetupScript(EventScript_UseRockSmashTool);
