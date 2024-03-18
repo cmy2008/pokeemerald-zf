@@ -35,7 +35,7 @@
 #include "constants/map_types.h"
 #include "constants/party_menu.h"
 #include "constants/moves.h"
-
+//
 static u8 CreateUseToolTask(void);
 static void Task_UseTool_Init(u8);
 static void LockPlayerAndLoadMon(void);
@@ -43,7 +43,7 @@ static void LockPlayerAndLoadMon(void);
 static void FieldCallback_UseFlyTool(void);
 static void Task_UseFlyTool(void);
 
-static void SurfToolFieldEffect_Init(struct Task *task); //qol_field_moves
+void SurfToolFieldEffect_Init(struct Task *task); //qol_field_moves
 
 static void SetUpFieldMove_UseFlash(u32);
 static void UseFlash(u32 fieldMoveStatus);
@@ -54,8 +54,8 @@ static void Task_UseWaterfallTool(u8);
 static bool8 IsPlayerFacingWaterfall(void);
 
 static void Task_UseDiveTool(u8);
-static bool8 DiveToolFieldEffect_Init(struct Task *task);
-static bool8 DiveToolFieldEffect_TryWarp(struct Task *task);
+bool8 DiveToolFieldEffect_Init(struct Task *task);
+bool8 DiveToolFieldEffect_TryWarp(struct Task *task);
 
 static bool32 PartyCanLearnMoveLevelUp(u16, u16);
 static bool32 SetMonResultVariables(u32 partyIndex, u32 species);
@@ -72,11 +72,11 @@ static u8 CreateUseToolTask(void)
 
 static void Task_UseTool_Init(u8 taskId)
 {
-    u8 objEventId;
+ //   u8 objEventId;
 
     LockPlayerFieldControls();
     gPlayerAvatar.preventStep = TRUE;
-    objEventId = gPlayerAvatar.objectEventId;
+ //   objEventId = gPlayerAvatar.objectEventId;
 
         gFieldEffectArguments[1] = GetPlayerFacingDirection();
         if (gFieldEffectArguments[1] == DIR_SOUTH)
@@ -218,7 +218,8 @@ u32 CanUseSurfFromInteractedWater()
 
 u8 FldEff_UseSurfTool(void)
 {
-    u8 taskId = CreateTask(Task_SurfToolFieldEffect, 0);
+//   u8 taskId = 
+    CreateTask(Task_SurfToolFieldEffect, 0);
     Overworld_ClearSavedMusic();
     Overworld_ChangeMusicTo(MUS_SURF);
     return FALSE;
