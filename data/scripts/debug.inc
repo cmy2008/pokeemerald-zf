@@ -76,7 +76,7 @@ Debug_FlagsNotSetOverworldConfigMessage::
 
 Debug_FlagsNotSetOverworldConfigMessage_Text:
 	.string "功能不可用!\n"
-	.string "请在这里定义该标记:\l"
+	.string "请在这里定义该标志:\l"
 	.string "'include/config/overworld.h'!$"
 
 Debug_FlagsNotSetBattleConfigMessage::
@@ -85,7 +85,7 @@ Debug_FlagsNotSetBattleConfigMessage::
 
 Debug_FlagsNotSetBattleConfigMessage_Text:
 	.string "功能不可用!\n"
-	.string "请在这里定义一个可用标记:\l"
+	.string "请在这里定义一个可用标志:\l"
 	.string "'include/config/battle.h'!$"
 
 Debug_BoxFilledMessage::
@@ -227,6 +227,6 @@ Debug_FlagsAndVarNotSetBattleConfigMessage::
 
 Debug_FlagsAndVarNotSetBattleConfigMessage_Text:
     .string "功能不可用！请在以下文件中定义\n"
-    .string "一个可用标记和一个可用的变量：\l"
+    .string "一个可用标志和一个可用的变量：\l"
     .string "'include/config/battle.h'！$"
 
