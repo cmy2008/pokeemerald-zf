@@ -25,6 +25,7 @@
 #include "text_window.h"
 #include "constants/event_objects.h"
 #include "constants/rgb.h"
+#include "walda_phrase.h"
 
 #define IS_CH_BEGIN(currChar) currChar >= 1 && currChar <= 0x1E
 
@@ -848,8 +849,7 @@ static bool8 MainState_WaitPageSwap(void)
 {
     s16 cursorX;
     s16 cursorY;
-    bool32 onLastColumn;
-    u8 column;
+    u16 column;
 
     if (IsPageSwapAnimNotInProgress())
     {
@@ -1323,7 +1323,7 @@ static void NamingScreen_CreatePlayerIcon(void)
     u8 spriteId;
 
     rivalGfxId = GetRivalAvatarGraphicsIdByStateIdAndGender(0, sNamingScreen->monSpecies);
-    spriteId = AddPseudoObjectEvent(rivalGfxId, SpriteCallbackDummy, POS_ICON_X, POS_ICON_Y - 3, 0);
+    spriteId = CreateObjectGraphicsSprite(rivalGfxId, SpriteCallbackDummy, POS_ICON_X, POS_ICON_Y - 3, 0);
     gSprites[spriteId].oam.priority = 3;
     StartSpriteAnim(&gSprites[spriteId], ANIM_STD_GO_SOUTH);
 }
@@ -1584,31 +1584,29 @@ static void TryTurnChineseRow(u8 y, u8 next)
 
 static void HandleDpadMovement(struct Task *task)
 {
-    const s8 sDpadDeltaX[] =
-    {
-        [INPUT_NONE]       = 0,
-        [INPUT_DPAD_UP]    = 0,
-        [INPUT_DPAD_DOWN]  = 0,
-        [INPUT_DPAD_LEFT]  = -1,
-        [INPUT_DPAD_RIGHT] = 1
-    };
+    // const s8 sDpadDeltaX[] =
+    // {
+    //     [INPUT_NONE]       = 0,
+    //     [INPUT_DPAD_UP]    = 0,
+    //     [INPUT_DPAD_DOWN]  = 0,
+    //     [INPUT_DPAD_LEFT]  = -1,
+    //     [INPUT_DPAD_RIGHT] = 1
+    // };
 
-    const s8 sDpadDeltaY[] =
-    {
-        [INPUT_NONE]       = 0,
-        [INPUT_DPAD_UP]    = -1,
-        [INPUT_DPAD_DOWN]  = 1,
-        [INPUT_DPAD_LEFT]  = 0,
-        [INPUT_DPAD_RIGHT] = 0
-    };
+    // const s8 sDpadDeltaY[] =
+    // {
+    //     [INPUT_NONE]       = 0,
+    //     [INPUT_DPAD_UP]    = -1,
+    //     [INPUT_DPAD_DOWN]  = 1,
+    //     [INPUT_DPAD_LEFT]  = 0,
+    //     [INPUT_DPAD_RIGHT] = 0
+    // };
 
     s16 cursorX;
     s16 cursorY;
     
-    s16 prevCursorX;
     GetCursorPos(&cursorX, &cursorY);
     // Get new cursor position
-    prevCursorX = cursorX;
     
     if (JOY_REPEAT(DPAD_UP))
     {
@@ -1845,7 +1843,7 @@ static void CalcNextChars()
 
 static void DrawChineseTextEntry()
 {
-   u16 i, j, k;
+//    u16 i, j, k;
     
     FillWindowPixelBuffer(sNamingScreen->windows[WIN_CH], 0);
     FillWindowPixelBuffer(sNamingScreen->windows[WIN_PINYIN], 0);
@@ -1968,16 +1966,20 @@ static void BufferCharacter(u16 ch)
 }
 */
 
-
 static void SaveInputText(void)
 {
     u8 i;
-    u8 maxChars = sNamingScreen->template->maxChars;
-    for (i = 0; i < maxChars; i++)
-        sNamingScreen->textBuffer[i] = PVPChars[i];
-    sNamingScreen->textBuffer[maxChars] = EOS;
-    StringCopyN(sNamingScreen->destBuffer, sNamingScreen->textBuffer, sNamingScreen->template->maxChars + 1);
+
+    for (i = 0; i < sNamingScreen->template->maxChars; i++)
+    {
+        if (sNamingScreen->textBuffer[i] != CHAR_SPACE && sNamingScreen->textBuffer[i] != EOS)
+        {
+            StringCopyN(sNamingScreen->destBuffer, sNamingScreen->textBuffer, sNamingScreen->template->maxChars + 1);
+            break;
+        }
+    }
 }
+
 static void LoadGfx(void)
 {
     LZ77UnCompWram(gNamingScreenBg_Gfx, sNamingScreen->tileBuffer);
@@ -2068,7 +2070,7 @@ static void CopyStrClear(const u8* src, u8* dest, u8 pad)
 
 static void PrintKeyboardKeys(u8 window, u8 page)
 {
-    u16 i, j, k;
+    u16 i;
 	u8 *buffer = gStringVar4;
     
     FillWindowPixelBuffer(window, 0);
@@ -2370,14 +2372,14 @@ static const u16 gUnderscore_Pal[] =  INCBIN_U16("graphics/naming_screen/undersc
 
 static const struct SpritePalette sSpritePalettes[] =
 {
-    {gNamingScreenMenu_Pal,         PALTAG_PC_ICON},
-    {gNamingScreenMenu_Pal + 0x10,  PALTAG_PAGE_SWAP_UPPER},
-    {gNamingScreenMenu_Pal + 0x20,  PALTAG_PAGE_SWAP_LOWER},
-    {gUnderscore_Pal,  PALTAG_PAGE_SWAP_OTHERS},
-    {gNamingScreenMenu_Pal + 0x40,  PALTAG_PAGE_SWAP},
-    {gNamingScreenMenu_Pal + 0x50,  PALTAG_CURSOR},
-    {gNamingScreenMenu_Pal + 0x40,  PALTAG_BACK_BUTTON},
-    {gNamingScreenMenu_Pal + 0x40,  PALTAG_OK_BUTTON},
+    {gNamingScreenMenu_Pal[0], PALTAG_MENU},
+    {gNamingScreenMenu_Pal[1], PALTAG_PAGE_SWAP_UPPER},
+    {gNamingScreenMenu_Pal[2], PALTAG_PAGE_SWAP_LOWER},
+    {gNamingScreenMenu_Pal[3], PALTAG_PAGE_SWAP_OTHERS},
+    {gNamingScreenMenu_Pal[4], PALTAG_PAGE_SWAP},
+    {gNamingScreenMenu_Pal[5], PALTAG_CURSOR},
+    {gNamingScreenMenu_Pal[4], PALTAG_BACK_BUTTON},
+    {gNamingScreenMenu_Pal[4], PALTAG_OK_BUTTON},
     {}
 };
 
