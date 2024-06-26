@@ -46,7 +46,7 @@ jobs:
         env:
           MODERN: 1
           COMPARE: 0
-        run: make -j${nproc} -O all CFLAGS="-Wno-unused-function"
+        run: make -j${nproc} -O all CFLAGS="-Wno-unused-function -Wno-maybe-uninitialized"
 
       - name: Upload ROMs
         uses: actions/upload-artifact@v4
