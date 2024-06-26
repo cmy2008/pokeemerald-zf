@@ -127,7 +127,7 @@ struct RfuBlockSend
 {
     /* 0x00 */ u16 next;
     /* 0x02 */ u16 count;
-    /* 0x04 */ const u8 *payload;
+    /* 0x04 */ const u32 *payload;
     /* 0x08 */ u32 receivedFlags;
     /* 0x0c */ u32 failedFlags;
     /* 0x10 */ bool8 sending;
