@@ -218,7 +218,7 @@ void VsSeekerResetObjectMovementAfterChargeComplete(void)
         templates[i].movementType = movementType;
     }
 }
-
+// TODO: REMOVE trainerRematchStepCounter
 bool8 UpdateVsSeekerStepCounter(void)
 {
     u8 x = 0;
