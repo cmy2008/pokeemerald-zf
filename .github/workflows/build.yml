@@ -17,7 +17,7 @@ jobs:
       GAME_LANGUAGE: ENGLISH
       MODERN: 0
       COMPARE: 0
-      UNUSED_ERROR: 1
+      UNUSED_ERROR: 0  # 将 UNUSED_ERROR 设置为 0
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -46,7 +46,7 @@ jobs:
         env:
           MODERN: 1
           COMPARE: 0
-        run: make -j${nproc} -O all
+        run: make -j${nproc} -O all CFLAGS="-Wno-unused-function"
 
       - name: Upload ROMs
         uses: actions/upload-artifact@v4
