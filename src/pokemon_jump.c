@@ -4331,6 +4331,8 @@ static struct PokemonJumpRecords *GetPokeJumpRecords(void)
 {
     #ifndef FREE_POKEMON_JUMP
     return &gSaveBlock2Ptr->pokeJump;
+    #else
+    return NULL;
     #endif
 }
 

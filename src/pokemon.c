@@ -1350,6 +1350,7 @@ void CreateEnemyEventMon(void)
     }
 }
 
+/* Unsed
 static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon)
 {
     u16 checksum = 0;
@@ -1373,7 +1374,7 @@ static u16 CalculateBoxMonChecksum(struct BoxPokemon *boxMon)
 
     return checksum;
 }
-
+*/
 #define CALC_STAT(base, iv, ev, statIndex, field)               \
 {                                                               \
     u8 baseStat = gSpeciesInfo[species].base;                   \
@@ -2405,7 +2406,7 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
         substruct1 = &(GetSubstruct(boxMon, 1)->type1);
         substruct2 = &(GetSubstruct(boxMon, 2)->type2);
         substruct3 = &(GetSubstruct(boxMon, 3)->type3);
-    }
+
 
     switch (field)
     {
@@ -2649,9 +2650,7 @@ void SetBoxMonData(struct BoxPokemon *boxMon, s32 field, const void *dataArg)
             break;
         }
     }
-
 }
-
 void CopyMon(void *dest, void *src, size_t size)
 {
     memcpy(dest, src, size);
