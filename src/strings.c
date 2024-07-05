@@ -2,6 +2,7 @@
 #include "strings.h"
 #include "battle_pyramid_bag.h"
 #include "item_menu.h"
+#include "text.h"
 
 ALIGNED(4)
 const u8 gText_ExpandedPlaceholder_Empty[] = _("");
@@ -267,7 +268,8 @@ const u8 *const gBagMenu_ReturnToStrings[] =
     [ITEMMENULOCATION_QUIZ_LADY]           = gText_TheField,
     [ITEMMENULOCATION_APPRENTICE]          = gText_TheField,
     [ITEMMENULOCATION_WALLY]               = gText_TheBattle,
-    [ITEMMENULOCATION_PCBOX]               = gText_ThePC
+    [ITEMMENULOCATION_PCBOX]               = gText_ThePC,
+    [ITEMMENULOCATION_BERRY_TREE_MULCH]    = gText_TheField,
 };
 
 const u8 *const gPyramidBagMenu_ReturnToStrings[] =
@@ -359,6 +361,7 @@ const u8 gText_AnythingElseICanHelp[] = _("还有什么我可以\n帮得上忙�
 const u8 gText_CanIHelpWithAnythingElse[] = _("还有什么我能帮得上忙的吗？");
 const u8 gText_ThrowInPremierBall[] = _("赠送一个首席球作为礼品哦！{PAUSE_UNTIL_PRESS}");
 const u8 gText_CantBuyKeyItem[] = _("{STR_VAR_2}吗？\n噢，抱歉，我不能买那个。{PAUSE_UNTIL_PRESS}");
+const u8 gText_ThrowInPremierBalls[] = _("I'll throw in {STR_VAR_1} PREMIER BALLS, too.{PAUSE_UNTIL_PRESS}");
 const u8 gText_HowManyToSell[] = _("{STR_VAR_2}吗？\n要卖多少个呢？");
 const u8 gText_ICanPayVar1[] = _("这样的话以{STR_VAR_1}$\n的价格成交吧。");
 const u8 gText_TurnedOverVar1ForVar2[] = _("用{STR_VAR_2}交换\n并得到了{STR_VAR_1}$。");
@@ -1102,7 +1105,7 @@ const u8 gText_GamePlayCannotBeContinued[] = _("{COLOR RED}“游戏不能继续
 const u8 gText_CheckCompleted[] = _("检查完毕，\n尝试再次存档。\n请稍后。");
 const u8 gText_SaveCompleteGameCannotContinue[] = _("保存完毕。\n{COLOR RED}“游戏不能继续了，\n正在返回标题画面……”");
 const u8 gText_SaveCompletePressA[] = _("保存完毕。\n{COLOR RED}“请按A键。”");
-const u8 gText_Ferry[] = _("港口");
+const u8 gText_Ferry[] = _("轮船");
 const u8 gText_SecretBase[] = _("秘密基地");
 const u8 gText_Hideout[] = _("藏身所");
 const u8 gText_ResetRTCConfirmCancel[] = _("重置实时时钟么？\nA：确认 B：取消");
@@ -1842,3 +1845,5 @@ const u8 gText_Berries[] = _("树果");
 const u8 gText_ExpShareOn[] = _("The Exp. Share has been turned on.{PAUSE_UNTIL_PRESS}");
 const u8 gText_ExpShareOff[] = _("The Exp. Share has been turned off.{PAUSE_UNTIL_PRESS}");
 const u8 gText_BasePointsResetToZero[] = _("{STR_VAR_1}'s base points\nwere all reset to zero!{PAUSE_UNTIL_PRESS}");
+const u8 gText_Fertilize[] = _("FERTILIZE");
+const u8 gText_PlantBerry[] = _("PLANT BERRY");
