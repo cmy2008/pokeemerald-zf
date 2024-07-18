@@ -10120,10 +10120,6 @@ PLACEHOLDER_ANIM_SINGLE_FRAME(IronCrown);
 #endif //P_FAMILY_IRON_CROWN
 
 #if P_FAMILY_TERAPAGOS
-<<<<<<< HEAD
-PLACEHOLDER_ANIM_SINGLE_FRAME(TerapagosNormal);
-PLACEHOLDER_ANIM_SINGLE_FRAME(TerapagosTerastal);
-=======
 static const union AnimCmd sAnim_TerapagosNormal_1[] =
 {
     ANIMCMD_FRAME(0, 30),
@@ -10138,7 +10134,6 @@ static const union AnimCmd sAnim_TerapagosTerastal_1[] =
     ANIMCMD_FRAME(0, 1),
     ANIMCMD_END,
 };
->>>>>>> 0625c90277c9e1f577618d2468c8c3d6003c36bb
 PLACEHOLDER_ANIM_SINGLE_FRAME(TerapagosStellar);
 #endif //P_FAMILY_TERAPAGOS
 
