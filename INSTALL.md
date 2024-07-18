@@ -395,12 +395,6 @@ If this works, then proceed to [Installation](#installation). Otherwise, ask for
 
 Python is now installed.
 
-### Installing Python (macOS)
-1. Download the latest Python package from [here](https://www.python.org/downloads/).
-2. Open the package to install Python.
-
-Python is now installed.
-
 ### Choosing where to store pokeemerald Expansion (macOS)
 At this point, you can choose a folder to store pokeemerald Expansion into. If you're okay with storing pokeemerald Expansion in the user folder, then proceed to [Installation](#installation). Otherwise, you'll need to account for where pokeemerald Expansion is stored when changing directory to the pokeemerald-expansion folder.
 
