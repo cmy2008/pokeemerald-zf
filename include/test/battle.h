@@ -695,6 +695,7 @@ struct BattleTestData
 struct BattleTestRunnerState
 {
     u8 battlersCount;
+    bool8 forceMoveAnim;
     u16 parametersCount; // Valid only in BattleTest_Setup.
     u16 parameters;
     u16 runParameter;
@@ -996,6 +997,8 @@ void SendOut(u32 sourceLine, struct BattlePokemon *, u32 partyIndex);
 #define NONE_OF for (OpenQueueGroup(__LINE__, QUEUE_GROUP_NONE_OF); gBattleTestRunnerState->data.queueGroupType != QUEUE_GROUP_NONE; CloseQueueGroup(__LINE__))
 #define NOT NONE_OF
 
+#define FORCE_MOVE_ANIM(set) gBattleTestRunnerState->forceMoveAnim = (set)
+
 #define ABILITY_POPUP(battler, ...) QueueAbility(__LINE__, battler, (struct AbilityEventContext) { __VA_ARGS__ })
 #define ANIMATION(type, id, ...) QueueAnimation(__LINE__, type, id, (struct AnimationEventContext) { __VA_ARGS__ })
 #define HP_BAR(battler, ...) QueueHP(__LINE__, battler, (struct HPEventContext) { APPEND_TRUE(__VA_ARGS__) })
@@ -1003,6 +1006,8 @@ void SendOut(u32 sourceLine, struct BattlePokemon *, u32 partyIndex);
 // Static const is needed to make the modern compiler put the pattern variable in the .rodata section, instead of putting it on stack(which can break the game).
 #define MESSAGE(pattern) do {static const u8 msg[] = _(pattern); QueueMessage(__LINE__, msg);} while (0)
 #define STATUS_ICON(battler, status) QueueStatus(__LINE__, battler, (struct StatusEventContext) { status })
+#define FREEZE_OR_FROSTBURN_STATUS(battler, isFrostbite) \
+    (B_USE_FROSTBITE ? STATUS_ICON(battler, frostbite: isFrostbite) : STATUS_ICON(battler, freeze: isFrostbite))
 
 enum QueueGroupType
 {

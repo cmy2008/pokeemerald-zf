@@ -185,6 +185,10 @@ Debug_SaveBlock3Size::
 	.string "SaveBlock3 size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
 	.string "Free space: {STR_VAR_3}b.$"
 
+Debug_SaveBlock3Size::
+	.string "SaveBlock3 size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
+	.string "Free space: {STR_VAR_3}b.$"
+
 Debug_PokemonStorageSize::
 	.string "{PKMN}Storage 大小: {STR_VAR_1}b/{STR_VAR_2}b.\n"
 	.string "剩余空间: {STR_VAR_3}b.$"
@@ -269,8 +273,8 @@ Debug_BerryPestsDisabled::
 	end
 
 DebugText_BerryPestsDisabled:
-	.string "树果害虫已禁用。\n"
-	.string "无法强制害虫进入树果$"
+	.string "OW_BERRY_PESTS is disabled.\n"
+	.string "Unable to force pests onto berry trees.$"
 
 Debug_BerryWeedsDisabled::
 	msgbox DebugText_BerryWeedsDisabled, MSGBOX_DEFAULT
@@ -278,21 +282,8 @@ Debug_BerryWeedsDisabled::
 	end
 
 DebugText_BerryWeedsDisabled:
-	.string "杂草已被禁用了\n"
-	.string "无法使杂草侵入浆果树。"
-
-Debug_FlagsAndVarNotSetBattleConfigMessage::
-	lockall
-	message Debug_FlagsAndVarNotSetBattleConfigMessage_Text
-	waitmessage
-	waitbuttonpress
-	releaseall
-	end
-
-Debug_FlagsAndVarNotSetBattleConfigMessage_Text:
-    .string "功能不可用！请在以下文件中定义\n"
-    .string "一个可用标志和一个可用的变量：\l"
-    .string "'include/config/battle.h'！$"
+	.string "OW_BERRY_WEEDS is disabled.\n"
+	.string "Unable to force weeds onto berry trees.$"
 
 Debug_EventScript_InflictStatus1::
 	lockall

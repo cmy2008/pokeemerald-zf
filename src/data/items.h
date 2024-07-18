@@ -1,3 +1,4 @@
+// 先放个注释在这，太多了懒得更新_(:з」∠)_ TODO: 优化合并
 #include "constants/moves.h"
 
 #if I_USE_EVO_HELD_ITEMS_FROM_BAG == TRUE
@@ -2492,10 +2493,11 @@ const struct Item gItemsInfo[] =
     [ITEM_STABLE_MULCH] =
     {
         .name = _("久久肥"),
+        .pluralName = _("久久肥"),
         .price = 200,
 #if OW_BERRY_MULCH_USAGE == TRUE
         .description = COMPOUND_STRING(
-            "培育树果时的肥料\n。但完全不适合丰\n缘的土壤。"),
+            "培育树果时的肥料\n。但完全不适合丰\n缘的土壤。",
 #else
         .description = sGenericMulchDesc,
 #endif
@@ -3856,6 +3858,7 @@ const struct Item gItemsInfo[] =
     [ITEM_GHOST_MEMORY] =
     {
         .name = _("Ghost Memory"),
+        .pluralName = _("Ghost Memories"),
         .price = 1000,
         .holdEffect = HOLD_EFFECT_MEMORY,
         .holdEffectParam = 0,
@@ -10936,7 +10939,13 @@ const struct Item gItemsInfo[] =
         .name = _("厉害中药"),
         .price = 750,
         .description = COMPOUND_STRING(
-            "能让宝可梦回复1\n50HP，但很苦\n，友好度会降低。"),
+            "能让宝可梦回复"
+            #if I_HEALTH_RECOVERY >= GEN_7
+            "\n120HP"
+            #else
+            "200HP"
+            #endif
+            "，但很苦\n，友好度会降低。"),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Medicine,
@@ -10951,7 +10960,11 @@ const struct Item gItemsInfo[] =
         .price = 800,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
+            "让宝可梦在战斗中\n变得不易被对手\n招式命中的道具。"),
+        #else
             "让宝可梦在战斗中\n变得较不易被对手\n招式命中的道具。"),
+        #endif
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10960,11 +10973,15 @@ const struct Item gItemsInfo[] =
 
     [ITEM_AUX_GUARD] =
     {
-        .name = _("防守药丸"),
+        .name = _("防御强化"),
         .price = 400,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
-            "大大提高战斗中宝\n可梦防守力的道具\n。"),
+        #if B_X_ITEMS_BUFF >= GEN_7
+            "大大提高战斗中宝\n可梦防守力的道具。"),
+        #else
+            "提高战斗中宝\n可梦防守力的道具。"),
+        #endif
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10973,11 +10990,15 @@ const struct Item gItemsInfo[] =
 
     [ITEM_AUX_POWER] =
     {
-        .name = _("进攻药丸"),
+        .name = _("进攻强化"),
         .price = 400,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
-            "大大提高战斗中宝\n可梦进攻力的道具\n。"),
+        #if B_X_ITEMS_BUFF >= GEN_7
+            "大大提高战斗中宝\n可梦进攻力的道具。"),
+        #else
+            "提高战斗中宝\n可梦进攻力的道具。"),
+        #endif
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -10990,7 +11011,11 @@ const struct Item gItemsInfo[] =
         .price = 1200,
         .holdEffectParam = X_ITEM_STAGES,
         .description = COMPOUND_STRING(
+        #if B_X_ITEMS_BUFF >= GEN_7
             "大大提高战斗中宝\n可梦进攻力和防守\n力的道具。"),
+        #else
+            "提高战斗中宝\n可梦进攻力和防守\n力的道具。"),
+        #endif
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,
@@ -11001,8 +11026,9 @@ const struct Item gItemsInfo[] =
     {
         .name = _("讲究粽"),
         .price = 1200,
-        .description = COMPOUND_STRING(
-            "使用后会让宝可梦\n陷入热衷的粽子。"),
+        .description = sQuestionMarksDesc,
+        //        .description = COMPOUND_STRING(
+        //    "使用后会让宝可梦\n陷入热衷的粽子。"),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_CannotUse,

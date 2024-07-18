@@ -35,17 +35,30 @@ static void AddTreeBonus(struct BerryTree *tree, u8 bonus);
 
 // Check include/config/overworld.h configs and throw an error if illegal
 #if OW_BERRY_GROWTH_RATE < GEN_3 || (OW_BERRY_GROWTH_RATE > GEN_7 && OW_BERRY_GROWTH_RATE != GEN_6_ORAS)
-#error "树果生长速度必须在 GEN_3 和 GEN_7 之间！"
+#error "OW_BERRY_YIELD_RATE 必须在 GEN_3 和 GEN_7 之间！"
 #endif
 
 #if OW_BERRY_YIELD_RATE < GEN_3 || (OW_BERRY_YIELD_RATE > GEN_6 && OW_BERRY_YIELD_RATE != GEN_6_ORAS)
-#error "树果生长速度必须在 GEN_3 和 GEN_6 之间！"
+#error "OW_BERRY_YIELD_RATE 必须在 GEN_3 和 GEN_6 之间！"
 #elif OW_BERRY_YIELD_RATE == GEN_5
-#error "树果生长速度不能是 GEN_5！"
+#error "OW_BERRY_YIELD_RATE 不能为 GEN_5！"
 #endif
 
 #if OW_BERRY_MOISTURE && OW_BERRY_DRAIN_RATE != GEN_4 && OW_BERRY_DRAIN_RATE != GEN_6_XY && OW_BERRY_DRAIN_RATE != GEN_6_ORAS
-#error "树果生长速度必须是 GEN_5, GEN_6_XY 或 GEN_6_ORAS！"
+#error "OW_BERRY_DRAIN_RATE 必须为 GEN_5, GEN_6_XY 或 GEN_6_ORAS！"
+#endif
+
+#define GROWTH_DURATION(g3, g4, g5, xy, oras, g7) OW_BERRY_GROWTH_RATE == GEN_3 ? g3 : OW_BERRY_GROWTH_RATE == GEN_4 ? g4 : OW_BERRY_GROWTH_RATE == GEN_5 ? g5 : OW_BERRY_GROWTH_RATE == GEN_6_XY ? xy : OW_BERRY_GROWTH_RATE == GEN_6_ORAS ? oras : g7
+#define YIELD_RATE(g3, g4, xy, oras) OW_BERRY_YIELD_RATE == GEN_3 ? g3 : OW_BERRY_YIELD_RATE == GEN_4 ? g4 : OW_BERRY_YIELD_RATE == GEN_6_XY ? xy : oras
+
+#if OW_BERRY_YIELD_RATE < GEN_3 || (OW_BERRY_YIELD_RATE > GEN_6 && OW_BERRY_YIELD_RATE != GEN_6_ORAS)
+#error "OW_BERRY_DRAIN_RATE 必须在 GEN_3 和 GEN_6 之间！"
+#elif OW_BERRY_YIELD_RATE == GEN_5
+#error "OW_BERRY_DRAIN_RATE 不能为 GEN_5！"
+#endif
+
+#if OW_BERRY_MOISTURE && OW_BERRY_DRAIN_RATE != GEN_4 && OW_BERRY_DRAIN_RATE != GEN_6_XY && OW_BERRY_DRAIN_RATE != GEN_6_ORAS
+#error "OW_BERRY_DRAIN_RATE 必须为 GEN_5, GEN_6_XY 或 GEN_6_ORAS！"
 #endif
 
 #define GROWTH_DURATION(g3, g4, g5, xy, oras, g7) OW_BERRY_GROWTH_RATE == GEN_3 ? g3 : OW_BERRY_GROWTH_RATE == GEN_4 ? g4 : OW_BERRY_GROWTH_RATE == GEN_5 ? g5 : OW_BERRY_GROWTH_RATE == GEN_6_XY ? xy : OW_BERRY_GROWTH_RATE == GEN_6_ORAS ? oras : g7
@@ -2383,6 +2396,7 @@ static u8 GetTreeMutationValue(u8 id)
         return 0;
     myMutation.asField.a = tree->mutationA;
     myMutation.asField.b = tree->mutationB;
+    myMutation.asField.unused = 0;
     return sBerryMutations[myMutation.value - 1][2];
 #else
     return 0;

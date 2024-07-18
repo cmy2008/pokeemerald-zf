@@ -855,8 +855,9 @@
 	.byte 0x99
 	.endm
 
-	.macro setfocusenergy
+	.macro setfocusenergy battler:req
 	.byte 0x9a
+	.byte \battler
 	.endm
 
 	.macro transformdataexecution
@@ -1361,6 +1362,11 @@
 	.4byte \jumpInstr
 	.endm
 
+	.macro itemstatchangeeffects battler:req
+	callnative BS_RunStatChangeItems
+	.byte \battler
+	.endm
+
 	.macro allyswitchswapbattlers
 	callnative BS_AllySwitchSwapBattler
 	.endm
@@ -1382,9 +1388,10 @@
 	.4byte \jumpInstr
 	.endm
 
-	.macro itemrestorehp jumpInstr:req
+	.macro itemrestorehp jumpInstr:req, restoreBattlerInstr:req
 	callnative BS_ItemRestoreHP
 	.4byte \jumpInstr
+	.4byte \restoreBattlerInstr
 	.endm
 
 	.macro itemcurestatus jumpInstr:req
@@ -1500,18 +1507,10 @@
 	.4byte \jumpInstr
 	.endm
 
-	.macro jumpifrodaffected battler:req, jumpInstr:req
-	callnative BS_JumpIfRod
-	.4byte \jumpInstr
-	.endm
-
-	.macro jumpifabsorbaffected battler:req, jumpInstr:req
-	callnative BS_JumpIfAbsorb
-	.4byte \jumpInstr
-	.endm
-
-	.macro jumpifmotoraffected battler:req, jumpInstr:req
-	callnative BS_JumpIfMotor
+	.macro jumpifelectricabilityaffected battler:req, ability:req, jumpInstr:req
+	callnative BS_JumpIfElectricAbilityAffected
+	.byte \battler
+	.2byte \ability
 	.4byte \jumpInstr
 	.endm
 
@@ -1625,6 +1624,19 @@
 	callnative BS_TryTidyUp
 	.byte \clear
 	.4byte \jumpInstr
+	.endm
+
+	.macro trygulpmissile
+	callnative BS_TryGulpMissile
+	.endm
+
+	.macro tryactivategulpmissile
+	callnative BS_TryActivateGulpMissile
+	.endm
+
+	.macro tryquash failInstr:req
+	callnative BS_TryQuash
+	.4byte \failInstr
 	.endm
 
 @ various command changed to more readable macros
@@ -1816,11 +1828,6 @@
 
 	.macro setlastusedability battler:req
 	various \battler, VARIOUS_SET_LAST_USED_ABILITY
-	.endm
-
-	.macro tryquash failInstr:req
-	various BS_ATTACKER, VARIOUS_TRY_QUASH
-	.4byte \failInstr
 	.endm
 
 	.macro tryafteryou failInstr:req
@@ -2196,10 +2203,6 @@
 	.4byte \failInstr
 	.endm
 
-	.macro shellsidearmcheck
-	various BS_ATTACKER, VARIOUS_SHELL_SIDE_ARM_CHECK
-	.endm
-
 	.macro jumpifteanoberry jumpInstr:req
 	various BS_ATTACKER, VARIOUS_TEATIME_TARGETS
 	.4byte \jumpInstr
@@ -2364,10 +2367,6 @@
 
 	.macro dmgtocurrattackerhp
 	manipulatedamage DMG_CURR_ATTACKER_HP
-	.endm
-
-	.macro dmg_1_2_attackerhp
-	manipulatedamage DMG_1_2_ATTACKER_HP
 	.endm
 
 	.macro jumpifflowerveil jumpInstr:req

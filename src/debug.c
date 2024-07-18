@@ -519,8 +519,6 @@ static const u8 sDebugText_Util_WarpToMap_SelectMapGroup[] = _("组: {STR_VAR_1}
 static const u8 sDebugText_Util_WarpToMap_SelectMap[] =      _("地图: {STR_VAR_1}{CLEAR_TO 90}\nMapSec:{CLEAR_TO 90}\n{STR_VAR_2}{CLEAR_TO 90}\n{STR_VAR_3}{CLEAR_TO 90}");
 static const u8 sDebugText_Util_WarpToMap_SelectWarp[] =     _("传送点:{CLEAR_TO 90}\n{STR_VAR_1}{CLEAR_TO 90}\n{CLEAR_TO 90}\n{STR_VAR_3}{CLEAR_TO 90}");
 static const u8 sDebugText_Util_WarpToMap_SelMax[] =         _("{STR_VAR_1} / {STR_VAR_2}");
-
-// Flags/Vars Menu
 static const u8 sDebugText_Util_SaveBlockSpace[] =           _("SaveBlock 可用空间…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_Util_ROMSpace[] =                 _("ROM 可用空间…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_Util_Weather[] =                  _("设置天气…{CLEAR_TO 110}{RIGHT_ARROW}");
@@ -556,8 +554,8 @@ static const u8 sDebugText_Party_CheckEVs[] =                _("检查努力值"
 static const u8 sDebugText_Party_CheckIVs[] =                _("检查个体值");
 static const u8 sDebugText_Party_ClearParty[] =              _("清空队伍");
 // Flags/Vars Menu
-static const u8 sDebugText_FlagsVars_Flags[] =               _("设置标志 XYZ…{CLEAR_TO 110}{RIGHT_ARROW}");
-static const u8 sDebugText_FlagsVars_Flag[] =                _("标志: {STR_VAR_1}{CLEAR_TO 90}\n{STR_VAR_2}{CLEAR_TO 90}\n{STR_VAR_3}");
+static const u8 sDebugText_FlagsVars_Flags[] =               _("设置Flag XYZ…{CLEAR_TO 110}{RIGHT_ARROW}");
+static const u8 sDebugText_FlagsVars_Flag[] =                _("Flag: {STR_VAR_1}{CLEAR_TO 90}\n{STR_VAR_2}{CLEAR_TO 90}\n{STR_VAR_3}");
 static const u8 sDebugText_FlagsVars_FlagHex[] =             _("{STR_VAR_1}{CLEAR_TO 90}\n0x{STR_VAR_2}{CLEAR_TO 90}");
 static const u8 sDebugText_FlagsVars_Vars[] =                _("设置变量 XYZ…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_FlagsVars_VariableHex[] =         _("{STR_VAR_1}{CLEAR_TO 90}\n0x{STR_VAR_2}{CLEAR_TO 90}");
@@ -578,7 +576,6 @@ static const u8 sDebugText_FlagsVars_SwitchEncounter[] =     _("切换 {STR_VAR_
 static const u8 sDebugText_FlagsVars_SwitchTrainerSee[] =    _("切换 {STR_VAR_1}训练师查看关闭");
 static const u8 sDebugText_FlagsVars_SwitchBagUse[] =        _("切换 {STR_VAR_1}背包使用关闭");
 static const u8 sDebugText_FlagsVars_SwitchCatching[] =      _("切换 {STR_VAR_1}捕捉关闭");
-
 // Battle
 static const u8 sDebugText_Battle_0_Wild[] =        _("野生…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_Battle_0_WildDouble[] =  _("野生双打…{CLEAR_TO 110}{RIGHT_ARROW}");
@@ -613,7 +610,6 @@ static const u8 sDebugText_Battle_2_Terrain_6[] =   _("山地…{CLEAR_TO 110}{R
 static const u8 sDebugText_Battle_2_Terrain_7[] =   _("洞穴…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_Battle_2_Terrain_8[] =   _("建筑物…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_Battle_2_Terrain_9[] =   _("平原…{CLEAR_TO 110}{RIGHT_ARROW}");
-
 // Give Menu
 static const u8 sDebugText_Give_GiveItem[] =            _("给予物品 XYZ…{CLEAR_TO 110}{RIGHT_ARROW}");
 static const u8 sDebugText_ItemQuantity[] =             _("数量:{CLEAR_TO 90}\n{STR_VAR_1}{CLEAR_TO 90}\n\n{STR_VAR_2}");
@@ -658,7 +654,6 @@ static const u8 sDebugText_BerryFunctions_Ready[] =     _("使地图上的树木
 static const u8 sDebugText_BerryFunctions_NextStage[] = _("使地图上的树木生长到下一个阶段");
 static const u8 sDebugText_BerryFunctions_Pests[] =     _("在地图上的树木上放虫子");
 static const u8 sDebugText_BerryFunctions_Weeds[] =     _("在地图上的树木上放杂草");
-
 
 static const u8 sDebugText_Digit_1[] =        _("{LEFT_ARROW}+1{RIGHT_ARROW}        ");
 static const u8 sDebugText_Digit_10[] =       _("{LEFT_ARROW}+10{RIGHT_ARROW}       ");
@@ -3409,7 +3404,7 @@ static void DebugAction_Give_Pokemon_SelectNature(u8 taskId)
 
     if (JOY_NEW(A_BUTTON))
     {
-        u8 abilityId;
+        u16 abilityId;
         sDebugMonData->nature = gTasks[taskId].tInput;
         gTasks[taskId].tInput = 0;
         gTasks[taskId].tDigit = 0;

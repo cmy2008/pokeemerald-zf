@@ -1,6 +1,4 @@
 #include "constants/abilities.h"
-
-// Shared Pokédex entries
 #include "species_info/shared_dex_text.h"
 
 // Macros for ease of use.
@@ -33,11 +31,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .categoryName = _("未知"),
         .height = 0,
         .weight = 0,
-        .description = COMPOUND_STRING(
-            "This is a newly discovered Pokémon.\n"
-            "It is currently under investigation.\n"
-            "No detailed information is available\n"
-            "at this time."),
+        .description = gFallbackPokedexText,
         .pokemonScale = 256,
         .pokemonOffset = 0,
         .trainerScale = 256,
@@ -55,6 +49,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .shinyPalette = gMonShinyPalette_CircledQuestionMark,
         .iconSprite = gMonIcon_QuestionMark,
         .iconPalIndex = 0,
+        FOOTPRINT(QuestionMark)
         .levelUpLearnset = sNoneLevelUpLearnset,
         .teachableLearnset = sNoneTeachableLearnset,
     },
@@ -143,7 +138,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .iconPalIndex = 0,
         //.iconSpriteFemale = gMonIcon_QuestionMarkF,
         //.iconPalIndexFemale = 1,
-        //FOOTPRINT(None)
+        FOOTPRINT(QuestionMark)
         .levelUpLearnset = sNoneLevelUpLearnset,
         .teachableLearnset = sNoneTeachableLearnset,
         .evolutions = EVOLUTION({EVO_LEVEL, 100, SPECIES_NONE},

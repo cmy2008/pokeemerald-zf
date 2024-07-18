@@ -389,9 +389,9 @@ struct SpeciesInfo /*0x8C*/
  /* 0x38 */ u16 trainerScale;
  /* 0x3A */ u16 trainerOffset;
  /* 0x3C */ const u8 *description;
- /* 0x40 */ u8 bodyColor : 7;
+ /* 0x40 */ u8 bodyColor:7;
             // Graphical Data
-            u8 noFlip : 1;
+            u8 noFlip:1;
  /* 0x41 */ u8 frontAnimDelay;
  /* 0x42 */ u8 frontAnimId;
  /* 0x43 */ u8 backAnimId;
@@ -514,6 +514,7 @@ struct MoveInfo
     u32 parentalBondBanned:1;
     u32 skyBattleBanned:1;
     u32 sketchBanned:1;
+    u32 padding:5; // end of word
 
     u32 argument;
 
