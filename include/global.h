@@ -1092,6 +1092,4 @@ struct MapPosition
     s8 elevation;
 };
 
-extern u8 gStackBase[]; // Start of stack-allocated IWRAM
-
 #endif // GUARD_GLOBAL_H

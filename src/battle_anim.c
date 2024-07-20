@@ -462,6 +462,7 @@ static u8 GetBattleAnimMoveTargets(u8 battlerArgIndex, u8 *targets)
         ignoredTgt = gBattlerAttacker;
         break;
     }
+
     switch (target)
     {
     case MOVE_TARGET_FOES_AND_ALLY:

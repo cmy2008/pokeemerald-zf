@@ -17026,7 +17026,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
         .description = COMPOUND_STRING(
             "用物攻特攻数值更高的一项\n"
             "攻击。有时会让对手中毒。"),
-        .effect = EFFECT_SHELL_SIDE_ARM,
+        .effect = EFFECT_HIT, // The effect is hardcoded to the move since SetShellSideArmCategory() can't be used with anything but Shell Side Arm because of the BP requirement
         .power = 90,
         .type = TYPE_POISON,
         .accuracy = 100,
@@ -18911,8 +18911,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_BLAZING_TORQUE] =
     {
         .name = COMPOUND_STRING("灼热暴冲"),
-        .description = COMPOUND_STRING(
-            "--\n-"),
+        .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_FIRE,
@@ -18940,8 +18939,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_WICKED_TORQUE] =
     {
         .name = COMPOUND_STRING("黑暗暴冲"),
-        .description = COMPOUND_STRING(
-            "--\n-"),
+        .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
         .power = 80,
         .type = TYPE_DARK,
@@ -18969,8 +18967,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_NOXIOUS_TORQUE] =
     {
         .name = COMPOUND_STRING("剧毒暴冲"),
-        .description = COMPOUND_STRING(
-            "--\n-"),
+        .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_POISON,
@@ -18998,8 +18995,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_COMBAT_TORQUE] =
     {
         .name = COMPOUND_STRING("格斗暴冲"),
-        .description = COMPOUND_STRING(
-            "--\n-"),
+        .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_FIGHTING,
@@ -19027,8 +19023,7 @@ const struct MoveInfo gMovesInfo[MOVES_COUNT_DYNAMAX] =
     [MOVE_MAGICAL_TORQUE] =
     {
         .name = COMPOUND_STRING("魔法暴冲"),
-        .description = COMPOUND_STRING(
-            "--\n-"),
+        .description = COMPOUND_STRING("---"),
         .effect = EFFECT_HIT,
         .power = 100,
         .type = TYPE_FAIRY,

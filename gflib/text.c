@@ -313,6 +313,11 @@ u16 AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 
     return AddTextPrinter(&printerTemplate, speed, callback);
 }
 
+u16 AddTextPrinterFixedCaseParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16))
+{
+    return AddTextPrinterParameterized(windowId, fontId, MirrorPtr(str), x, y, speed, callback);
+}
+
 bool32 AddTextPrinter(struct TextPrinterTemplate *printerTemplate, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16))
 {
     int i;
@@ -326,6 +331,16 @@ bool32 AddTextPrinter(struct TextPrinterTemplate *printerTemplate, u8 speed, voi
     sTempTextPrinter.textSpeed = speed;
     sTempTextPrinter.delayCounter = 0;
     sTempTextPrinter.scrollDistance = 0;
+    if (DECAP_ENABLED)
+    {
+        // string address is mirrored; treat it as a fixed-case string
+        // Technically, unmirroring isn't necessary;
+        // but older emulators may not support mirroring
+        // printerTemplate->currentChar = UnmirrorPtr(printerTemplate->currentChar);
+        if (DECAP_MIRRORING && IsMirrorPtr(printerTemplate->currentChar))
+            sTempTextPrinter.lastChar = CHAR_FIXED_CASE;
+        sTempTextPrinter.lastChar = 0;
+    }
 
     for (i = 0; i < (int)ARRAY_COUNT(sTempTextPrinter.subStructFields); i++)
         sTempTextPrinter.subStructFields[i] = 0;
@@ -976,10 +991,30 @@ void DrawDownArrow(u8 windowId, u16 x, u16 y, u8 bgColor, bool32 drawArrow, u8 *
     }
 }
 
+// if table[char] & 0xFF == 0, character is not uppercase
+const u16 gLowercaseDiffTable[] = {
+    // English
+    [CHAR_SPACE]                            = 0,
+    [CHAR_SPACER]                           = 0,
+    [CHAR_A ... CHAR_Z]                     = CHAR_a - CHAR_A,
+    // é treated as uppercase so POKéDEX, POKéMON, etc. decapped
+    [CHAR_e_ACUTE]                          = 0 | MARK_UPPER_FLAG,
+    [CHAR_SGL_QUOTE_RIGHT]                  = 0 | MARK_UPPER_FLAG,
+    // International
+    [CHAR_A_GRAVE ... CHAR_A_ACUTE]         = CHAR_a_GRAVE - CHAR_A_GRAVE,
+    [CHAR_A_CIRCUMFLEX]                     = CHAR_a_CIRCUMFLEX,
+    [CHAR_C_CEDILLA ... CHAR_I_GRAVE]       = CHAR_c_CEDILLA - CHAR_C_CEDILLA,
+    [CHAR_I_ACUTE]                          = CHAR_i_ACUTE,
+    [CHAR_I_CIRCUMFLEX ... CHAR_N_TILDE]    = CHAR_i_CIRCUMFLEX - CHAR_I_CIRCUMFLEX,
+    [CHAR_A_DIAERESIS ... CHAR_U_DIAERESIS] = CHAR_a_DIAERESIS - CHAR_A_DIAERESIS,
+    [EOS]                                   = 0,
+};
+
 static u16 RenderText(struct TextPrinter *textPrinter)
 {
     struct TextPrinterSubStruct *subStruct = (struct TextPrinterSubStruct *)(&textPrinter->subStructFields);
-    u16 currChar;
+    u32 currChar;
+    u32 lastChar;
     s32 width;
     s32 widthHelper;
 
@@ -1007,6 +1042,12 @@ static u16 RenderText(struct TextPrinter *textPrinter)
 
         currChar = *textPrinter->printerTemplate.currentChar;
         textPrinter->printerTemplate.currentChar++;
+        if (DECAP_ENABLED)
+        {
+            lastChar = textPrinter->lastChar;
+            if (lastChar != CHAR_FIXED_CASE)
+                textPrinter->lastChar = currChar;
+        }
 
         switch (currChar)
         {
@@ -1162,7 +1203,21 @@ static u16 RenderText(struct TextPrinter *textPrinter)
             textPrinter->printerTemplate.currentX += gCurGlyph.width + textPrinter->printerTemplate.letterSpacing;
             return RENDER_PRINT;
         case EOS:
-            return RENDER_FINISH;
+            return 1;
+        case 0x1 ... 0x1e:
+            if (currChar != 0x6 && currChar != 0x1B)
+            {
+                if (currChar > 0x1B)
+                    currChar -= 2;
+                else if(currChar > 0x6)
+                    currChar--;
+
+                currChar = *textPrinter->printerTemplate.currentChar | ((currChar - 1) << 8);
+                currChar += 0x1000;
+                textPrinter->printerTemplate.currentChar++;
+            }
+            break;
+return RENDER_FINISH;
         }
 
         switch (subStruct->fontId)
@@ -1488,6 +1543,11 @@ s32 GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing)
                 isJapanese = 0;
                 break;
             case EXT_CTRL_CODE_RESET_FONT:
+                if (letterSpacing == -1)
+                   localLetterSpacing = GetFontAttribute(fontId, FONTATTR_LETTER_SPACING);
+               else
+                   localLetterSpacing = letterSpacing;
+               break;
             case EXT_CTRL_CODE_PAUSE_UNTIL_PRESS:
             case EXT_CTRL_CODE_WAIT_SE:
             case EXT_CTRL_CODE_FILL_WINDOW:
@@ -1519,7 +1579,12 @@ s32 GetStringWidth(u8 fontId, const u8 *str, s16 letterSpacing)
         case CHAR_PROMPT_CLEAR:
             break;
         default:
-            glyphWidth = func(*str, isJapanese);
+            if(*str >= 0x1000 && (fontId == 0 || fontId == 8))
+                glyphWidth = 10;
+            else if(*str >= 0x1000 && (fontId == 1 || fontId == 2 || fontId == 7))
+                glyphWidth = 12;
+            else
+                glyphWidth = func(*str, isJapanese);
             if (minGlyphWidth > 0)
             {
                 if (glyphWidth < minGlyphWidth)

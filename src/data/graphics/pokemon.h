@@ -12004,6 +12004,7 @@ const u8 gMonFootprint_QuestionMark[] = INCBIN_U8("graphics/pokemon/question_mar
 #if P_FOOTPRINTS
     const u8 gMonFootprint_MausholdFamilyOfThree[] = INCBIN_U8("graphics/pokemon/maushold/footprint.1bpp");
 #endif //P_FOOTPRINTS
+
     const u32 gMonFrontPic_MausholdFamilyOfFour[] = INCBIN_U32("graphics/pokemon/maushold/four/front.4bpp.lz");
     const u32 gMonBackPic_MausholdFamilyOfFour[] = INCBIN_U32("graphics/pokemon/maushold/four/back.4bpp.lz");
     const u8 gMonIcon_MausholdFamilyOfFour[] = INCBIN_U8("graphics/pokemon/maushold/four/icon.4bpp");

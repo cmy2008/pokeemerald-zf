@@ -6,6 +6,49 @@
 // Given as a text speed when all the text should be
 // loaded at once but not copied to vram yet.
 #define TEXT_SKIP_DRAW 0xFF
+// 临时解决方案 TODO: 更新text.c
+// See include/config/decap.h for decap configuration
+
+#define ROM_MIRROR_MASK (0x02000000)
+#define RAM_MIRROR_MASK (0x00800000)
+#define ROM_MIRROR_PTR(x) ((void*)(((u32)(x)) | ROM_MIRROR_MASK))
+#define RAM_MIRROR_PTR(x) ((void*)(((u32)(x)) | RAM_MIRROR_MASK))
+
+#ifndef GUARD_CONFIG_DECAP_H
+#define GUARD_CONFIG_DECAP_H
+
+/*
+Enable automatic decapitalization of *all* text
+Exceptions:
+- Several bigrams: TV, TM, HP, HM, PC, PP, PM
+- Player names, nicknames, box names
+- Strings beginning with {FIXED_CASE}
+- C strings that use `_C` or `__C`
+- ASM strings that use `.fixstr`
+- If mirroring enabled, string addresses passed through MirrorPtr
+*/
+#define DECAP_ENABLED FALSE
+// Enables signaling that a string's case should be preserved
+// by *mirroring* its address: i.e 08xxxxxx to 0Axxxxxx
+// Unless you are targeting a different platform than the GBA,
+// there aren't many reasons to disable this
+#define DECAP_MIRRORING TRUE
+
+// If TRUE, *all* Pokemon nicknames and player names will be decapitalized.
+// Otherwise, their case will be preserved. Default FALSE
+#define DECAP_NICKNAMES     FALSE
+
+#define DECAP_MAIN_MENU     TRUE // Main menu text.
+#define DECAP_OPTION_MENU   TRUE // Option menu text.
+#define DECAP_START_MENU    TRUE // Start menu options & Save menu text.
+#define DECAP_PARTY_MENU    TRUE // Party menu text.
+#define DECAP_MAP_NAMES     TRUE // Map and location names.
+#define DECAP_EASY_CHAT     TRUE // Easy Chat words and interface.
+#define DECAP_FIELD_MSG     TRUE // Field messages (including scripts!).
+#define DECAP_SUMMARY       TRUE // Summary interface text.
+#define DECAP_ITEM_NAMES    TRUE // Item names (obtained via ItemId_GetName).
+
+#endif // GUARD_CONFIG_DECAP_H
 
 enum {
     FONT_SMALL,
@@ -92,6 +135,7 @@ struct TextPrinter
     u8 scrollDistance;
     u8 minLetterSpacing;  // 0x20
     u8 japanese;
+    u8 lastChar; // used to determine whether to decap strings
 };
 
 struct FontInfo
@@ -134,6 +178,19 @@ extern TextFlags gTextFlags;
 
 extern u8 gDisableTextPrinters;
 extern struct TextGlyph gCurGlyph;
+
+extern const u16 gLowercaseDiffTable[];
+// in gLowercaseDiffTable, 0x100 represents a character treated as uppercase,
+// but that maps to itself; only the lower 8 bits are used for mapping
+#define MARK_UPPER_FLAG 0x100
+#define LOWERCASE_DIFF_MASK 0xFF
+#define IS_UPPER(x) (gLowercaseDiffTable[(x) & LOWERCASE_DIFF_MASK])
+#define TO_LOWER(x) (((x) + gLowercaseDiffTable[(x)]) & LOWERCASE_DIFF_MASK)
+
+void * UnmirrorPtr(const void * ptr);
+void * MirrorPtr(const void * ptr);
+bool32 IsMirrorPtr(const void *ptr);
+u16 AddTextPrinterFixedCaseParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
 
 void DeactivateAllTextPrinters(void);
 u16 AddTextPrinterParameterized(u8 windowId, u8 fontId, const u8 *str, u8 x, u8 y, u8 speed, void (*callback)(struct TextPrinterTemplate *, u16));
