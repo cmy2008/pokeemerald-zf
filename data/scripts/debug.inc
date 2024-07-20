@@ -182,12 +182,8 @@ Debug_SaveBlock2Size::
 	.string "剩余空间: {STR_VAR_3}b.$"
 
 Debug_SaveBlock3Size::
-	.string "SaveBlock3 size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
-	.string "Free space: {STR_VAR_3}b.$"
-
-Debug_SaveBlock3Size::
-	.string "SaveBlock3 size: {STR_VAR_1}b/{STR_VAR_2}b.\n"
-	.string "Free space: {STR_VAR_3}b.$"
+	.string "SaveBlock3 大小: {STR_VAR_1}b/{STR_VAR_2}b.\n"
+	.string "剩余空间: {STR_VAR_3}b.$"
 
 Debug_PokemonStorageSize::
 	.string "{PKMN}Storage 大小: {STR_VAR_1}b/{STR_VAR_2}b.\n"

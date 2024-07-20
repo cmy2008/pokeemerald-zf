@@ -450,6 +450,7 @@ static u8 GetBattleAnimMoveTargets(u8 battlerArgIndex, u8 *targets)
     u32 i;
     u32 ignoredTgt = gBattlerAttacker;
     u32 target = GetBattlerMoveTargetType(gBattleAnimAttacker, gAnimMoveIndex);
+
     switch (battlerAnimId)
     {
     case ANIM_ATTACKER:

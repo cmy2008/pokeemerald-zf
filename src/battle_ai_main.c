@@ -3638,7 +3638,7 @@ static u32 AI_CalcMoveEffectScore(u32 battlerAtk, u32 battlerDef, u32 move)
             else
                 ADJUST_SCORE(WEAK_EFFECT);
         }
-        else if (aiData->abilities[battlerAtk] != ABILITY_CONTRARY)
+        else
         {
             IncreaseStatUpScore(battlerAtk, battlerDef, STAT_CHANGE_ATK, &score);
             IncreaseStatUpScore(battlerAtk, battlerDef, STAT_CHANGE_DEF, &score);
