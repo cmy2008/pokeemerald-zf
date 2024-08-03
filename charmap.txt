@@ -329,9 +329,6 @@ TALL_PLUS   = FC 0C FB
 'ー' = AE
 '⋯' = B0
 
-
-
-
 STRING = FD
 
 @ string placeholders
@@ -7881,5 +7878,6 @@ EMOJI_BIGANGER = F9 FE
 '鼾' = 1E6B
 '齄' = 1E6C
 '~' = 1E6A
+'椪' = 1E6D
 
 
