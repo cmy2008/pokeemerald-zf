@@ -135,12 +135,14 @@ const struct Item gItemsInfo[] =
     {
         #if PVPDALAO
         .name = _("下界合金剑"),
+        .description = COMPOUND_STRING(
+            "来自异世界的物品，\n可对宝可梦造成伤\n害，但没人知道它\n应该如何使用。"),
         #else
         .name = _("大师球"),
-        #endif
-        .price = 0,
         .description = COMPOUND_STRING(
             "必定能捉到野生宝\n可梦的，性能最好\n的球。"),
+        #endif
+        .price = 0,
         .pocket = POCKET_POKE_BALLS,
         .type = ITEM_USE_BAG_MENU,
         .battleUsage = EFFECT_ITEM_THROW_BALL,
